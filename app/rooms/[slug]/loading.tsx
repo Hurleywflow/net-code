@@ -1,6 +1,9 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-const LoadingSpinner = () => (
+interface Props {
+	children?: React.ReactNode;
+}
+export const LoadingSpinner = ({ children }: Props) => (
 	<section className='bg-white dark:bg-gray-900'>
 		<div className='container mx-auto animate-pulse px-6 py-10'>
 			<div className='mx-auto h-2 w-48 rounded-lg bg-gray-200 dark:bg-gray-700' />
