@@ -14,6 +14,11 @@ module.exports = {
 		'plugin:react/recommended',
 		'plugin:tailwindcss/recommended',
 	],
+	settings: {
+		react: {
+			version: 'detect',
+		},
+	},
 	overrides: [
 		{
 			env: {

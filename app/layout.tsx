@@ -1,8 +1,10 @@
+import Navbar from '@/components/cc/navbar/navbar';
 import { TailwindIndicator } from '@/components/cc/tailwind-indicator/tailwind-indicator';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
+
 // import GoogleAnalytics from '@bradgarropy/next-google-analytics';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -31,6 +33,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html lang='en'>
 			<body className={`m-0 box-border p-0 ${inter.className}`}>
+				<Navbar />
 				{children}
 				<TailwindIndicator />
 			</body>
