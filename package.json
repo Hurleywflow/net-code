@@ -1,0 +1,53 @@
+{
+  "name": "nextjs-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lintes": "eslint .",
+    "lint:debug": "eslint . --debug",
+    "lint:fix": "eslint . --fix",
+    "bioformat": "bunx @biomejs/biome format --write .",
+    "biolint": "bunx @biomejs/biome check --apply .",
+    "biolintunsafe": "bunx @biomejs/biome check --apply-unsafe ."
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "classnames": "^2.5.1",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.0.3",
+    "lucide-react": "^0.316.0",
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.5.3",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
+    "autoprefixer": "^10.0.1",
+    "bun-types": "latest",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.0.4",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-tailwindcss": "^3.14.1",
+    "postcss": "^8",
+    "prettier": "^3.2.4",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "tailwindcss": "^3.3.0"
+  },
+  "module": "index.ts",
+  "type": "commonjs",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
