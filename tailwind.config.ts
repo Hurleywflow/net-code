@@ -1,4 +1,17 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
+const colors = require('tailwindcss/colors');
+const {
+	default: flattenColorPalette,
+} = require('tailwindcss/lib/util/flattenColorPalette');
+
 import type { Config } from 'tailwindcss';
+const { nextui } = require('@nextui-org/react');
+const plugin = require('tailwindcss/plugin');
 
 const config = {
 	darkMode: ['class'],
@@ -7,6 +20,7 @@ const config = {
 		'./components/**/*.{ts,tsx}',
 		'./app/**/*.{ts,tsx}',
 		'./src/**/*.{ts,tsx}',
+		'./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
 	],
 	prefix: '',
 	theme: {
@@ -66,6 +80,11 @@ const config = {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)',
 			},
+			textShadow: {
+				sm: '0 1px 2px var(--tw-shadow-color)',
+				DEFAULT: '0 2px 4px var(--tw-shadow-color)',
+				lg: '0 8px 16px var(--tw-shadow-color)',
+			},
 			keyframes: {
 				'accordion-down': {
 					from: { height: '0' },
@@ -76,15 +95,68 @@ const config = {
 					to: { height: '0' },
 				},
 				// TODO: add more below
+				slidein: {
+					from: {
+						opacity: '0',
+						transform: 'translateY(-10px)',
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateY(0)',
+					},
+				},
+				spotlight: {
+					'0%': {
+						opacity: '0',
+						transform: 'translate(-72%, -62%) scale(0.5)',
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translate(-50%,-40%) scale(1)',
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
+				// TODO: add more below
+				slidein: 'slidein 1s ease var(--slidein-delay, 0) forwards',
+				spotlight: 'spotlight 2s ease .75s 1 forwards',
 			},
-			// TODO: add more below
 		},
 	},
-	plugins: [require('tailwindcss-animate')],
+
+	plugins: [
+		require('tailwindcss-animate'),
+		require('@tailwindcss/aspect-ratio'),
+		addVariablesForColors,
+		nextui(),
+		// biome-ignore lint/complexity/useArrowFunction: <explanation>
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+		plugin(({ matchUtilities, theme }: { matchUtilities: any; theme: any }) => {
+			matchUtilities(
+				{
+					// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+					'text-shadow': (value: any) => ({
+						textShadow: value,
+					}),
+				},
+				{ values: theme('textShadow') },
+			);
+		}),
+	],
 } satisfies Config;
 
 export default config;
+
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+function addVariablesForColors({ addBase, theme }: any) {
+	const allColors = flattenColorPalette(theme('colors'));
+	const newVars = Object.fromEntries(
+		Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
+	);
+
+	addBase({
+		':root': newVars,
+	});
+}
