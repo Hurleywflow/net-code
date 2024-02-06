@@ -27,10 +27,12 @@
     "classnames": "^2.5.1",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.3",
+    "gsap": "^3.12.5",
     "lucide-react": "^0.316.0",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
+    "sass": "^1.70.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7"
   },

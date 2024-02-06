@@ -54,71 +54,80 @@ import { BackgroundBeamsHero } from './backgroundBeam';
 
 function HeroBeam() {
 	return (
-		<section className='wrapper'>
-			{/* background beams */}
-			<div className='full-bleed relative z-10 flex h-screen items-center bg-zinc-800 bg-[url(/img/opal-rebuild/hero-tadpole.webp)] bg-cover bg-center pb-20'>
-				<BackgroundBeamsHero />
-			</div>
-
-			<div className='mt-[-100svh] h-[400svh] [view-timeline-name:--reveal-wrapper]'>
-				<div className='sticky top-0 flex min-h-screen items-center justify-center'>
-					<div>
+		<section>
+			<BackgroundBeamsHero />
+			<div className='wrapper'>
+				{/* background beams */}
+				{/* <div className='full-bleed relative z-10 flex h-screen items-center bg-zinc-800 bg-[url(/img/opal-rebuild/hero-tadpole.webp)] bg-cover bg-center pb-20'>
+					<BackgroundBeamsHero />
+				</div> */}
+				<div className='mt-[-100svh] h-[500svh] [view-timeline-name:--reveal-wrapper]'>
+					<div className='sticky top-0 flex min-h-screen flex-col items-center justify-center'>
 						<TitleSparkles />
-						<p className='supports-[animation-timeline]:reveal-text text-xl shadow-neutral-500 text-shadow-lg md:text-4xl lg:text-[60px] lg:leading-[1]'>
-							Introducing the Tadpole the smallest webcam ever built. With a
-							category-first directional microphone, a mirrorless Sony sensor,
-							and the easiest way to mute your call with a tap it’s the perfect
-							webcam to take with you everywhere
-						</p>
+						<div className='p-10'>
+							<p className='supports-[animation-timeline]:reveal-text text-balance text-2xl text-neutral-500 shadow-neutral-500 text-shadow-lg md:text-3xl lg:text-4xl lg:leading-[1]'>
+								We have a proven track record in designing websites that are
+								both visually appealing and user-friendly. A solid company
+								branding is an essential element for any successful website. Our
+								team builds scalable websites from scratch that seamlessly
+								integrate with design. Our focus is on micro animations,
+								transitions, and interaction to enhance user experience. For
+								content management, we use headless Sanity CMS. We pride
+								ourselves on delivering complete websites from concept to
+								implementation, which sets us apart from the competition. Our
+								excellent design sense and development skills enable us to
+								create outstanding projects.
+							</p>
+						</div>
 					</div>
 				</div>
+
+				{/* <ParallaxImage
+					smallImage='/img/opal-rebuild/image-1.webp'
+					largeImage='/img/opal-rebuild/image-2.webp'
+					smallImageSide='left'
+					parallaxDistance='100%'
+								/>
+
+								<ParallaxImage
+					smallImage='/img/opal-rebuild/image-1.webp'
+					largeImage='/img/opal-rebuild/image-2.webp'
+					smallImageSide='right'
+					parallaxDistance='100%'
+								/> */}
+
+				{/* <div className='full-bleed flex h-screen items-center justify-center bg-gray-100 px-4 text-lg md:text-2xl'>
+					<div className='max-w-[800px] space-y-3'>
+						<p>
+							This is a rebuild by{' '}
+							<a
+								href='https://www.frontend.fyi'
+								target='_blank'
+								className='underline'
+								rel='noreferrer'
+							>
+								Frontend.FYI
+							</a>
+							, rebuilding the{' '}
+							<a
+								href='https://opalcamera.com/opal-tadpole'
+								target='_blank'
+								className='underline'
+								rel='noreferrer'
+							>
+								Opal Tadpole
+							</a>{' '}
+							animations with modern CSS techniques. This website is in no way
+							related to Opal. Their design is only used as an inspiration to
+							teach frontend development.
+						</p>
+						<p>
+							All images are taken from Opal's Press kit, and remain copyrighted
+							by Opal.
+						</p>
+					</div>
+								</div> */}
 			</div>
-
-			{/* <ParallaxImage
-				smallImage='/img/opal-rebuild/image-1.webp'
-				largeImage='/img/opal-rebuild/image-2.webp'
-				smallImageSide='left'
-				parallaxDistance='100%'
-			/>
-
-			<ParallaxImage
-				smallImage='/img/opal-rebuild/image-1.webp'
-				largeImage='/img/opal-rebuild/image-2.webp'
-				smallImageSide='right'
-				parallaxDistance='100%'
-			/> */}
-
-			{/* <div className='full-bleed flex h-screen items-center justify-center bg-gray-100 px-4 text-lg md:text-2xl'>
-				<div className='max-w-[800px] space-y-3'>
-					<p>
-						This is a rebuild by{' '}
-						<a
-							href='https://www.frontend.fyi'
-							target='_blank'
-							className='underline'
-							rel='noreferrer'
-						>
-							Frontend.FYI
-						</a>
-						, rebuilding the{' '}
-						<a
-							href='https://opalcamera.com/opal-tadpole'
-							target='_blank'
-							className='underline'
-							rel='noreferrer'
-						>
-							Opal Tadpole
-						</a>{' '}
-						animations with modern CSS techniques. This website is in no way
-						related to Opal. Their design is only used as an inspiration to
-						teach frontend development.
-					</p>
-					<p>
-						All images are taken from Opal's Press kit, and remain copyrighted
-						by Opal.
-					</p>
-				</div>
-			</div> */}
 		</section>
 	);
 }

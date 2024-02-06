@@ -100,13 +100,12 @@ export const ProjectParallax = ({
 export const Header = () => {
 	return (
 		<div className='relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40'>
-			<h1 className='text-2xl font-bold dark:text-white md:text-7xl'>
-				The Ultimate <br /> development studio
+			<h1 className='bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-5xl font-bold text-transparent md:text-7xl'>
+				The Ultimate <br /> Development project.
 			</h1>
-			<p className='mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl'>
-				We build beautiful products with the latest technologies and frameworks.
-				We are a team of passionate developers and designers that love to build
-				amazing products.
+			<p className='mt-8 max-w-2xl text-lg font-normal text-neutral-100'>
+				We are a team of passionate developers and designers who create stunning
+				products using the latest technologies and frameworks.
 			</p>
 		</div>
 	);

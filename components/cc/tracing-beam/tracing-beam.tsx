@@ -32,7 +32,7 @@ export const TracingBeam = ({
 		}
 	}, []);
 	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-useEffect(() => {
+	useEffect(() => {
 		return scrollYProgressVelocity.onChange((latestVelocity) => {
 			setVelocity(latestVelocity);
 		});

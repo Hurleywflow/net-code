@@ -1,3 +1,4 @@
+import Contact from '@/components/cc/Contact/contact';
 import { Container } from '@/components/cc/container/container';
 import Footer from '@/components/cc/footer/footer';
 import HeroBeam from '@/components/cc/heroBeam/heroBeam';
@@ -7,16 +8,24 @@ import { TracingBeam } from '@/components/cc/tracing-beam/tracing-beam';
 
 export default function Home() {
 	return (
-		<main className='m-0 box-border flex min-h-[100svh] min-w-full items-center justify-center p-0'>
+		<main className='m-0 box-border flex min-h-[100svh] min-w-full flex-col items-center justify-center p-0'>
 			<Container>
-				<TracingBeam>
-					<HeroBeam />
-					<ProjectParallaxProducts />
-					<TitleSpotlight />
-					{/* <QuestionAnswers /> */}
-					<Footer />
-				</TracingBeam>
+				<HeroBeam />
 			</Container>
+			<div className='w-[100vw] bg-slate-900'>
+				<Container>
+					<TracingBeam>
+						<ProjectParallaxProducts />
+					</TracingBeam>
+				</Container>
+			</div>
+			<TitleSpotlight />
+			{/* <QuestionAnswers /> */}
+			{/* <CircleContainer /> */}
+			<Container>
+				<Contact />
+			</Container>
+			<Footer />
 		</main>
 	);
 }

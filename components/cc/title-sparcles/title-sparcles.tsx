@@ -3,11 +3,11 @@ import SparklesCore from './sparkles';
 
 export function TitleSparkles() {
 	return (
-		<div className='flex h-[20rem] w-full flex-col items-center justify-center overflow-hidden rounded-md bg-black'>
+		<div className='flex h-[20rem] w-full max-w-screen-2xl flex-col items-center justify-center overflow-hidden rounded-md bg-black'>
 			<h1 className='relative z-20 text-center text-3xl font-bold text-white md:text-7xl lg:text-9xl'>
 				NetCode
 			</h1>
-			<div className='relative h-40 w-[40rem]'>
+			<div className='relative h-40 w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[40vw]'>
 				{/* Gradients */}
 				<div className='absolute inset-x-20 top-0 h-[2px] w-3/4 bg-gradient-to-r from-transparent via-indigo-500 to-transparent blur-sm' />
 				<div className='absolute inset-x-20 top-0 h-px w-3/4 bg-gradient-to-r from-transparent via-indigo-500 to-transparent' />
