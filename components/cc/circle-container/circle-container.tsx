@@ -24,7 +24,7 @@ export default function CircleContainer() {
 				style={{ height }}
 				className='relative flex size-full flex-wrap items-center justify-center bg-[red]'
 			>
-				<div className='bg-grid-white/[0.02] absolute h-[1550%]  w-screen rounded-[0_0_50%_50%] bg-slate-900 shadow-[0px_60px_50px_rgba(0,0,0,0.748)]' />
+				<div className='bg-grid-white/[0.02] absolute h-[1550%]  w-screen rounded-[0_0_50%_50%] bg-foreground shadow-[0px_60px_50px_rgba(0,0,0,0.748)]' />
 			</MotionDiv>
 		</div>
 	);

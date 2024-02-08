@@ -1,7 +1,9 @@
 import Contact from '@/components/cc/Contact/contact';
+import CircleContainer from '@/components/cc/circle-container/circle-container';
 import { Container } from '@/components/cc/container/container';
 import Footer from '@/components/cc/footer/footer';
 import HeroBeam from '@/components/cc/heroBeam/heroBeam';
+import { LampDemo } from '@/components/cc/lamp/lamp';
 import { ProjectParallaxProducts } from '@/components/cc/project-parallax/project-parallax-products';
 import { TitleSpotlight } from '@/components/cc/title-spotlight/title-spotlight';
 import { TracingBeam } from '@/components/cc/tracing-beam/tracing-beam';
@@ -12,16 +14,16 @@ export default function Home() {
 			<Container>
 				<HeroBeam />
 			</Container>
-			<div className='w-[100vw] bg-slate-900'>
+			<div className='w-[100vw] bg-foreground'>
 				<Container>
-					<TracingBeam>
-						<ProjectParallaxProducts />
-					</TracingBeam>
+					<ProjectParallaxProducts />
 				</Container>
 			</div>
-			<TitleSpotlight />
-			{/* <QuestionAnswers /> */}
-			{/* <CircleContainer /> */}
+			{/* <TitleSpotlight /> */}
+				<LampDemo />
+				<CircleContainer />
+				{/* <QuestionAnswers /> */}
+				{/* <CircleContainer /> */}
 			<Container>
 				<Contact />
 			</Container>

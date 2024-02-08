@@ -65,6 +65,7 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
+
 }
 
 @layer base {
@@ -128,7 +129,7 @@ body {
     grid-column: full;
   }
 
-  @media (min-width: theme("screens.md")) {
+  @media (min-width: theme('screens.md')) {
     .wrapper > * {
       grid-column: narrow;
     }
@@ -151,7 +152,7 @@ body {
     browser would not be able to animate it from 0% to 100%.
   */
   @property --progress {
-    syntax: "<percentage>";
+    syntax: '<percentage>';
     inherits: false;
     initial-value: 0%;
   }

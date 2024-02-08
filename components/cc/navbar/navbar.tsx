@@ -1,6 +1,6 @@
 'use client';
+import { Button } from '@/components/ui/button';
 import {
-	Button,
 	Link,
 	Navbar,
 	NavbarBrand,
@@ -52,35 +52,43 @@ export default function NavBar() {
 			<NavbarContent className='hidden gap-4 sm:flex' justify='center'>
 				<NavbarBrand>
 					<AcmeLogo />
-					<p className='font-bold text-inherit'>ACME</p>
+					<p className='font-bold text-inherit'>NetCode</p>
 				</NavbarBrand>
 				<NavbarItem>
-					<Link color='foreground' href='#'>
-						Features
+					<Link color='foreground' href='/'>
+						Home
 					</Link>
 				</NavbarItem>
 				<NavbarItem isActive>
 					<Link href='#' aria-current='page'>
-						Customers
+						Introduction
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
 					<Link color='foreground' href='#'>
-						Integrations
+						Projects
+					</Link>
+				</NavbarItem>
+				<NavbarItem>
+					<Link color='foreground' href='#'>
+						FAQs
+					</Link>
+				</NavbarItem>
+				<NavbarItem>
+					<Link color='foreground' href='#'>
+						Contact
 					</Link>
 				</NavbarItem>
 			</NavbarContent>
 
 			<NavbarContent justify='end'>
 				<NavbarItem>
-					<Button
-						as={Link as React.ElementType}
-						color='warning'
-						href='#'
-						variant='flat'
+					<Link
+						href='https://www.linkedin.com/in/netcodedev/'
+						target='#Contact'
 					>
-						ORDER
-					</Button>
+						<Button variant='default'>ORDER</Button>
+					</Link>
 				</NavbarItem>
 			</NavbarContent>
 

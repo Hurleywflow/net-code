@@ -4,7 +4,7 @@ import { Spotlight } from './spotlight';
 
 export function TitleSpotlight() {
 	return (
-		<section className='z-10 flex w-full flex-col items-center justify-center bg-slate-900 '>
+		<section className='z-10 flex w-full flex-col items-center justify-center bg-foreground '>
 			<div className='bg-grid-white/[0.02] relative mx-auto flex min-h-fit w-full overflow-hidden rounded-md antialiased md:items-center md:justify-center '>
 				<Spotlight
 					className='-top-40 left-0 md:-top-20 md:left-[20rem] lg:left-[30rem] xl:left-[40rem] 2xl:left-[50rem]'

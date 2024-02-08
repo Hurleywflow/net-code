@@ -65,7 +65,7 @@ function HeroBeam() {
 					<div className='sticky top-0 flex min-h-screen flex-col items-center justify-center'>
 						<TitleSparkles />
 						<div className='p-10'>
-							<p className='supports-[animation-timeline]:reveal-text text-balance text-2xl text-neutral-500 shadow-neutral-500 text-shadow-lg md:text-3xl lg:text-4xl lg:leading-[1]'>
+							<p className='supports-[animation-timeline]:reveal-text text-balance text-xl text-foreground shadow-foreground-400 text-shadow-lg md:text-2xl lg:text-3xl lg:leading-[1]'>
 								We have a proven track record in designing websites that are
 								both visually appealing and user-friendly. A solid company
 								branding is an essential element for any successful website. Our

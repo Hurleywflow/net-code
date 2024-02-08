@@ -1,13 +1,13 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react';
+import { cn } from '@/lib/utils';
 import {
 	motion,
-	useTransform,
 	useScroll,
-	useVelocity,
 	useSpring,
+	useTransform,
+	useVelocity,
 } from 'framer-motion';
-import { cn } from '@/lib/utils';
+import React, { useEffect, useRef, useState } from 'react';
 
 export const TracingBeam = ({
 	children,
@@ -31,12 +31,11 @@ export const TracingBeam = ({
 			setSvgHeight(contentRef.current.offsetHeight);
 		}
 	}, []);
-	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	useEffect(() => {
 		return scrollYProgressVelocity.onChange((latestVelocity) => {
 			setVelocity(latestVelocity);
 		});
-	}, []);
+	}, [scrollYProgressVelocity]);
 
 	const y1 = useSpring(
 		useTransform(scrollYProgress, [0, 0.8], [50, svgHeight - velo * 500]),
@@ -69,7 +68,7 @@ export const TracingBeam = ({
 								? 'none'
 								: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
 					}}
-					className='ml-[27px] h-4 w-4 rounded-full border border-netural-200 shadow-sm flex items-center justify-center'
+					className='border-netural-200 ml-[27px] flex size-4 items-center justify-center rounded-full border shadow-sm'
 				>
 					<motion.div
 						transition={{
@@ -82,7 +81,7 @@ export const TracingBeam = ({
 							borderColor:
 								scrollYProgress.get() > 0 ? 'white' : 'var(--emerald-600)',
 						}}
-						className='h-2 w-2 rounded-full border border-neutral-300 bg-white'
+						className='size-2 rounded-full border border-neutral-300 bg-white'
 					/>
 				</motion.div>
 				<svg

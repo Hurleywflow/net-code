@@ -8,10 +8,10 @@ const Contact = () => {
 			<div className='text-wrap bg-gradient-to-b  from-neutral-500 to-neutral-950 bg-clip-text p-5 text-7xl text-transparent md:text-8xl  lg:text-[12rem] xl:text-[14rem]'>
 				Let's work together
 			</div>
-			<div className='relative flex h-[20vw] w-full items-center p-5'>
+			<div className='relative flex h-[20vw] w-full  items-center p-5 2xl:h-[15vw]'>
 				<hr className='w-full border-2 border-destructive ' />
 				<Button
-					className='absolute inset-y-0 right-0 mr-10 size-[20vw] justify-center text-wrap rounded-full p-1 text-lg font-semibold md:text-2xl md:font-bold lg:text-3xl'
+					className='absolute inset-y-0 right-0 mr-10 size-[20vw] justify-center text-wrap rounded-full p-1 text-lg font-semibold md:text-2xl md:font-bold lg:text-3xl 2xl:size-[15vw]'
 					size='lg'
 				>
 					Get in touch
