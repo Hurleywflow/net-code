@@ -9,7 +9,6 @@ import gsap from 'gsap';
 export default function index({ children }) {
 	const magnetic = useRef(null);
 
-	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	useEffect(() => {
 		console.log(children);
 		const xTo = gsap.quickTo(magnetic.current, 'x', {
@@ -34,7 +33,7 @@ export default function index({ children }) {
 			xTo(0);
 			yTo(0);
 		});
-	}, []);
+	}, [children]);
 
 	return React.cloneElement(children, { ref: magnetic });
 }

@@ -1,30 +1,35 @@
 import { Button } from '@/components/ui/button';
 import { MotionLinearGradient, MotionPath } from '@/lib/framer';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 export function BackgroundBeamsHero() {
 	return (
 		<div className='absolute inset-0 z-10 overflow-hidden'>
-			<div className='relative flex h-screen flex-col items-center justify-center bg-neutral-950 antialiased'>
+			<div className='relative flex h-screen flex-col items-center justify-center bg-foreground antialiased'>
 				<div className='z-10 mx-auto flex   max-w-7xl flex-col gap-5 p-4'>
 					{/* <!-- Element 1 --> */}
 					<div className='animate-slidein opacity-0 [--slidein-delay:500ms]'>
-						<div className='relative z-10 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center font-sans text-2xl  font-bold text-transparent md:text-4xl lg:text-5xl'>
+						<div className='relative z-10 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center font-sans text-3xl  font-bold text-transparent md:text-4xl lg:text-5xl'>
 							It's time to establish a connection.
 						</div>
 					</div>
 					{/* <!-- Element 2 --> */}
-					<h1 className='relative z-10 animate-slidein bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text  text-center font-sans text-5xl font-bold text-transparent  opacity-0 [--slidein-delay:500ms] md:text-7xl lg:text-8xl xl:text-9xl'>
+					<h1 className='relative z-10 animate-slidein bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text  text-center font-sans text-6xl font-bold text-transparent  opacity-0 [--slidein-delay:500ms] md:text-7xl lg:text-8xl xl:text-9xl'>
 						NetCode is a superior approach to product development.
 					</h1>
 					{/* <!-- Element 3 --> */}
-					<p className='relative z-10 mx-auto my-2 max-w-lg animate-slidein text-center text-medium font-normal text-neutral-200 opacity-0 [--slidein-delay:700ms] lg:text-2xl'>
+					<p className='relative z-10 mx-auto my-2 max-w-lg animate-slidein text-center text-medium font-normal text-neutral-200 opacity-0 [--slidein-delay:700ms] lg:text-xl'>
 						Our team of experienced developers provide custom web development
 						solutions that meet industry standards at an affordable price.
 					</p>
 					{/* <!-- Element 4 --> */}
 					<div className='relative z-10 mx-auto my-2 max-w-lg animate-slidein text-center text-sm text-neutral-500 opacity-0 [--slidein-delay:900ms]'>
-						<Button className=''>Get started</Button>
+						<Link href='#contact'>
+							<Button className='rounded-full' size={'lg'} variant={'outline'} >
+								Get in touch
+							</Button>
+						</Link>
 					</div>
 				</div>
 				<BackgroundBeams />

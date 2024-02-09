@@ -51,7 +51,8 @@ export const ProjectParallax = ({
 		springConfig,
 	);
 	return (
-		<div
+		<section
+			id='projects'
 			ref={ref}
 			className='relative flex h-[250svh]  flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d]'
 		>
@@ -93,14 +94,14 @@ export const ProjectParallax = ({
 					))}
 				</MotionDiv>
 			</MotionDiv>
-		</div>
+		</section>
 	);
 };
 
 export const Header = () => {
 	return (
 		<div className='relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40'>
-			<h1 className='bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-5xl font-bold text-transparent md:text-7xl'>
+			<h1 className='mt-8 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text py-4 text-5xl font-bold text-transparent md:text-6xl lg:text-7xl '>
 				The Ultimate <br /> Development project.
 			</h1>
 			<p className='mt-8 max-w-2xl text-lg font-normal text-neutral-100'>

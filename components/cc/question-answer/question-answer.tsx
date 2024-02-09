@@ -7,7 +7,7 @@ import {
 
 export function QuestionAnswers() {
 	return (
-		<section className='mx-auto mt-10 w-full max-w-screen-lg px-2 text-base font-normal text-neutral-100 sm:px-4 lg:px-6'>
+		<section className='mx-auto mt-10 w-full max-w-screen-lg px-8 text-base font-normal text-neutral-100'>
 			<Accordion type='single' collapsible className='w-full'>
 				<AccordionItem value='item-1'>
 					<AccordionTrigger>Is it accessible?</AccordionTrigger>
