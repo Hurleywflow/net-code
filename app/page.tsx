@@ -20,10 +20,10 @@ export default function Home() {
 				</Container>
 			</div>
 			{/* <TitleSpotlight /> */}
-				<LampDemo />
-				<CircleContainer />
-				{/* <QuestionAnswers /> */}
-				{/* <CircleContainer /> */}
+			<LampDemo />
+			<CircleContainer />
+			{/* <QuestionAnswers /> */}
+			{/* <CircleContainer /> */}
 			<Container>
 				<Contact />
 			</Container>

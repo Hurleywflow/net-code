@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
 			// not allow to show in google
 			disallow: '/studio',
 		},
-		sitemap: 'https://yourdomainname/sitemap.xml',
+		sitemap: 'https://netcodedev.com/sitemap.xml',
 	};
 }

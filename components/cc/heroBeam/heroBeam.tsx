@@ -1,4 +1,4 @@
-import { TitleSparkles } from '../title-sparcles/title-sparcles';
+import { TitleSparkles } from '../title-sparkles/title-sparkles';
 import { BackgroundBeamsHero } from './backgroundBeam';
 
 // type ParallaxImageProps = {
@@ -54,7 +54,7 @@ import { BackgroundBeamsHero } from './backgroundBeam';
 
 function HeroBeam() {
 	return (
-		<section>
+		<section id='home'>
 			<BackgroundBeamsHero />
 			<div className='wrapper'>
 				{/* background beams */}

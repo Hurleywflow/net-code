@@ -13,6 +13,7 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended-type-checked',
 		'plugin:react/recommended',
 		'plugin:tailwindcss/recommended',
+		// '@nkzw',
 	],
 	settings: {
 		react: {
@@ -64,5 +65,6 @@ module.exports = {
 		'@typescript-eslint/no-unused-vars': 'off',
 		'@typescript-eslint/no-use-before-define': 'off',
 		'no-mixed-spaces-and-tabs': 'off',
+		'react/prop-types': 'off',
 	},
 };

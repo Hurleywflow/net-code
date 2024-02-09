@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { MotionLinearGradient, MotionPath } from '@/lib/framer';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 export function BackgroundBeamsHero() {
 	return (
@@ -24,9 +25,11 @@ export function BackgroundBeamsHero() {
 					</p>
 					{/* <!-- Element 4 --> */}
 					<div className='relative z-10 mx-auto my-2 max-w-lg animate-slidein text-center text-sm text-neutral-500 opacity-0 [--slidein-delay:900ms]'>
-						<Button className='' size={'lg'} variant={'outline'}>
-							Get started
-						</Button>
+						<Link href='#contact'>
+							<Button className='rounded-full' size={'lg'} variant={'outline'} >
+								Get in touch
+							</Button>
+						</Link>
 					</div>
 				</div>
 				<BackgroundBeams />

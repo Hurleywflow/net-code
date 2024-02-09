@@ -1,30 +1,31 @@
 /* eslint-disable tailwindcss/enforces-negative-arbitrary-values */
-import { MotionDiv, MotionH1 } from '@/lib/framer';
+import { MotionDiv } from '@/lib/framer';
 import { cn } from '@/lib/utils';
-import { motion } from 'framer-motion';
 import React from 'react';
 import { QuestionAnswers } from '../question-answer/question-answer';
 
 export function LampDemo() {
 	return (
-		<LampContainer>
-			<MotionDiv
-				initial={{ opacity: 0.5, y: 100 }}
-				whileInView={{ opacity: 1, y: 0 }}
-				transition={{
-					delay: 0.3,
-					duration: 0.8,
-					ease: 'easeInOut',
-				}}
-				className='flex w-screen flex-col items-center justify-center'
-			>
-				<h1 className='mt-8 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text py-4 text-center text-5xl font-bold text-transparent md:text-6xl lg:text-7xl '>
-					{' '}
-					Frequently Asked Questions <br /> (FAQs)
-				</h1>
-				<QuestionAnswers />
-			</MotionDiv>
-		</LampContainer>
+		<section id='faqs'>
+			<LampContainer>
+				<MotionDiv
+					initial={{ opacity: 0.5, y: 100 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{
+						delay: 0.3,
+						duration: 0.8,
+						ease: 'easeInOut',
+					}}
+					className='flex w-screen flex-col items-center justify-center'
+				>
+					<h1 className='mt-8 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text py-4 text-center text-5xl font-bold text-transparent md:text-6xl lg:text-7xl '>
+						{' '}
+						Frequently Asked Questions <br /> (FAQs)
+					</h1>
+					<QuestionAnswers />
+				</MotionDiv>
+			</LampContainer>
+		</section>
 	);
 }
 

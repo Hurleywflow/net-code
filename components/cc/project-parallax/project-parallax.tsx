@@ -51,7 +51,8 @@ export const ProjectParallax = ({
 		springConfig,
 	);
 	return (
-		<div
+		<section
+			id='projects'
 			ref={ref}
 			className='relative flex h-[250svh]  flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d]'
 		>
@@ -93,7 +94,7 @@ export const ProjectParallax = ({
 					))}
 				</MotionDiv>
 			</MotionDiv>
-		</div>
+		</section>
 	);
 };
 
