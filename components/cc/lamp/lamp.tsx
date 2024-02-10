@@ -6,7 +6,7 @@ import { QuestionAnswers } from '../question-answer/question-answer';
 
 export function LampDemo() {
 	return (
-		<section id='faqs'>
+		<section id='faqs' className=''>
 			<LampContainer>
 				<MotionDiv
 					initial={{ opacity: 0.5, y: 100 }}
@@ -39,7 +39,7 @@ export const LampContainer = ({
 	return (
 		<div
 			className={cn(
-				'relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-foreground w-screen rounded-md z-0',
+				'relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-foreground w-screen z-0 ',
 				className,
 			)}
 		>
