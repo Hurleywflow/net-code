@@ -120,6 +120,15 @@ const config = {
 					'0%': { backgroundPosition: 'top left' },
 					'100%': { backgroundPosition: 'bottom right' },
 				},
+				//meteor effect hero section
+				meteor: {
+					'0%': { transform: 'rotate(215deg) translateX(0)', opacity: '1' },
+					'70%': { opacity: '1' },
+					'100%': {
+						transform: 'rotate(215deg) translateX(-1000px)',
+						opacity: '0',
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -129,6 +138,8 @@ const config = {
 				spotlight: 'spotlight 2s ease .75s 1 forwards',
 				//background clip text
 				slowpan: 'slowpan 30s alternate ease-in-out infinite',
+				//meteor effect hero section
+				'meteor-effect': 'meteor 5s linear infinite',
 			},
 		},
 	},

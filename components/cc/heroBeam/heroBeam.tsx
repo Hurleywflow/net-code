@@ -1,4 +1,5 @@
 import { TitleSparkles } from '../title-sparkles/title-sparkles';
+import { TitleSpotlight } from '../title-spotlight/title-spotlight';
 import { BackgroundBeamsHero } from './backgroundBeam';
 
 // type ParallaxImageProps = {
@@ -62,7 +63,8 @@ function HeroBeam() {
 				{/* <BackgroundBeamsHero /> */}
 				{/* background beams */}
 				<div className='full-bleed relative z-30 flex h-screen items-center bg-cover bg-center pb-20'>
-					<BackgroundBeamsHero />
+					{/* <BackgroundBeamsHero /> */}
+					<TitleSpotlight />
 				</div>
 				<div className='mt-[-100svh] h-[500svh] [view-timeline-name:--reveal-wrapper]'>
 					<div className='sticky top-0 flex min-h-screen flex-col items-center justify-center'>
