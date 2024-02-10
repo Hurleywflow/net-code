@@ -10,20 +10,17 @@ import { TracingBeam } from '@/components/cc/tracing-beam/tracing-beam';
 
 export default function Home() {
 	return (
-		<main className='m-0 box-border flex min-h-[100svh] min-w-full flex-col items-center justify-center p-0'>
+		<main className='m-0 flex min-h-[100svh] min-w-full flex-col items-center justify-center overflow-x-clip p-0'>
 			<Container>
 				<HeroBeam />
 			</Container>
-			<div className='w-[100vw] bg-foreground'>
+			<div className='m-0 box-border w-screen bg-foreground p-0'>
 				<Container>
 					<ProjectParallaxProducts />
 				</Container>
 			</div>
-			{/* <TitleSpotlight /> */}
 			<LampDemo />
 			<CircleContainer />
-			{/* <QuestionAnswers /> */}
-			{/* <CircleContainer /> */}
 			<Container>
 				<Contact />
 			</Container>

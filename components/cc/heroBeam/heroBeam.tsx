@@ -54,13 +54,16 @@ import { BackgroundBeamsHero } from './backgroundBeam';
 
 function HeroBeam() {
 	return (
-		<section id='home'>
-			<BackgroundBeamsHero />
+		<section
+			id='home'
+			className='m-0 flex w-screen flex-col items-center justify-center '
+		>
 			<div className='wrapper'>
+				{/* <BackgroundBeamsHero /> */}
 				{/* background beams */}
-				{/* <div className='full-bleed relative z-10 flex h-screen items-center bg-zinc-800 bg-[url(/img/opal-rebuild/hero-tadpole.webp)] bg-cover bg-center pb-20'>
+				<div className='full-bleed relative z-30 flex h-screen items-center bg-cover bg-center pb-20'>
 					<BackgroundBeamsHero />
-				</div> */}
+				</div>
 				<div className='mt-[-100svh] h-[500svh] [view-timeline-name:--reveal-wrapper]'>
 					<div className='sticky top-0 flex min-h-screen flex-col items-center justify-center'>
 						<TitleSparkles />
