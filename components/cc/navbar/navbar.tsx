@@ -92,7 +92,7 @@ export default function NavBar() {
 			isBordered={false}
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
-			className='mix-blend-difference backdrop-blur-sm'
+			className='mx-auto box-border mix-blend-difference  backdrop-blur-sm'
 		>
 			{/* toggle button */}
 			<NavbarContent className='sm:hidden' justify='start'>
@@ -105,7 +105,7 @@ export default function NavBar() {
 				<NavbarBrand>
 					{/* adding logo */}
 					<AcmeLogo />
-					<p className='font-bold text-inherit'>ACME</p>
+					<p className='font-bold text-inherit'>NetCode</p>
 				</NavbarBrand>
 			</NavbarContent>
 

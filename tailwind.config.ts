@@ -115,6 +115,11 @@ const config = {
 						transform: 'translate(-50%,-40%) scale(1)',
 					},
 				},
+				// background clip text
+				slowpan: {
+					'0%': { backgroundPosition: 'top left' },
+					'100%': { backgroundPosition: 'bottom right' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -122,6 +127,8 @@ const config = {
 				// TODO: add more below
 				slidein: 'slidein 1s ease var(--slidein-delay, 0) forwards',
 				spotlight: 'spotlight 2s ease .75s 1 forwards',
+				//background clip text
+				slowpan: 'slowpan 30s alternate ease-in-out infinite',
 			},
 		},
 	},

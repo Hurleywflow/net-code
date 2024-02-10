@@ -185,10 +185,10 @@ body {
     animation-range: entry 200% cover 80%;
   }
 
-  .parallax-image {
+  /* .parallax-image {
     transform: translateY(0px);
     animation: parallax-movement linear both;
     animation-timeline: --parallax-wrapper;
     animation-range: entry 25% cover 80%;
-  }
+  } */
 }
