@@ -22,7 +22,7 @@ export function TitleSpotlight() {
 					</div>
 					{/* <!-- Element 2 --> */}
 					<h1 className='relative  animate-slidein bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text  text-center font-sans text-6xl font-bold text-transparent  opacity-0 [--slidein-delay:500ms] md:text-7xl lg:text-8xl xl:text-9xl'>
-						NetCode is a superior approach to product development.
+						NetCode is a superior approach to web development.
 					</h1>
 					{/* <!-- Element 3 --> */}
 					<p className='relative  mx-auto my-2 max-w-lg animate-slidein text-center text-medium font-normal text-neutral-200 opacity-0 [--slidein-delay:700ms] lg:text-xl'>

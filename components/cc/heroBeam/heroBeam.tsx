@@ -1,6 +1,5 @@
 import { TitleSparkles } from '../title-sparkles/title-sparkles';
 import { TitleSpotlight } from '../title-spotlight/title-spotlight';
-import { BackgroundBeamsHero } from './backgroundBeam';
 
 // type ParallaxImageProps = {
 // 	smallImage: string;
@@ -60,10 +59,8 @@ function HeroBeam() {
 			className='m-0 flex w-screen flex-col items-center justify-center '
 		>
 			<div className='wrapper'>
-				{/* <BackgroundBeamsHero /> */}
-				{/* background beams */}
 				<div className='full-bleed relative z-30 flex h-screen items-center bg-cover bg-center pb-20'>
-					{/* <BackgroundBeamsHero /> */}
+					{/* add a background star and spotlight */}
 					<TitleSpotlight />
 				</div>
 				<div className='mt-[-100svh] h-[500svh] [view-timeline-name:--reveal-wrapper]'>
