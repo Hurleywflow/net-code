@@ -5,26 +5,26 @@ import Footer from '@/components/cc/footer/footer';
 import HeroBeam from '@/components/cc/heroBeam/heroBeam';
 import { LampDemo } from '@/components/cc/lamp/lamp';
 import { ProjectParallaxProducts } from '@/components/cc/project-parallax/project-parallax-products';
-import { TitleSpotlight } from '@/components/cc/title-spotlight/title-spotlight';
-import { TracingBeam } from '@/components/cc/tracing-beam/tracing-beam';
 
 export default function Home() {
 	return (
-		<main className='m-0 flex min-h-[100svh] min-w-full flex-col items-center justify-center overflow-x-clip p-0'>
-			<Container>
-				<HeroBeam />
-			</Container>
-			<div className='m-0 box-border w-screen bg-foreground p-0'>
+		<>
+			<main className='m-0 flex min-h-[100svh] min-w-full flex-col items-center justify-center overflow-x-clip p-0'>
 				<Container>
-					<ProjectParallaxProducts />
+					<HeroBeam />
 				</Container>
-			</div>
-			<LampDemo />
-			<CircleContainer />
-			<Container>
-				<Contact />
-			</Container>
+				<div className='m-0 box-border w-screen bg-foreground p-0'>
+					<Container>
+						<ProjectParallaxProducts />
+					</Container>
+				</div>
+				<LampDemo />
+				<CircleContainer />
+				<Container>
+					<Contact />
+				</Container>
+			</main>
 			<Footer />
-		</main>
+		</>
 	);
 }

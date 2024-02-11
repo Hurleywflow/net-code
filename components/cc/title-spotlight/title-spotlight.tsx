@@ -5,7 +5,7 @@ import { Spotlight } from './spotlight';
 
 export function TitleSpotlight() {
 	return (
-		<section className='relative z-10 flex size-full h-[100svh] w-full flex-col items-center justify-center overflow-hidden bg-foreground '>
+		<header className='relative z-10 flex size-full h-[100svh] w-full flex-col items-center justify-center overflow-hidden bg-foreground '>
 			<div className='relative mx-auto flex size-full items-center justify-center overflow-hidden rounded-md bg-foreground antialiased '>
 				<Spotlight
 					className='-top-40 left-0 md:-top-20 md:left-[20rem] lg:left-[30rem] xl:left-[40rem] 2xl:left-[50rem]'
@@ -45,6 +45,6 @@ export function TitleSpotlight() {
 			</div>
 			{/* meteors hero section background */}
 			<Meteors number={60} />
-		</section>
+		</header>
 	);
 }
