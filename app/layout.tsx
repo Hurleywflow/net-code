@@ -29,11 +29,13 @@ export const viewport = {
 interface RootLayoutProps {
 	children: React.ReactNode;
 }
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
 	return (
 		<html lang='en'>
 			<body className={`m-0 box-border p-0 ${inter.className}`}>
-				<Navbar />
+				<header>
+					<Navbar />
+				</header>
 				{children}
 				<TailwindIndicator />
 			</body>
