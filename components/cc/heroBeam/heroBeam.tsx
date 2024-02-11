@@ -68,17 +68,18 @@ function HeroBeam() {
 						<TitleSparkles />
 						<div className='p-10'>
 							<p className='supports-[animation-timeline]:reveal-text text-balance text-xl text-foreground shadow-foreground-400 text-shadow-lg md:text-2xl lg:text-3xl lg:leading-[1]'>
-								We have a proven track record in designing websites that are
-								both visually appealing and user-friendly. A solid company
-								branding is an essential element for any successful website. Our
-								team builds scalable websites from scratch that seamlessly
-								integrate with design. Our focus is on micro animations,
-								transitions, and interaction to enhance user experience. For
-								content management, we use headless Sanity CMS. We pride
-								ourselves on delivering complete websites from concept to
-								implementation, which sets us apart from the competition. Our
-								excellent design sense and development skills enable us to
-								create outstanding projects.
+								Our team of skilled and versatile developers specialize in a
+								wide range of custom web development services. Whether you
+								require a basic website or a complex web application, we can
+								provide high-quality solutions that align with your business
+								objectives. We have a proven track record in designing visually
+								appealing and user-friendly websites. Our team can build
+								scalable websites from scratch that seamlessly integrate with
+								design. A professionally designed website is a powerful
+								marketing tool that establishes credibility and confidence,
+								attracting and engaging potential customers. Choosing
+								professional website development services is a strategic
+								decision that promotes business growth.
 							</p>
 						</div>
 					</div>
