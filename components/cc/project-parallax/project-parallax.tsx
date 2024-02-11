@@ -54,7 +54,7 @@ export const ProjectParallax = ({
 		<section
 			id='projects'
 			ref={ref}
-			className='relative flex h-[250svh] w-screen  flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d]'
+			className='relative flex h-[250svh] w-screen  flex-col self-auto overflow-hidden antialiased [perspective:1000px] [transform-style:preserve-3d]'
 		>
 			<Header />
 			<MotionDiv
