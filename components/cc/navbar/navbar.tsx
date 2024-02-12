@@ -1,5 +1,25 @@
 'use client';
+import Magnetic from '@/components/cc/common/Magnetic';
 import { Button } from '@/components/ui/button';
+import {
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogHeader,
+	DialogTitle,
+	DialogTrigger,
+} from '@/components/ui/dialog';
+import {
+	Drawer,
+	DrawerClose,
+	DrawerContent,
+	DrawerDescription,
+	DrawerFooter,
+	DrawerHeader,
+	DrawerTitle,
+	DrawerTrigger,
+} from '@/components/ui/drawer';
+import useMediaQuery from '@/hooks/useMediaQuery';
 import {
 	Navbar,
 	NavbarBrand,
@@ -10,12 +30,16 @@ import {
 	NavbarMenuToggle,
 } from '@nextui-org/react';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import { useState } from 'react';
+import ProfileForm from '../booking-form/booking-form';
 import { Tabs } from '../tab/tabs';
 import { AcmeLogo } from './Logo.jsx';
 
 export default function NavBar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	// const [snap, setSnap] = useState<number | string | null>(0.7);
+	const [open, setOpen] = useState(false);
+	const isDesktop = useMediaQuery('(min-width: 768px)');
 
 	const menuItems = [
 		{
@@ -104,15 +128,27 @@ export default function NavBar() {
 			<NavbarContent className='pr-3 sm:hidden' justify='center'>
 				<NavbarBrand>
 					{/* adding logo */}
-					<AcmeLogo />
-					<p className='font-bold text-inherit'>NetCode</p>
+					<Link href='/'>
+						<AcmeLogo />
+					</Link>
+					<Link href='/'>
+						<Magnetic>
+							<p className='font-bold text-inherit'>NetCode</p>
+						</Magnetic>
+					</Link>
 				</NavbarBrand>
 			</NavbarContent>
 
 			<NavbarContent className='hidden gap-4 sm:flex' justify='center'>
 				<NavbarBrand>
-					<AcmeLogo />
-					<p className='font-bold text-inherit'>NetCode</p>
+					<Link href='/'>
+						<AcmeLogo />
+					</Link>
+					<Link href='/'>
+						<Magnetic>
+							<p className='font-bold text-inherit'>NetCode</p>
+						</Magnetic>
+					</Link>
 				</NavbarBrand>
 				{/* <NavbarItem>
 					<Link color='foreground' href='/'>
@@ -147,16 +183,69 @@ export default function NavBar() {
 			</NavbarContent>
 			{/* end of the navbar items */}
 			<NavbarContent justify='end'>
-				<NavbarItem>
-					<Link
-						href='https://www.linkedin.com/in/netcodedev/'
-						target='#Contact'
+				{isDesktop ? (
+					<Dialog open={open} onOpenChange={setOpen}>
+						<DialogTrigger asChild>
+							<NavbarItem>
+								<Magnetic>
+									<Button variant='default' className='rounded-full'>
+										Keep in touch
+									</Button>
+								</Magnetic>
+							</NavbarItem>
+						</DialogTrigger>
+						<DialogContent className=' sm:max-w-[425px]'>
+							<DialogHeader className='px-2'>
+								<DialogTitle>Get in touch</DialogTitle>
+								<DialogDescription>
+									We are always happy to stay connected with you.
+								</DialogDescription>
+							</DialogHeader>
+							{/* form booking data */}
+							<ProfileForm className='px-2' />
+						</DialogContent>
+					</Dialog>
+				) : (
+					<Drawer
+						open={open}
+						onOpenChange={setOpen}
+						// snapPoints={[0.7, 1]}
+						// // snapPoints={[0.5, 0.8, 1]}
+						// activeSnapPoint={snap}
+						// setActiveSnapPoint={setSnap}
 					>
-						<Button variant='default' className='rounded-full'>
-							Keep in touch
-						</Button>
-					</Link>
-				</NavbarItem>
+						<DrawerTrigger asChild>
+							<NavbarItem>
+								<Magnetic>
+									<Button variant='default' className='rounded-full'>
+										Keep in touch
+									</Button>
+								</Magnetic>
+							</NavbarItem>
+						</DrawerTrigger>
+						<DrawerContent>
+							{/* <div
+							className={cn('', {
+								'overflow-y-auto': snap === 1,
+								'overflow-hidden': snap !== 1,
+							})}
+						> */}
+							<DrawerHeader className='px-5 text-left'>
+								<DrawerTitle>Get in touch</DrawerTitle>
+								<DrawerDescription>
+									We are always happy to stay connected with you.
+								</DrawerDescription>
+							</DrawerHeader>
+							<ProfileForm className='px-5' />
+							<DrawerFooter className='pt-2'>
+								<DrawerClose asChild>
+									<Button variant='outline'>Cancel</Button>
+								</DrawerClose>
+							</DrawerFooter>
+							{/* </div> */}
+						</DrawerContent>
+					</Drawer>
+				)}
 			</NavbarContent>
 
 			<NavbarMenu>
