@@ -133,6 +133,10 @@ const config = {
 						opacity: '0',
 					},
 				},
+				spin: {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -145,6 +149,7 @@ const config = {
 				slowpan: 'slowpan 30s alternate ease-in-out infinite',
 				//meteor effect hero section
 				'meteor-effect': 'meteor 5s linear infinite',
+				spin: '1s linear infinite',
 			},
 		},
 	},

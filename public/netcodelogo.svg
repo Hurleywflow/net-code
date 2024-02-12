@@ -1,20 +1,13 @@
-export const AcmeLogo = () => (
-	<svg
-		version='1.0'
-		xmlns='http://www.w3.org/2000/svg'
-		width='40.000000pt'
-		height='40.000000pt'
-		viewBox='0 0 1024.000000 1024.000000'
-		preserveAspectRatio='xMidYMid meet'
-	>
-		<title>NetCode</title>
-		<g
-			transform='translate(0.000000,1024.000000) scale(0.100000,-0.100000)'
-			fill='#000000'
-			stroke='none'
-		>
-			<path
-				d='M4910 8540 c-647 -51 -1210 -253 -1755 -628 -437 -300 -826 -731
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="40.000000pt" height="40.000000pt" viewBox="0 0 1024.000000 1024.000000"
+ preserveAspectRatio="xMidYMid meet"
+ >
+<g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke='none'>
+<path d="M4910 8540 c-647 -51 -1210 -253 -1755 -628 -437 -300 -826 -731
 -1084 -1201 -235 -425 -372 -869 -422 -1365 -15 -149 -6 -553 15 -722 102
 -804 454 -1508 1042 -2086 244 -239 497 -420 814 -582 554 -283 1090 -408
 1685 -393 538 14 985 124 1470 362 337 165 618 359 856 590 141 138 233 237
@@ -30,10 +23,8 @@ export const AcmeLogo = () => (
 185 -317 389 -369 453 -207 253 -553 688 -581 730 l-29 45 0 1170 c0 644 3
 1181 6 1194 l6 22 624 0 624 0 0 -732z m-3935 -583 c525 -660 909 -1140 920
 -1147 7 -5 10 -358 10 -1085 l0 -1078 -612 0 -613 0 0 1840 c0 1042 4 1835 9
-1830 4 -6 134 -167 286 -360z'
-				fill='#ffffff'
-				stroke='none'
-			/>
-		</g>
-	</svg>
-);
+1830 4 -6 134 -167 286 -360z"
+
+fill="#ffffff" stroke="none" />
+</g>
+</svg>

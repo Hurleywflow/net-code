@@ -1,3 +1,4 @@
+import Magnetic from '@/components/cc/common/Magnetic';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Meteors } from '../meteors/meteors';
@@ -19,32 +20,34 @@ export function TitleSpotlight() {
 						</h3>
 					</div>
 					{/* <!-- Element 2 --> */}
-					<h1 className='relative  animate-slidein bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text  text-center font-sans text-5xl font-bold text-transparent  opacity-0 [--slidein-delay:500ms] md:text-7xl lg:text-8xl'>
+					<h1 className='relative  animate-slidein bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text  text-center font-sans text-5xl font-bold text-transparent  opacity-0 [--slidein-delay:700ms] md:text-7xl lg:text-8xl'>
 						Boost your business with superior web development that drives leads
 						and revenue.
 					</h1>
 					{/* <!-- Element 3 --> */}
-					<p className='relative  mx-auto my-2 max-w-xl animate-slidein text-center text-medium font-normal text-neutral-200 opacity-0 [--slidein-delay:700ms] lg:text-xl'>
+					<p className='relative  mx-auto my-2 max-w-xl animate-slidein text-center text-medium font-normal text-neutral-200 opacity-0 [--slidein-delay:900ms] lg:text-xl'>
 						NetCode provides tailored web development solutions at an affordable
 						rate. Our experienced developers set industry standards at an
 						affordable price.
 					</p>
 					{/* <!-- Element 4 --> */}
-					<div className='relative  mx-auto my-2 max-w-lg animate-slidein text-center text-medium text-neutral-500 opacity-0 [--slidein-delay:900ms]'>
-						<Link href='#contact'>
-							<Button
-								className='rounded-full bg-secondary text-medium font-semibold'
-								size={'lg'}
-								variant={'gooeyLeft'}
-							>
-								Get in touch
-							</Button>
+					<div className='relative  mx-auto my-2 max-w-lg animate-slidein text-center text-medium text-neutral-500 opacity-0 [--slidein-delay:1.1s]'>
+						<Link href='#faqs'>
+							<Magnetic>
+								<Button
+									className='rounded-full bg-secondary text-medium font-semibold'
+									size={'lg'}
+									variant={'gooeyLeft'}
+								>
+									FAQs
+								</Button>
+							</Magnetic>
 						</Link>
 					</div>
 				</div>
 			</div>
 			{/* meteors hero section background */}
-			<Meteors number={60} />
+			<Meteors number={80} />
 		</header>
 	);
 }

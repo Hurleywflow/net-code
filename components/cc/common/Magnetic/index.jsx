@@ -3,8 +3,9 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useEffect, useRef } from 'react';
+'use client';
 import gsap from 'gsap';
+import React, { useEffect, useRef } from 'react';
 
 export default function index({ children }) {
 	const magnetic = useRef(null);

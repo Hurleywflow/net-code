@@ -33,9 +33,7 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
 	return (
 		<html lang='en'>
 			<body className={`m-0 box-border p-0 ${inter.className}`}>
-				<header>
-					<Navbar />
-				</header>
+				<Navbar />
 				{children}
 				<TailwindIndicator />
 			</body>
