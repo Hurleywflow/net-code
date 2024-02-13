@@ -1,4 +1,3 @@
-import React from 'react';
 import { ProjectParallax } from './project-parallax';
 
 export function ProjectParallaxProducts() {
@@ -8,38 +7,32 @@ export const products = [
 	{
 		title: ' Hurley Portfolio 1',
 		link: 'https://portfoliohurley.vercel.app/',
-		thumbnail:
-		'https://aceternity.com/images/products/thumbnails/new/cursor.png',
+		thumbnail: '/images/projects/hlp1.jpeg',
 	},
 	{
 		title: 'Villa Trung Nghia',
 		link: 'https://www.villadalat.online',
-		thumbnail:
-			'https://aceternity.com/images/products/thumbnails/new/moonbeam.png',
+		thumbnail: '/images/projects/vltn.gif',
 	},
 	{
 		title: 'Hurley Portfolio 2',
 		link: 'https://hurleyportfolio1.vercel.app/',
-		thumbnail:
-			'https://aceternity.com/images/products/thumbnails/new/rogue.png',
+		thumbnail: '/images/projects/hlp2.gif',
 	},
 
 	{
 		title: 'Bank Design',
 		link: 'https://hurley-bank.vercel.app',
-		thumbnail:
-			'https://aceternity.com/images/products/thumbnails/new/editorially.png',
-	},
-	{
-		title: 'RealEstate',
-		link: 'https://real-estate-api-alpha.vercel.app',
-		thumbnail:
-			'https://aceternity.com/images/products/thumbnails/new/editrix.png',
+		thumbnail: '/images/projects/b.gif',
 	},
 	{
 		title: 'NailStudioPro',
 		link: 'https://www.nailstudiopro.com',
-		thumbnail:
-			'https://aceternity.com/images/products/thumbnails/new/pixelperfect.png',
+		thumbnail: '/images/projects/nsp.jpeg',
+	},
+	{
+		title: 'RealEstate',
+		link: 'https://real-estate-api-alpha.vercel.app',
+		thumbnail: '/images/projects/rs.jpeg',
 	},
 ];
