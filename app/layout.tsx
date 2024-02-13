@@ -12,9 +12,10 @@ import toast, { Toaster as Toast } from 'react-hot-toast';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-	metadataBase: new URL('http://localhost:3000'),
-	title: 'nextjs-starter',
-	description: 'Villa ',
+	metadataBase: new URL('https://netcodedev.com'),
+	title: 'Web Development - Net Code',
+	description:
+		'Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.',
 	verification: {
 		google: '3008361373778677',
 	},

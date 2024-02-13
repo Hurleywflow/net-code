@@ -15,7 +15,7 @@ export default function Home() {
 					<HeroBeam />
 				</Container>
 				<div className='m-0 box-border w-screen bg-foreground p-0'>
-					<Container>
+					<Container className='overflow-hidden'>
 						<ProjectParallaxProducts />
 					</Container>
 				</div>
@@ -23,7 +23,6 @@ export default function Home() {
 				<CircleContainer />
 				<Container>
 					<Contact />
-					
 				</Container>
 			</main>
 			<Footer />
