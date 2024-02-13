@@ -1,6 +1,6 @@
 export function TailwindIndicator() {
 	//TODO: changing NODE_ENV to false will show the tailwind indicator
-	const Development = true;
+	const Development = false;
 	if (!Development) {
 		return null;
 	}
