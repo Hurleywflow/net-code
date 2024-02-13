@@ -111,12 +111,21 @@ const Contact = () => {
 					// setActiveSnapPoint={setSnap}
 				>
 					<DrawerTrigger asChild>
-						<Button
-							className='absolute inset-y-0 right-0 mr-10 size-[30vw] justify-center overflow-hidden text-wrap rounded-full p-1 text-lg font-semibold md:size-[20vw] md:text-2xl md:font-bold lg:text-3xl 2xl:size-[15vw]'
-							size='lg'
-						>
-							<Rounded>Get in touch</Rounded>
-						</Button>
+						<div>
+							<Button
+								className='absolute inset-y-0 right-0 mr-10 hidden size-[30vw] justify-center overflow-hidden text-wrap rounded-full p-1 text-lg font-semibold md:size-[20vw] md:text-2xl md:font-bold lg:block lg:text-3xl 2xl:size-[15vw]'
+								size='lg'
+							>
+								<Rounded>Get in touch</Rounded>
+							</Button>
+							{/*show up  on mobile devices */}
+							<Button
+								className='absolute inset-y-0 right-0 mr-10 size-[30vw] justify-center overflow-hidden text-wrap rounded-full p-1 text-lg font-semibold md:size-[20vw] md:text-2xl md:font-bold lg:hidden lg:text-3xl 2xl:size-[15vw]'
+								size='lg'
+							>
+								Get in touch
+							</Button>
+						</div>
 					</DrawerTrigger>
 					<DrawerContent>
 						{/* <div
