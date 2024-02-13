@@ -4,6 +4,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
+import { Toaster } from '@/components/ui/toaster';
+import toast, { Toaster as Toast } from 'react-hot-toast';
 
 // import GoogleAnalytics from '@bradgarropy/next-google-analytics';
 
@@ -33,9 +35,11 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
 	return (
 		<html lang='en'>
 			<body className={`m-0 box-border p-0 ${inter.className}`}>
+				<Toast />
 				<Navbar />
 				{children}
 				<TailwindIndicator />
+				<Toaster />
 			</body>
 			{/* Google Analytics */}
 			{/* <!-- Google tag (gtag.js) --> */}

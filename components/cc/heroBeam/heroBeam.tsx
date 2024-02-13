@@ -13,7 +13,7 @@ function HeroBeam() {
 					{/* add a background star and spotlight */}
 					<TitleSpotlight />
 				</div>
-				<div className='mt-[-100svh] h-[500svh] [view-timeline-name:--reveal-wrapper]'>
+				<div className='mt-[-100svh] h-[200svh] [view-timeline-name:--reveal-wrapper] lg:h-[500svh]'>
 					<div className='sticky top-0 flex min-h-screen flex-col items-center justify-center'>
 						<TitleSparkles />
 						<div className='mt-10 hidden lg:block'>
@@ -32,7 +32,7 @@ function HeroBeam() {
 								decision that promotes business growth.
 							</p>
 						</div>
-						<div className='mt-10 lg:hidden'>
+						<div className='my-10 lg:hidden'>
 							<Description />
 						</div>
 					</div>

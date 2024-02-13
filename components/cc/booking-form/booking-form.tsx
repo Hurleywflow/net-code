@@ -23,7 +23,8 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { toast } from '@/components/ui/use-toast';
+import { useToast } from '@/components/ui/use-toast';
+
 import { cn } from '@/lib/utils';
 import FormSubmitButton from '../formStatusButton/FormSubmitButton';
 
@@ -49,6 +50,9 @@ const FormSchema = z.object({
 });
 
 function ProfileForm({ className }: React.ComponentProps<'form'>) {
+	const { toast } = useToast();
+	const router = useRouter();
+	// 1. Define your form.
 	const form = useForm<z.infer<typeof FormSchema>>({
 		resolver: zodResolver(FormSchema),
 		defaultValues: {
@@ -58,8 +62,8 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 			note: '',
 		},
 	});
-	const router = useRouter();
-	async function onSubmit(data: z.infer<typeof FormSchema>): Promise<void> {
+	// 2. Define a submit handler.
+	async function onSubmit(data: z.infer<typeof FormSchema>) {
 		console.log(data);
 
 		// interface FormData {
@@ -72,20 +76,34 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 		// }
 
 		// function showDateError(error: string): void {
-		// 	toast({
-		// 		variant: 'destructive',
-		// 		title: 'Uh oh! Something went wrong.',
-		// 		description: error,
-		// 		action: <ToastAction altText='Try again'>Try again</ToastAction>,
-		// 	});
+		//   toast({
+		//     variant: 'destructive',
+		//     title: 'Uh oh! Something went wrong.',
+		//     description: error,
+		//     action: <ToastAction altText='Try again'>Try again</ToastAction>,
+		//   });
 		// }
 		// post data to resend api
 		try {
-			await fetch('/api/email', {
+			const response = await fetch('/api/email', {
 				method: 'POST',
 				body: JSON.stringify(data),
 			});
+			if (!response.ok) {
+				toast({
+					variant: 'destructive',
+					title: 'Woops!',
+					description: 'Your message has not been sent.',
+				});
+			}
 		} catch (error) {
+			if (error instanceof Error) {
+				toast({
+					variant: 'destructive',
+					title: 'Woops!',
+					description: 'Your message has not been sent.',
+				});
+			}
 			throw new Error('Error sending email');
 		}
 
@@ -100,9 +118,10 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 		});
 
 		// reset to default value of the from, closed dialog or drawer and redirect to home page
-		form.reset();
-		await new Promise((resolve) => setTimeout(resolve, 3000));
 		router.push('/');
+		await new Promise((resolve) => setTimeout(resolve, 3000));
+		form.reset();
+		return data;
 	}
 
 	return (

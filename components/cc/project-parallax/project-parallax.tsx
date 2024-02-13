@@ -15,9 +15,12 @@ export const ProjectParallax = ({
 		thumbnail?: string;
 	}[];
 }) => {
-	const firstRow = products.slice(0, 5);
-	const secondRow = products.slice(5, 10);
-	const thirdRow = products.slice(10, 15);
+	const firstRow = products.slice(0, 3);
+	const secondRow = products.slice(3, 6);
+	const thirdRow = products.slice(6, 9);
+	// const firstRow = products.slice(0, 5);
+	// const secondRow = products.slice(5, 10);
+	// const thirdRow = products.slice(10, 15);
 	const ref = React.useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: ref,
