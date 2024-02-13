@@ -1,3 +1,4 @@
+import Description from '../Description';
 import { TitleSparkles } from '../title-sparkles/title-sparkles';
 import { TitleSpotlight } from '../title-spotlight/title-spotlight';
 
@@ -15,7 +16,7 @@ function HeroBeam() {
 				<div className='mt-[-100svh] h-[500svh] [view-timeline-name:--reveal-wrapper]'>
 					<div className='sticky top-0 flex min-h-screen flex-col items-center justify-center'>
 						<TitleSparkles />
-						<div className='p-10'>
+						<div className='mt-10 hidden lg:block'>
 							<p className='supports-[animation-timeline]:reveal-text text-balance text-xl text-foreground shadow-foreground-400 text-shadow-lg md:text-2xl lg:text-3xl lg:leading-[1]'>
 								Our team of skilled and versatile developers specialize in a
 								wide range of custom web development services. Whether you
@@ -30,6 +31,9 @@ function HeroBeam() {
 								professional website development services is a strategic
 								decision that promotes business growth.
 							</p>
+						</div>
+						<div className='mt-10 lg:hidden'>
+							<Description />
 						</div>
 					</div>
 				</div>

@@ -1,13 +1,12 @@
+import gsap from 'gsap';
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import React from 'react';
 import { useEffect, useRef } from 'react';
-import styles from './style.module.scss';
-import gsap from 'gsap';
 import Magnetic from '../Magnetic';
+import styles from './style.module.scss';
 
 export default function index({
 	children,
@@ -32,10 +31,6 @@ export default function index({
 			);
 	}, []);
 
-	// const manageMouseEnter = () => {
-	// 	if (timeoutId) clearTimeout(timeoutId);
-	// 	timeline.current.tweenFromTo('enter', 'exit');
-	// };
 	const manageMouseEnter = () => {
 		if (timeoutId) {
 			clearTimeout(timeoutId);
