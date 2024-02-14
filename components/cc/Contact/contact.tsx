@@ -37,7 +37,7 @@ const Contact = () => {
 				id='contact'
 			>
 				{/* <section className='mb-[17svh] mt-[50svh]  flex size-full flex-col flex-wrap items-center justify-center gap-4 md:mt-[-35svh] md:pt-[80svh] lg:pt-[50svh]'> */}
-				<div className='animate-slowpan text-wrap  bg-[url("/images/C.WEBP")] bg-clip-text p-5  text-[5rem] text-transparent md:text-8xl lg:text-[12rem] xl:text-[14rem]'>
+				<div className=' text-wrap   p-5  text-[5rem]  md:text-8xl lg:text-[12rem] xl:text-[14rem]'>
 					Let's work together
 				</div>
 				<div className='relative flex h-[30vw] w-full items-center  p-5 md:h-[20vw] 2xl:h-[15vw]'>
@@ -96,7 +96,7 @@ const Contact = () => {
 			id='contact'
 		>
 			{/* <section className='mb-[17svh] mt-[50svh]  flex size-full flex-col flex-wrap items-center justify-center gap-4 md:mt-[-35svh] md:pt-[80svh] lg:pt-[50svh]'> */}
-			<div className='animate-slowpan text-wrap  bg-[url("/images/c.png")] bg-clip-text p-5  text-[5rem] text-transparent md:text-8xl lg:text-[12rem] xl:text-[14rem]'>
+			<div className='animate-slowpan text-wrap  bg-[url("/images/c.jpeg")] bg-clip-text p-5  text-[5rem] text-transparent md:text-8xl lg:text-[12rem] xl:text-[14rem]'>
 				Let's work together
 			</div>
 			<div className='relative flex h-[30vw] w-full items-center  p-5 md:h-[20vw] 2xl:h-[15vw]'>
