@@ -4,9 +4,10 @@
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="1024.000000pt" height="1024.000000pt" viewBox="0 0 1024.000000 1024.000000"
  preserveAspectRatio="xMidYMid meet"
+ fill="#000" stroke="none"
  >
 <g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke='none'>
+fill="#000" stroke='none'>
 <path d="M4910 8540 c-647 -51 -1210 -253 -1755 -628 -437 -300 -826 -731
 -1084 -1201 -235 -425 -372 -869 -422 -1365 -15 -149 -6 -553 15 -722 102
 -804 454 -1508 1042 -2086 244 -239 497 -420 814 -582 554 -283 1090 -408
@@ -25,6 +26,6 @@ fill="#000000" stroke='none'>
 -1147 7 -5 10 -358 10 -1085 l0 -1078 -612 0 -613 0 0 1840 c0 1042 4 1835 9
 1830 4 -6 134 -167 286 -360z"
 
-fill="#ffffff" stroke="none" />
+fill="#000" stroke="none" />
 </g>
 </svg>
