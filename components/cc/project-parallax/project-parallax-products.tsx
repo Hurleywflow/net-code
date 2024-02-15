@@ -10,10 +10,11 @@ export const products = [
 		thumbnail: '/images/projects/hlp1.jpeg',
 	},
 	{
-		title: 'Villa Trung Nghia',
-		link: 'https://www.villadalat.online',
-		thumbnail: '/images/projects/vltn.gif',
+		title: 'NailStudioPro',
+		link: 'https://www.nailstudiopro.com',
+		thumbnail: '/images/projects/nsp.jpeg',
 	},
+
 	{
 		title: 'Hurley Portfolio 2',
 		link: 'https://hurleyportfolio1.vercel.app/',
@@ -25,10 +26,11 @@ export const products = [
 		link: 'https://hurley-bank.vercel.app',
 		thumbnail: '/images/projects/b.gif',
 	},
+
 	{
-		title: 'NailStudioPro',
-		link: 'https://www.nailstudiopro.com',
-		thumbnail: '/images/projects/nsp.jpeg',
+		title: 'Villa Trung Nghia',
+		link: 'https://www.villadalat.online',
+		thumbnail: '/images/projects/vltn.gif',
 	},
 	{
 		title: 'RealEstate',
