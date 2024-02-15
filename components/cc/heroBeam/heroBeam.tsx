@@ -14,7 +14,7 @@ function HeroBeam() {
 					<TitleSpotlight />
 				</div>
 				<div className='mt-[-100vh] h-[200vh] [view-timeline-name:--reveal-wrapper] lg:h-[500vh]'>
-					<div className='sticky top-24 flex min-h-screen flex-col items-center justify-center lg:top-0'>
+					<div className='sticky top-0 flex min-h-screen flex-col items-center justify-center'>
 						<TitleSparkles />
 						<div className='my-10 hidden lg:block'>
 							<p className='supports-[animation-timeline]:reveal-text text-balance text-xl text-foreground shadow-foreground-400 text-shadow-lg md:text-2xl lg:text-3xl lg:leading-[1]'>
