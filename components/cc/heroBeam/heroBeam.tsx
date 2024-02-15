@@ -13,7 +13,7 @@ function HeroBeam() {
 					{/* add a background beams and spotlight */}
 					<TitleSpotlight />
 				</div>
-				<div className='mt-[-100vh] h-[250vh] [view-timeline-name:--reveal-wrapper] lg:h-[500vh]'>
+				<div className='mt-[-100vh] h-[220vh] [view-timeline-name:--reveal-wrapper] lg:h-[500vh]'>
 					<div className='sticky top-0 flex min-h-screen flex-col items-center justify-center'>
 						<TitleSparkles />
 						<div className='my-10 hidden lg:block'>
