@@ -47,14 +47,16 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
 			<Script
 				strategy='afterInteractive'
 				async
-				src='https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX'
+				src='https://www.googletagmanager.com/gtag/js?id=G-9LZ03P2LHT'
+				// src='https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX'
 			/>
 			<Script id='google-analytics' strategy='afterInteractive'>
 				{` window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-XXXXXXXXXX');`}
+          gtag('config', 'G-9LZ03P2LHT');`}
+				{/* gtag('config', 'G-XXXXXXXXXX');`} */}
 			</Script>
 			{/* Google Analytics npm packages*/}
 			{/* <GoogleAnalytics measurementId='G-XXXXXXXXXX' /> */}
