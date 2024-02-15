@@ -23,10 +23,10 @@ export function QuestionAnswers() {
 				</AccordionItem>
 				<AccordionItem value='item-2'>
 					<AccordionTrigger>
-						How to prepare before partnering with a web development company?
+						How to prepare before partnering with a web developer?
 					</AccordionTrigger>
 					<AccordionContent>
-						To partner with a web development company, you need to have a clear
+						To partner with a web developer, you need to have a clear
 						idea of your project, choose the web technologies you want to
 						implement, and consider your budget.
 					</AccordionContent>

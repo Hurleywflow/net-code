@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 	title: 'Web Development - Net Code',
 	description:
 		'Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.',
-	verification: {
-		google: '3008361373778677',
-	},
+	// verification: {
+	// 	google: '3008361373778677',
+	// },
 };
 export const viewport = {
 	width: 'device-width',
