@@ -9,7 +9,7 @@ const SparklesCore = dynamic(getSparkles);
 export function TitleSparkles() {
 	return (
 		<div
-			className=' flex h-[20rem] w-screen  max-w-screen-2xl flex-col items-center justify-center overflow-hidden rounded-md bg-foreground lg:w-full'
+			className='mt-28 flex h-[20rem] w-screen max-w-screen-2xl  flex-col items-center justify-center overflow-hidden rounded-md bg-foreground lg:mt-10 lg:w-full'
 			id='intro'
 		>
 			<h1 className='relative text-wrap bg-gradient-to-b from-neutral-500  to-neutral-950 bg-clip-text p-5 text-center text-7xl text-transparent md:text-8xl  lg:text-[9rem] xl:text-[10rem] 2xl:text-[11rem]'>
