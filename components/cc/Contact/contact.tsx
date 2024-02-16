@@ -59,8 +59,8 @@ const Contact = () => {
 									We are always happy to stay connected with you.
 								</DialogDescription>
 							</DialogHeader>
-							{/* form booking data */}
-							<ProfileForm className='px-2' />
+							{/* form booking data, h-50 is adjusting height of the dialog */}
+							<ProfileForm className='h-50 px-2' />
 						</DialogContent>
 					</Dialog>
 				</div>
@@ -128,7 +128,8 @@ const Contact = () => {
 							</Button>
 						</div>
 					</DrawerTrigger>
-					<DrawerContent>
+					{/* h-[70svh] is adjusting height of the drawer */}
+					<DrawerContent className='h-[70svh]'>
 						{/* <div
 							className={cn('', {
 								'overflow-y-auto': snap === 1,
