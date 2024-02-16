@@ -10,8 +10,9 @@ import React, { useEffect, useRef } from 'react';
 export default function index({ children }) {
 	const magnetic = useRef(null);
 
-	useEffect(() => {
-		console.log(children);
+	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+useEffect(() => {
+
 		const xTo = gsap.quickTo(magnetic.current, 'x', {
 			duration: 1,
 			ease: 'elastic.out(1, 0.3)',

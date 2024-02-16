@@ -14,24 +14,24 @@ export function TitleSpotlight() {
 				/>
 				<div className=' mx-auto flex   max-w-7xl flex-col gap-5 p-4'>
 					{/* <!-- Element 1 --> */}
-					<div className='animate-slidein opacity-0 [--slidein-delay:500ms]'>
+					<div className='animate-slidein opacity-0 [--slidein-delay:100ms]'>
 						<h3 className='relative  bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center font-sans text-2xl  font-bold italic text-transparent md:text-4xl lg:text-5xl'>
 							It's time to establish a connection.
 						</h3>
 					</div>
 					{/* <!-- Element 2 --> */}
-					<h1 className='relative  animate-slidein bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text  text-center font-sans text-5xl font-bold text-transparent  opacity-0 [--slidein-delay:700ms] md:text-7xl lg:text-8xl'>
+					<h1 className='relative  animate-slidein bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text  text-center font-sans text-5xl font-bold text-transparent  opacity-0 [--slidein-delay:300ms] md:text-7xl lg:text-8xl'>
 						Boost your business with superior web development that drives leads
 						and revenue.
 					</h1>
 					{/* <!-- Element 3 --> */}
-					<p className='relative  mx-auto my-2 max-w-xl animate-slidein text-center text-medium font-normal text-neutral-200 opacity-0 [--slidein-delay:900ms] lg:text-xl'>
+					<p className='relative  mx-auto my-2 max-w-xl animate-slidein text-center text-medium font-normal text-neutral-200 opacity-0 [--slidein-delay:500ms] lg:text-xl'>
 						NetCode provides tailored web development solutions at an affordable
 						rate. Our experienced developers set industry standards at an
 						affordable price.
 					</p>
 					{/* <!-- Element 4 --> */}
-					<div className='relative  mx-auto my-2 max-w-lg animate-slidein text-center text-medium text-neutral-500 opacity-0 [--slidein-delay:1.1s]'>
+					<div className='relative  mx-auto my-2 max-w-lg animate-slidein text-center text-medium text-neutral-500 opacity-0 [--slidein-delay:700ms]'>
 						<Link href='#faqs'>
 							<Magnetic>
 								<Button
