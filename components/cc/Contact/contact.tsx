@@ -128,8 +128,8 @@ const Contact = () => {
 							</Button>
 						</div>
 					</DrawerTrigger>
-					{/* h-[70svh] is adjusting height of the drawer */}
-					<DrawerContent className='h-[70svh]'>
+					{/* h-[80svh] is adjusting height of the drawer */}
+					<DrawerContent className='h-[80svh]'>
 						{/* <div
 							className={cn('', {
 								'overflow-y-auto': snap === 1,

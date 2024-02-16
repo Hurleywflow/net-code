@@ -201,8 +201,8 @@ export default function NavBar() {
 									We are always happy to stay connected with you.
 								</DialogDescription>
 							</DialogHeader>
-							{/* form booking data */}
-							<ProfileForm className='px-2' />
+							{/* form booking data, h-50 is adjusting height of the dialog */}
+							<ProfileForm className='h-50 px-2' />
 						</DialogContent>
 					</Dialog>
 				) : (
@@ -223,7 +223,7 @@ export default function NavBar() {
 								</Magnetic>
 							</NavbarItem>
 						</DrawerTrigger>
-						<DrawerContent>
+						<DrawerContent className='h-[80svh]'>
 							{/* <div
 							className={cn('', {
 								'overflow-y-auto': snap === 1,
