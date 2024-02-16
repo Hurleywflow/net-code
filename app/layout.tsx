@@ -13,6 +13,15 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://netcodedev.com'),
+	alternates: {
+		canonical: '/',
+		languages: {
+			'en-US': '/en-US',
+		},
+	},
+	openGraph: {
+		images: '/opengraph-image.png',
+	},
 	title: 'Web Development - Net Code',
 	description:
 		'Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.',
