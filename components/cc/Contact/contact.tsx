@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/no-contradicting-classname */
 'use client';
 
 import Magnetic from '@/components/cc/common/Magnetic';
@@ -33,7 +34,7 @@ const Contact = () => {
 	if (isDesktop) {
 		return (
 			<section
-				className='mb-5 mt-28 flex h-[100svh] w-full flex-col flex-wrap items-center justify-center gap-4'
+				className=' mb-5 mt-28 flex h-[100svh] w-full flex-col flex-wrap items-center justify-center gap-4'
 				id='contact'
 			>
 				{/* <section className='mb-[17svh] mt-[50svh]  flex size-full flex-col flex-wrap items-center justify-center gap-4 md:mt-[-35svh] md:pt-[80svh] lg:pt-[50svh]'> */}
@@ -92,7 +93,7 @@ const Contact = () => {
 	}
 	return (
 		<section
-			className='mb-5 mt-28 flex h-[100svh] w-full flex-col flex-wrap items-center justify-center gap-4'
+			className=' mb-5 mt-28 flex h-[100svh] w-full flex-col flex-wrap items-center justify-center gap-4'
 			id='contact'
 		>
 			{/* <section className='mb-[17svh] mt-[50svh]  flex size-full flex-col flex-wrap items-center justify-center gap-4 md:mt-[-35svh] md:pt-[80svh] lg:pt-[50svh]'> */}
@@ -111,7 +112,7 @@ const Contact = () => {
 					// setActiveSnapPoint={setSnap}
 				>
 					<DrawerTrigger asChild>
-						<div>
+						<div className=''>
 							<Button
 								className='absolute inset-y-0 right-0 mr-10 hidden size-[30vw] justify-center overflow-hidden text-wrap rounded-full p-1 text-lg font-semibold md:size-[20vw] md:text-2xl md:font-bold lg:block lg:text-3xl 2xl:size-[15vw]'
 								size='lg'
