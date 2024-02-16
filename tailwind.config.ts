@@ -23,6 +23,7 @@ const config = {
 		'./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
 	],
 	prefix: '',
+	safelist: ['animate-ripple'],
 	theme: {
 		screens: {
 			xs: '380px',
@@ -137,6 +138,11 @@ const config = {
 					'0%': { transform: 'rotate(0deg)' },
 					'100%': { transform: 'rotate(360deg)' },
 				},
+				ripple: {
+					'50%': {
+						transform: 'scale(var(--scale, 1.25))',
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -150,6 +156,9 @@ const config = {
 				//meteor effect hero section
 				'meteor-effect': 'meteor 5s linear infinite',
 				spin: '1s linear infinite',
+				// contact section
+				ripple:
+					'ripple var(--duration, 1.5s) ease calc(var(--i, 0) * 0.1s) infinite',
 			},
 		},
 	},
@@ -171,6 +180,21 @@ const config = {
 				},
 				{ values: theme('textShadow') },
 			);
+		}),
+		// contact section ripple effect
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+		plugin(({ addComponents, theme }: { addComponents: any; theme: any }) => {
+			addComponents({
+				'.ripple': {
+					'--size':
+						'calc(var(--baseSize, 80px) + var(--sizeStep, 64px) * var(--i, 0))',
+					width: 'var(--size)',
+					height: 'var(--size)',
+					opacity:
+						'calc(var(--baseOpacity, 0.25) - var(--opacityStep, 0.05) * var(--i, 0))',
+					animation: theme('animation.ripple'),
+				},
+			});
 		}),
 	],
 } satisfies Config;

@@ -10,15 +10,14 @@ export const products = [
 		thumbnail: '/images/projects/hlp1.jpeg',
 	},
 	{
-		title: 'NailStudioPro',
-		link: 'https://www.nailstudiopro.com',
-		thumbnail: '/images/projects/nsp.jpeg',
-	},
-
-	{
 		title: 'Hurley Portfolio 2',
 		link: 'https://hurleyportfolio1.vercel.app/',
 		thumbnail: '/images/projects/hlp2.gif',
+	},
+	{
+		title: 'NailStudioPro',
+		link: 'https://www.nailstudiopro.com',
+		thumbnail: '/images/projects/nsp.jpeg',
 	},
 
 	{
