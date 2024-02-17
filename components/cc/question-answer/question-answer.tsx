@@ -26,9 +26,9 @@ export function QuestionAnswers() {
 						How to prepare before partnering with a web developer?
 					</AccordionTrigger>
 					<AccordionContent>
-						To partner with a web developer, you need to have a clear
-						idea of your project, choose the web technologies you want to
-						implement, and consider your budget.
+						To partner with a web developer, you need to have a clear idea of
+						your project, choose the web technologies you want to implement, and
+						consider your budget.
 					</AccordionContent>
 				</AccordionItem>
 				<AccordionItem value='item-3'>

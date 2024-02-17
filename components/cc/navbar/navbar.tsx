@@ -116,7 +116,7 @@ export default function NavBar() {
 			isBordered={false}
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
-			className='mx-auto box-border mix-blend-difference  backdrop-blur-sm'
+			className='mx-auto box-border  mix-blend-difference backdrop-blur-sm'
 		>
 			{/* toggle button */}
 			<NavbarContent className='sm:hidden' justify='start'>
@@ -128,27 +128,39 @@ export default function NavBar() {
 			<NavbarContent className='pr-3 sm:hidden' justify='center'>
 				<NavbarBrand>
 					{/* adding logo */}
-					<Link href='/'>
-						<AcmeLogo />
-					</Link>
-					<Link href='/'>
-						<Magnetic>
-							<p className='font-bold text-inherit'>NetCode</p>
-						</Magnetic>
-					</Link>
+					<ul className='flex flex-row items-center justify-center gap-1'>
+						<li>
+							<Link href='/'>
+								<AcmeLogo />
+							</Link>
+						</li>
+						<li>
+							<Link href='/'>
+								<Magnetic>
+									<p className='font-bold text-inherit'>NetCode</p>
+								</Magnetic>
+							</Link>
+						</li>
+					</ul>
 				</NavbarBrand>
 			</NavbarContent>
 
 			<NavbarContent className='hidden gap-4 sm:flex' justify='center'>
 				<NavbarBrand>
-					<Link href='/'>
-						<AcmeLogo />
-					</Link>
-					<Link href='/'>
-						<Magnetic>
-							<p className='font-bold text-inherit'>NetCode</p>
-						</Magnetic>
-					</Link>
+					<ul className='flex flex-row items-center justify-center gap-1'>
+						<li>
+							<Link href='/'>
+								<AcmeLogo />
+							</Link>
+						</li>
+						<li>
+							<Link href='/'>
+								<Magnetic>
+									<p className='font-bold text-inherit'>NetCode</p>
+								</Magnetic>
+							</Link>
+						</li>
+					</ul>
 				</NavbarBrand>
 				{/* <NavbarItem>
 					<Link color='foreground' href='/'>
@@ -177,9 +189,7 @@ export default function NavBar() {
 				</NavbarItem> */}
 
 				{/* adding tabs component to make this navbar items at center */}
-				<NavbarItem>
-					<Tabs tabs={tabs} />
-				</NavbarItem>
+				<Tabs tabs={tabs} />
 			</NavbarContent>
 			{/* end of the navbar items */}
 			<NavbarContent justify='end'>
@@ -188,7 +198,7 @@ export default function NavBar() {
 						<DialogTrigger asChild>
 							<NavbarItem>
 								<Magnetic>
-									<Button variant='default' className='rounded-full'>
+									<Button variant='default' className='rounded-full '>
 										Keep in touch
 									</Button>
 								</Magnetic>
@@ -217,7 +227,7 @@ export default function NavBar() {
 						<DrawerTrigger asChild>
 							<NavbarItem>
 								<Magnetic>
-									<Button variant='default' className='rounded-full'>
+									<Button variant='default' className='rounded-full '>
 										Keep in touch
 									</Button>
 								</Magnetic>

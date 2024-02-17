@@ -6,10 +6,7 @@ import { QuestionAnswers } from '../question-answer/question-answer';
 
 export function LampDemo() {
 	return (
-		<section
-			id='faqs'
-			className='m-0 flex items-center justify-center  p-0'
-		>
+		<section id='faqs' className='m-0 flex items-center justify-center  p-0'>
 			<LampContainer>
 				<MotionDiv
 					initial={{ opacity: 0.5, y: 100 }}
@@ -21,10 +18,10 @@ export function LampDemo() {
 					}}
 					className='mt-64 flex w-screen flex-col items-center justify-center'
 				>
-					<h1 className='mt-8 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text py-4 text-center text-5xl font-bold text-transparent md:text-6xl lg:text-7xl '>
+					<h2 className='mt-8 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text py-4 text-center text-5xl font-bold text-transparent md:text-6xl lg:text-7xl '>
 						{' '}
 						Frequently Asked Questions <br /> (FAQs)
-					</h1>
+					</h2>
 					<QuestionAnswers />
 				</MotionDiv>
 			</LampContainer>
