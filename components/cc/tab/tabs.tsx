@@ -5,7 +5,7 @@
 
 import { MotionDiv } from '@/lib/framer';
 import { cn } from '@/lib/utils';
-import { AnimatePresence, motion } from 'framer-motion';
+import { NavbarItem } from '@nextui-org/react';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -111,22 +111,23 @@ export const FadeInDiv = ({
 	return (
 		<div className='relative size-full'>
 			{tabs.map((tab, idx) => (
-				<MotionDiv
-					key={tab.value}
-					layoutId={tab.value}
-					style={{
-						scale: 1 - idx * 0.1,
-						top: hovering ? idx * -50 : 0,
-						zIndex: -idx,
-						opacity: idx < 3 ? 1 - idx * 0.1 : 0,
-					}}
-					animate={{
-						y: isActive(tab) ? [0, 40, 0] : 0,
-					}}
-					className={cn('w-full h-full absolute top-0 left-0', className)}
-				>
-					{/* {tab.content} */}
-				</MotionDiv>
+				<NavbarItem key={tab.value}>
+					<MotionDiv
+						layoutId={tab.value}
+						style={{
+							scale: 1 - idx * 0.1,
+							top: hovering ? idx * -50 : 0,
+							zIndex: -idx,
+							opacity: idx < 3 ? 1 - idx * 0.1 : 0,
+						}}
+						animate={{
+							y: isActive(tab) ? [0, 40, 0] : 0,
+						}}
+						className={cn('w-full h-full absolute top-0 left-0', className)}
+					>
+						{/* {tab.content} */}
+					</MotionDiv>
+				</NavbarItem>
 			))}
 		</div>
 	);

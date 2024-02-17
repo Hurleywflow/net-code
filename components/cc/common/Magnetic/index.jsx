@@ -11,8 +11,7 @@ export default function index({ children }) {
 	const magnetic = useRef(null);
 
 	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-useEffect(() => {
-
+	useEffect(() => {
 		const xTo = gsap.quickTo(magnetic.current, 'x', {
 			duration: 1,
 			ease: 'elastic.out(1, 0.3)',

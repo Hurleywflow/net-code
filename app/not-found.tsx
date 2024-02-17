@@ -6,7 +6,7 @@ export default function NotFound() {
 	return (
 		<div className='mx-auto flex h-screen max-w-screen-xl items-center justify-start px-4 md:px-8'>
 			<div className='mx-auto max-w-lg space-y-3 text-center'>
-				<h3 className='font-semibold text-indigo-600'>404 Error</h3>
+				<h2 className='font-semibold text-indigo-600'>404 Error</h2>
 				<p className='text-4xl font-semibold text-gray-800 sm:text-5xl'>
 					Page not found
 				</p>

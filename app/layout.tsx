@@ -1,11 +1,10 @@
 import Navbar from '@/components/cc/navbar/navbar';
-import { TailwindIndicator } from '@/components/cc/tailwind-indicator/tailwind-indicator';
+import { Toaster } from '@/components/ui/toaster';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
+import { Toaster as Toast } from 'react-hot-toast';
 import './globals.css';
-import { Toaster } from '@/components/ui/toaster';
-import toast, { Toaster as Toast } from 'react-hot-toast';
 
 // import GoogleAnalytics from '@bradgarropy/next-google-analytics';
 
@@ -22,9 +21,9 @@ export const metadata: Metadata = {
 	openGraph: {
 		images: '/opengraph-image.png',
 	},
-	title: 'Web Development - Net Code',
+	title: 'Website Development | Web Developers Growing Business - NetCode',
 	description:
-		'Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.',
+		'Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs. A leading website development company in Australia. We help businesses of all sizes create stunning websites.',
 	// verification: {
 	// 	google: '3008361373778677',
 	// },
@@ -32,8 +31,8 @@ export const metadata: Metadata = {
 export const viewport = {
 	width: 'device-width',
 	initialScale: 1,
-	maximumScale: 1,
-	userScalable: "no",
+	// maximumScale: 1,
+	// userScalable: 'no',
 	// Also supported by less commonly used
 	// interactiveWidget: 'resizes-visual',
 };
@@ -48,7 +47,6 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
 				<Toast />
 				<Navbar />
 				{children}
-				<TailwindIndicator />
 				<Toaster />
 			</body>
 			{/* Google Analytics */}
@@ -56,10 +54,11 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
 			<Script
 				strategy='afterInteractive'
 				async
+				defer
 				src='https://www.googletagmanager.com/gtag/js?id=G-9LZ03P2LHT'
 				// src='https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX'
 			/>
-			<Script id='google-analytics' strategy='afterInteractive'>
+			<Script id='google-analytics' strategy='afterInteractive' defer>
 				{` window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());

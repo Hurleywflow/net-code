@@ -15,9 +15,9 @@ export function TitleSpotlight() {
 				<div className=' mx-auto flex   max-w-7xl flex-col gap-5 p-4'>
 					{/* <!-- Element 1 --> */}
 					<div className='animate-slidein opacity-0 [--slidein-delay:100ms]'>
-						<h3 className='relative  bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center font-sans text-2xl  font-bold italic text-transparent md:text-4xl lg:text-5xl'>
+						<h2 className='relative  bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center font-sans text-2xl  font-bold italic text-transparent md:text-4xl lg:text-5xl'>
 							It's time to establish a connection.
-						</h3>
+						</h2>
 					</div>
 					{/* <!-- Element 2 --> */}
 					<h1 className='relative  animate-slidein bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text  text-center font-sans text-5xl font-bold text-transparent  opacity-0 [--slidein-delay:300ms] md:text-7xl lg:text-8xl'>

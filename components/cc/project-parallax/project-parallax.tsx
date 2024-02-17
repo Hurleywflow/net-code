@@ -104,9 +104,9 @@ export const ProjectParallax = ({
 export const Header = () => {
 	return (
 		<div className='relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40'>
-			<h1 className='mt-8 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text py-4 text-5xl font-bold text-transparent md:text-6xl lg:text-7xl '>
+			<h2 className='mt-8 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text py-4 text-5xl font-bold text-transparent md:text-6xl lg:text-7xl '>
 				The Ultimate <br /> Development Clients Project.
-			</h1>
+			</h2>
 			<p className='mt-8 max-w-2xl text-lg font-normal text-neutral-100'>
 				We are a team of passionate developers and designers who create stunning
 				products using the latest technologies and frameworks.

@@ -78,7 +78,7 @@
   box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
 }
 body {
   overscroll-behavior: none;

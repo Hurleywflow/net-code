@@ -1,4 +1,3 @@
-
 import gsap from 'gsap';
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
@@ -11,7 +10,7 @@ import styles from './style.module.scss';
 
 export default function index({
 	children,
-	backgroundColor = '#455CE9',
+	backgroundColor = '#EF4345',
 	...attributes
 }) {
 	const circle = useRef(null);
