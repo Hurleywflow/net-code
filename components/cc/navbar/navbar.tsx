@@ -262,7 +262,6 @@ export default function NavBar() {
 				{menuItems.map((item, index) => (
 					<NavbarMenuItem
 						key={`${item.title}-${
-							// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 							index
 						}`}
 					>

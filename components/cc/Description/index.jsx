@@ -41,7 +41,6 @@ function Description() {
 			<div className={styles.body}>
 				<p>
 					{phrase.split(' ').map((word, index) => {
-						// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 						return (
 							<span
 								// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
