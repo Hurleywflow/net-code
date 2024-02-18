@@ -12,7 +12,7 @@ export const products = [
 	{
 		title: 'Hurley Portfolio 2',
 		link: 'https://hurleyportfolio1.vercel.app/',
-		thumbnail: '/images/projects/hlp2.gif',
+		thumbnail: '/images/projects/hlp2.jpeg',
 	},
 	{
 		title: 'NailStudioPro',
@@ -23,13 +23,13 @@ export const products = [
 	{
 		title: 'Bank Design',
 		link: 'https://hurley-bank.vercel.app',
-		thumbnail: '/images/projects/b.gif',
+		thumbnail: '/images/projects/b.jpeg',
 	},
 
 	{
 		title: 'Villa Trung Nghia',
 		link: 'https://www.villadalat.online',
-		thumbnail: '/images/projects/vltn.gif',
+		thumbnail: '/images/projects/vltn.jpeg',
 	},
 	{
 		title: 'RealEstate',
