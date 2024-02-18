@@ -128,7 +128,7 @@ export default function NavBar() {
 			<NavbarContent className='pr-3 sm:hidden' justify='center'>
 				<NavbarBrand>
 					{/* adding logo */}
-					<ul className='flex flex-row items-center justify-center gap-1'>
+					<ul className='flex flex-row items-center justify-center gap-1 divide-x divide-none'>
 						<li>
 							<Link href='/'>
 								<AcmeLogo />
@@ -147,7 +147,7 @@ export default function NavBar() {
 
 			<NavbarContent className='hidden gap-4 sm:flex' justify='center'>
 				<NavbarBrand>
-					<ul className='flex flex-row items-center justify-center gap-1'>
+					<ul className='flex flex-row items-center justify-center gap-1 divide-x divide-none'>
 						<li>
 							<Link href='/'>
 								<AcmeLogo />
