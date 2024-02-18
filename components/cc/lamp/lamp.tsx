@@ -29,7 +29,7 @@ export function LampDemo() {
 	);
 }
 
-export const LampContainer = ({
+const LampContainer = ({
 	children,
 	className,
 }: {

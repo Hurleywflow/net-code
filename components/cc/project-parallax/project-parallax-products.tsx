@@ -3,7 +3,7 @@ import { ProjectParallax } from './project-parallax';
 export function ProjectParallaxProducts() {
 	return <ProjectParallax products={products} />;
 }
-export const products = [
+const products = [
 	{
 		title: ' Hurley Portfolio 1',
 		link: 'https://portfoliohurley.vercel.app/',
