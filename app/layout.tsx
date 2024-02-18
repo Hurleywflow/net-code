@@ -24,9 +24,6 @@ export const metadata: Metadata = {
 	title: 'Website Development | Web Developers Growing Business - NetCode',
 	description:
 		'Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.',
-	// verification: {
-	// 	google: '3008361373778677',
-	// },
 };
 export const viewport = {
 	width: 'device-width',
@@ -53,12 +50,11 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
 			{/* <!-- Google tag (gtag.js) --> */}
 			<Script
 				strategy='afterInteractive'
-				async
 				defer
 				src='https://www.googletagmanager.com/gtag/js?id=G-9LZ03P2LHT'
 				// src='https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX'
 			/>
-			<Script id='google-analytics' strategy='afterInteractive' defer>
+			<Script id='google-analytics' strategy='afterInteractive'>
 				{` window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
