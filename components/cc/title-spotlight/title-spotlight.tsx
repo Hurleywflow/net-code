@@ -15,7 +15,7 @@ export function TitleSpotlight() {
 				<div className=' mx-auto flex   max-w-7xl flex-col gap-5 p-4'>
 					{/* <!-- Element 1 --> */}
 					<div className=''>
-						<h2 className='relative  bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center font-sans text-2xl  font-semibold italic text-transparent md:text-4xl lg:text-5xl'>
+						<h2 className='relative  bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center  text-2xl  font-semibold italic text-transparent md:text-4xl lg:text-5xl'>
 							It's time to establish a connection.
 						</h2>
 					</div>
@@ -37,7 +37,7 @@ export function TitleSpotlight() {
 								<Button
 									className='rounded-full bg-secondary text-medium font-semibold'
 									size={'lg'}
-									variant={'gooeyLeft'}
+									variant={'secondary'}
 								>
 									FAQs
 								</Button>
