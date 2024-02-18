@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 	},
 	title: 'Website Development | Web Developers Growing Business - NetCode',
 	description:
-		'Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs. A leading website development company in Australia. We help businesses of all sizes create stunning websites.',
+		'Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.',
 	// verification: {
 	// 	google: '3008361373778677',
 	// },
