@@ -101,7 +101,7 @@ export const ProjectParallax = ({
 	);
 };
 
-export const Header = () => {
+const Header = () => {
 	return (
 		<div className='relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40'>
 			<h2 className='mt-8 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text py-4 text-5xl font-bold text-transparent md:text-6xl lg:text-7xl '>
@@ -115,7 +115,7 @@ export const Header = () => {
 	);
 };
 
-export const ProductCard = ({
+const ProductCard = ({
 	product,
 	translate,
 }: {
@@ -140,11 +140,12 @@ export const ProductCard = ({
 			<Link
 				href={product.link ?? ''}
 				className='block group-hover/product:shadow-2xl '
+				target='_blank'
 			>
 				<Image
 					src={product.thumbnail ?? ''}
-					height='600'
-					width='600'
+					height='400'
+					width='400'
 					className='absolute inset-0 size-full object-cover object-left-top'
 					alt={product.title ?? ''}
 				/>
