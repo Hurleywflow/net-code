@@ -27,7 +27,7 @@ function HeroBeam() {
 								scalable websites from scratch that seamlessly integrate with
 								design. A professionally designed website is a powerful
 								marketing tool that establishes credibility and confidence,
-								attracting and engaging potential customers. Choosing
+								attracting and engaging potential clients. Choosing
 								professional website development services is a strategic
 								decision that promotes business growth.
 							</p>

@@ -212,7 +212,8 @@ export default function NavBar() {
 								</DialogDescription>
 							</DialogHeader>
 							{/* form booking data, h-50 is adjusting height of the dialog */}
-							<ProfileForm className='h-50 px-2' />
+							<ProfileForm className='h-70 px-2' />
+							{/* <ProfileForm className='h-50 px-2' /> */}
 						</DialogContent>
 					</Dialog>
 				) : (
@@ -233,7 +234,8 @@ export default function NavBar() {
 								</Magnetic>
 							</NavbarItem>
 						</DrawerTrigger>
-						<DrawerContent className='h-[80svh]'>
+						<DrawerContent>
+							{/* <DrawerContent className='h-[80svh]'> */}
 							{/* <div
 							className={cn('', {
 								'overflow-y-auto': snap === 1,
@@ -260,11 +262,7 @@ export default function NavBar() {
 
 			<NavbarMenu>
 				{menuItems.map((item, index) => (
-					<NavbarMenuItem
-						key={`${item.title}-${
-							index
-						}`}
-					>
+					<NavbarMenuItem key={`${item.title}-${index}`}>
 						<Link
 							className='w-full'
 							color={

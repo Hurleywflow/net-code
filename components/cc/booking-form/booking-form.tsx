@@ -22,6 +22,13 @@ import {
 	FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import {
+	Select,
+	SelectContent,
+	SelectItem,
+	SelectTrigger,
+	SelectValue,
+} from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
 
@@ -41,6 +48,9 @@ const FormSchema = z.object({
 	phone: z.string().refine((value) => phoneRegex.test(value), {
 		message: 'Phone number is not valid.',
 	}),
+	services: z.string({
+		required_error: 'Please select an services you are looking for!',
+	}),
 	// date: z.date({
 	//   required_error: 'A date of your refer.',
 	// }),
@@ -59,6 +69,7 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 			username: '',
 			email: '',
 			phone: '',
+			services: '',
 			note: '',
 		},
 	});
@@ -110,7 +121,7 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 		toast({
 			title: 'You submitted the following values:',
 			description: (
-				<pre className='mt-2 flex w-[340px] items-center justify-center rounded-md bg-slate-700 p-4'>
+				<pre className='mt-2 flex w-full items-center justify-center rounded-md bg-slate-700 p-4 md:w-[340px]'>
 					<span className='mx-auto text-center'>{data && <Confetti />}</span>
 					<code className='text-white'>{JSON.stringify(data, null, 2)}</code>
 				</pre>
@@ -173,8 +184,33 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 						<FormItem>
 							<FormLabel>Phone Number</FormLabel>
 							<FormControl>
-								<Input placeholder='1234567890' {...field} />
+								<Input placeholder='0423099677' {...field} />
 							</FormControl>
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
+				<FormField
+					control={form.control}
+					name='services'
+					render={({ field }) => (
+						<FormItem>
+							<FormLabel>Services</FormLabel>
+							<Select onValueChange={field.onChange} defaultValue={field.value}>
+								<FormControl>
+									<SelectTrigger>
+										<SelectValue placeholder='Select a service you are looking for.' />
+									</SelectTrigger>
+								</FormControl>
+								<SelectContent>
+									<SelectItem value='Building A New Website'>
+										Building A New Website
+									</SelectItem>
+									<SelectItem value='Maintain Existing Website'>
+										Maintain Existing Website
+									</SelectItem>
+								</SelectContent>
+							</Select>
 							<FormMessage />
 						</FormItem>
 					)}
