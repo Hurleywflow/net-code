@@ -34,11 +34,13 @@ import { useState } from 'react';
 import ProfileForm from '../booking-form/booking-form';
 import { Tabs } from '../tab/tabs';
 import { AcmeLogo } from './Logo.jsx';
+import { usePathname } from 'next/navigation';
 
 export default function NavBar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	// const [snap, setSnap] = useState<number | string | null>(0.7);
 	const [open, setOpen] = useState(false);
+	const pathname = usePathname();
 	const isDesktop = useMediaQuery('(min-width: 768px)');
 
 	const menuItems = [
@@ -60,6 +62,28 @@ export default function NavBar() {
 		},
 		{
 			title: 'Contact',
+			content: '#contact',
+		},
+	];
+	const menuItemsVn = [
+		{
+			title: 'Trang chủ',
+			content: '/',
+		},
+		{
+			title: 'Giới thiệu',
+			content: '#intro',
+		},
+		{
+			title: 'Dự án',
+			content: '#projects',
+		},
+		{
+			title: 'Câu hỏi',
+			content: '#faqs',
+		},
+		{
+			title: 'Liên hệ',
 			content: '#contact',
 		},
 	];
@@ -110,13 +134,60 @@ export default function NavBar() {
 			content: '#contact',
 		},
 	];
+	const tabsVn = [
+		{
+			title: 'Trang chủ',
+			value: 'home',
+			content: '/',
+		},
+		{
+			title: 'Giới thiệu',
+			value: 'intro',
+			// content: (
+			// 	<div className='relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold text-white md:text-4xl'>
+			// 		<p>Services tab</p>
+			// 	</div>
+			// ),
+			content: '#intro',
+		},
+		{
+			title: 'Dự án',
+			value: 'projects',
+			// content: (
+			// 	<div className='relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold text-white md:text-4xl'>
+			// 		<p>Playground tab</p>
+			// 	</div>
+			// ),
+			content: '#projects',
+		},
+		{
+			title: 'Câu hỏi',
+			value: 'faqs',
+			// content: (
+			// 	<div className='relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold text-white md:text-4xl'>
+			// 		<p>Content tab</p>
+			// 	</div>
+			// ),
+			content: '#faqs',
+		},
+		{
+			title: 'Liên hệ',
+			value: 'contact',
+			// content: (
+			// 	<div className='relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold text-white md:text-4xl'>
+			// 		<p>Random tab</p>
+			// 	</div>
+			// ),
+			content: '#contact',
+		},
+	];
 
 	return (
 		<Navbar
 			isBordered={false}
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
-			className='mx-auto box-border  mix-blend-difference backdrop-blur-sm'
+			className='mx-auto box-border'
 		>
 			{/* toggle button */}
 			<NavbarContent className='sm:hidden' justify='start'>
@@ -145,7 +216,7 @@ export default function NavBar() {
 				</NavbarBrand>
 			</NavbarContent>
 
-			<NavbarContent className='hidden gap-4 sm:flex' justify='center'>
+			<NavbarContent className='hidden gap-6 sm:flex' justify='center'>
 				<NavbarBrand>
 					<ul className='flex flex-row items-center justify-center gap-1 divide-x divide-none'>
 						<li>
@@ -189,7 +260,11 @@ export default function NavBar() {
 				</NavbarItem> */}
 
 				{/* adding tabs component to make this navbar items at center */}
-				<Tabs tabs={tabs} />
+				{pathname.includes('/vn') ? (
+					<Tabs tabs={tabsVn} />
+				) : (
+					<Tabs tabs={tabs} />
+				)}
 			</NavbarContent>
 			{/* end of the navbar items */}
 			<NavbarContent justify='end'>
@@ -199,16 +274,20 @@ export default function NavBar() {
 							<NavbarItem>
 								<Magnetic>
 									<Button variant='default' className='rounded-full '>
-										Keep in touch
+										{pathname.includes('/vn') ? 'Đặt Hẹn' : 'Get in touch'}
 									</Button>
 								</Magnetic>
 							</NavbarItem>
 						</DialogTrigger>
 						<DialogContent className=' sm:max-w-[425px]'>
 							<DialogHeader className='px-2'>
-								<DialogTitle>Get in touch</DialogTitle>
+								<DialogTitle>
+									{pathname.includes('/vn') ? 'Đặt Hẹn' : 'Get in touch'}
+								</DialogTitle>
 								<DialogDescription>
-									We are always happy to stay connected with you.
+									{pathname.includes('/vn')
+										? 'Chúng tôi luôn sẵn lòng kết nối với bạn.'
+										: 'We are always happy to stay connected with you.'}
 								</DialogDescription>
 							</DialogHeader>
 							{/* form booking data, h-50 is adjusting height of the dialog */}
@@ -229,7 +308,7 @@ export default function NavBar() {
 							<NavbarItem>
 								<Magnetic>
 									<Button variant='default' className='rounded-full '>
-										Keep in touch
+										{pathname.includes('/vn') ? 'Đặt Hẹn' : 'Get in touch'}
 									</Button>
 								</Magnetic>
 							</NavbarItem>
@@ -243,9 +322,13 @@ export default function NavBar() {
 							})}
 						> */}
 							<DrawerHeader className='px-5 text-left'>
-								<DrawerTitle>Get in touch</DrawerTitle>
+								<DrawerTitle>
+									{pathname.includes('/vn') ? 'Đặt Hẹn' : 'Get in touch'}
+								</DrawerTitle>
 								<DrawerDescription>
-									We are always happy to stay connected with you.
+									{pathname.includes('/vn')
+										? 'Chúng tôi luôn sẵn lòng kết nối với bạn.'
+										: 'We are always happy to stay connected with you.'}
 								</DrawerDescription>
 							</DrawerHeader>
 							<ProfileForm className='px-5' />
@@ -260,7 +343,50 @@ export default function NavBar() {
 				)}
 			</NavbarContent>
 
-			<NavbarMenu>
+			{pathname.includes('/vn') ? (
+				<NavbarMenu className=''>
+					{menuItemsVn.map((item, index) => (
+						<NavbarMenuItem key={`${item.title}-${index}`} className=''>
+							<Link
+								className='w-full'
+								color={
+									index === 2
+										? 'warning'
+										: index === menuItems.length - 1
+										  ? 'danger'
+										  : 'foreground'
+								}
+								href={item.content}
+								// size='lg'
+							>
+								{item.title}
+							</Link>
+						</NavbarMenuItem>
+					))}
+				</NavbarMenu>
+			) : (
+				<NavbarMenu>
+					{menuItems.map((item, index) => (
+						<NavbarMenuItem key={`${item.title}-${index}`}>
+							<Link
+								className='w-full'
+								color={
+									index === 2
+										? 'warning'
+										: index === menuItems.length - 1
+										  ? 'danger'
+										  : 'foreground'
+								}
+								href={item.content}
+								// size='lg'
+							>
+								{item.title}
+							</Link>
+						</NavbarMenuItem>
+					))}
+				</NavbarMenu>
+			)}
+			{/* <NavbarMenu>
 				{menuItems.map((item, index) => (
 					<NavbarMenuItem key={`${item.title}-${index}`}>
 						<Link
@@ -279,7 +405,7 @@ export default function NavBar() {
 						</Link>
 					</NavbarMenuItem>
 				))}
-			</NavbarMenu>
+			</NavbarMenu> */}
 		</Navbar>
 	);
 }

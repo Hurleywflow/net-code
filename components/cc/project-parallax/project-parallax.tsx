@@ -5,15 +5,18 @@ import { MotionValue, useScroll, useSpring, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { Header } from '../MyCustomNextIntlClientProvider/MyCustomNextIntlClientProvider';
 
 export const ProjectParallax = ({
 	products,
+	children,
 }: {
 	products: {
 		title?: string;
 		link?: string;
 		thumbnail?: string;
 	}[];
+	children: React.ReactNode;
 }) => {
 	const firstRow = products.slice(0, 3);
 	const secondRow = products.slice(3, 6);
@@ -59,7 +62,8 @@ export const ProjectParallax = ({
 			ref={ref}
 			className='relative flex h-[250svh] w-screen  flex-col self-auto overflow-hidden antialiased [perspective:1000px] [transform-style:preserve-3d]'
 		>
-			<Header />
+			{/* <Header /> */}
+			{children}
 			<MotionDiv
 				style={{
 					rotateX,
@@ -98,20 +102,6 @@ export const ProjectParallax = ({
 				</MotionDiv>
 			</MotionDiv>
 		</section>
-	);
-};
-
-const Header = () => {
-	return (
-		<div className='relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40'>
-			<h2 className='mt-8 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text py-4 text-5xl font-bold text-transparent md:text-6xl lg:text-7xl '>
-				The Ultimate <br /> Development Clients Project.
-			</h2>
-			<p className='mt-8 max-w-2xl text-lg font-normal text-neutral-100'>
-				We are a team of passionate developers and designers who create stunning
-				products using the latest technologies and frameworks.
-			</p>
-		</div>
 	);
 };
 

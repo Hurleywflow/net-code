@@ -176,4 +176,12 @@ body {
     animation-timeline: --parallax-wrapper;
     animation-range: entry 25% cover 80%;
   } */
+
+}
+
+
+@keyframes loop {
+  to {
+    offset-distance: 100%;
+  }
 }

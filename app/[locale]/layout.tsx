@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import Navbar from '@/components/cc/navbar/navbar';
 import { Toaster } from '@/components/ui/toaster';
 import type { Metadata } from 'next';
@@ -5,6 +6,7 @@ import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import { Toaster as Toast } from 'react-hot-toast';
 import './globals.css';
+// import { getTranslations } from 'next-intl/server';
 
 // import GoogleAnalytics from '@bradgarropy/next-google-analytics';
 
@@ -14,14 +16,11 @@ export const metadata: Metadata = {
 	metadataBase: new URL('https://netcodedev.com'),
 	alternates: {
 		canonical: '/',
-		languages: {
-			'en-US': '/en-US',
-		},
 	},
 	openGraph: {
 		images: '/opengraph-image.png',
 	},
-	title: 'Website Development | Web Developers Growing Business - NetCode',
+	title: 'Web Developers Growing Business | Phát Triển Web - NetCode',
 	description:
 		'Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.',
 };
@@ -34,12 +33,28 @@ export const viewport = {
 	// interactiveWidget: 'resizes-visual',
 };
 
+// export async function generateMetadata({
+// 	params: { locale },
+// }: { params: { locale: string } }) {
+// 	const t = await getTranslations({
+// 		locale: locale,
+// 		namespace: 'Metadata' as 'Index',
+// 	});
+
+// 	return {
+// 		title: t('title'),
+// 	};
+// }
 interface RootLayoutProps {
 	children: React.ReactNode;
+	params: { locale: string };
 }
-export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
+export default function RootLayout({
+	children,
+	params: { locale },
+}: Readonly<RootLayoutProps>) {
 	return (
-		<html lang='en'>
+		<html lang={locale}>
 			<body className={`m-0 box-border p-0 ${inter.className}`}>
 				<Toast />
 				<Navbar />

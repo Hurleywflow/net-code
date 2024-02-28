@@ -1,3 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+const createNextIntlPlugin = require('next-intl/plugin');
+
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
@@ -12,4 +20,4 @@ const nextConfig = {
 	},
 };
 
-module.exports = nextConfig;
+module.exports = withNextIntl(nextConfig);

@@ -1,10 +1,10 @@
 import Contact from '@/components/cc/Contact/contact';
-import Description from '@/components/cc/Description';
 import CircleContainer from '@/components/cc/circle-container/circle-container';
 import { Container } from '@/components/cc/container/container';
 import Footer from '@/components/cc/footer/footer';
 import HeroBeam from '@/components/cc/heroBeam/heroBeam';
 import { LampDemo } from '@/components/cc/lamp/lamp';
+import { BackgroundBoxes } from '@/components/cc/project-parallax/BackgroundBoxes';
 import { ProjectParallaxProducts } from '@/components/cc/project-parallax/project-parallax-products';
 
 export default function Home() {
@@ -14,11 +14,12 @@ export default function Home() {
 				<Container>
 					<HeroBeam />
 				</Container>
-				<div className='m-0 box-border w-screen bg-foreground p-0'>
+				{/* <div className='m-0 box-border w-screen bg-foreground p-0'>
 					<Container className='overflow-hidden'>
 						<ProjectParallaxProducts />
 					</Container>
-				</div>
+				</div> */}
+				<BackgroundBoxes />
 				<LampDemo />
 				<CircleContainer />
 				<Container>
