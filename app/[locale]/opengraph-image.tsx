@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 import { getTranslations } from 'next-intl/server';
 
-export async function generateMetadata({
+export default async function generateMetadata({
 	params: { locale },
 }: { params: { locale: string } }) {
 	const t = await getTranslations({
