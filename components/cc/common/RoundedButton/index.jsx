@@ -10,7 +10,7 @@ import styles from './style.module.scss';
 
 export default function index({
 	children,
-	backgroundColor = '#EF4345',
+	backgroundColor = '#f97316',
 	...attributes
 }) {
 	const circle = useRef(null);

@@ -5,7 +5,6 @@ import Footer from '@/components/cc/footer/footer';
 import HeroBeam from '@/components/cc/heroBeam/heroBeam';
 import { LampDemo } from '@/components/cc/lamp/lamp';
 import { BackgroundBoxes } from '@/components/cc/project-parallax/BackgroundBoxes';
-import { ProjectParallaxProducts } from '@/components/cc/project-parallax/project-parallax-products';
 
 export default function Home() {
 	return (
@@ -14,11 +13,6 @@ export default function Home() {
 				<Container>
 					<HeroBeam />
 				</Container>
-				{/* <div className='m-0 box-border w-screen bg-foreground p-0'>
-					<Container className='overflow-hidden'>
-						<ProjectParallaxProducts />
-					</Container>
-				</div> */}
 				<BackgroundBoxes />
 				<LampDemo />
 				<CircleContainer />
