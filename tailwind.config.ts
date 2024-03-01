@@ -25,9 +25,6 @@ const config = {
 	prefix: '',
 	safelist: ['animate-ripple'],
 	theme: {
-		fontFamily: {
-			sans: ['var(--font-sans)', ...fontFamily.sans],
-		},
 		screens: {
 			xs: '380px',
 			sm: '640px',
@@ -44,6 +41,9 @@ const config = {
 			},
 		},
 		extend: {
+			fontFamily: {
+				sans: ['var(--font-sans)', ...fontFamily.sans],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
