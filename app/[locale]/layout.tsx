@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import Navbar from '@/components/cc/navbar/navbar';
 import { Toaster } from '@/components/ui/toaster';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+// import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 // import { getTranslations } from 'next-intl/server';
 import { Inter } from 'next/font/google';
@@ -74,7 +74,7 @@ export default function RootLayout({
 				<Navbar />
 				{children}
 				<Toaster />
-				<SpeedInsights />
+				{/* <SpeedInsights /> */}
 			</body>
 			{/* Google Analytics */}
 			{/* <!-- Google tag (gtag.js) --> */}

@@ -1,5 +1,5 @@
 import Contact from '@/components/cc/Contact/contact';
-import CircleContainer from '@/components/cc/circle-container/circle-container';
+// import CircleContainer from '@/components/cc/circle-container/circle-container';
 import { Container } from '@/components/cc/container/container';
 import Footer from '@/components/cc/footer/footer';
 import HeroBeam from '@/components/cc/heroBeam/heroBeam';
@@ -15,7 +15,7 @@ export default function Home() {
 				</Container>
 				<BackgroundBoxes />
 				<LampDemo />
-				<CircleContainer />
+				{/* <CircleContainer /> */}
 				<Container>
 					<Contact />
 				</Container>

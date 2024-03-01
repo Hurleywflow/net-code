@@ -2,7 +2,6 @@
 'use client';
 
 import Magnetic from '@/components/cc/common/Magnetic';
-import Rounded from '@/components/cc/common/RoundedButton';
 import { Button } from '@/components/ui/button';
 import {
 	Dialog,
@@ -51,22 +50,22 @@ const Contact = () => {
 					<Dialog open={open} onOpenChange={setOpen}>
 						<DialogTrigger asChild>
 							<Button
-								variant='outline'
-								className='absolute right-1/2 h-32 w-[70vw] max-w-screen-lg translate-x-1/2 rounded-full border-foreground font-semibold md:h-40 md:font-bold'
+								variant='default'
+								className='absolute right-1/2 h-32 w-[80vw] max-w-screen-lg translate-x-1/2 overflow-hidden rounded-full border-4 border-border font-semibold md:h-40 md:font-bold'
 								size='lg'
 							>
-								<Rounded>
-									<div className='flex flex-col items-center justify-center gap-2'>
-										<h3 className='text-center text-2xl font-bold'>
-											{pathname.includes('/vn') ? 'Đặt Hẹn' : 'Get in touch'}
-										</h3>
-										<p className='text-center text-sm font-light italic'>
-											{pathname.includes('/vn')
-												? 'Chúng tôi có thể làm được việc cho bạn!'
-												: "Let's see if we are good fit for you!"}
-										</p>
-									</div>
-								</Rounded>
+								{/* <Rounded> */}
+								<div className='flex flex-col items-center justify-center gap-2'>
+									<h3 className='text-center text-2xl font-bold'>
+										{pathname.includes('/vn') ? 'Đặt Hẹn' : 'Get in touch'}
+									</h3>
+									<p className='text-center text-sm font-light italic'>
+										{pathname.includes('/vn')
+											? 'Chúng tôi sẽ cung cấp theo yêu cầu!'
+											: "Let's see if we are good fit for you!"}
+									</p>
+								</div>
+								{/* </Rounded> */}
 							</Button>
 						</DialogTrigger>
 						<DialogContent className=' sm:max-w-[425px]'>
@@ -137,23 +136,24 @@ const Contact = () => {
 				>
 					<DrawerTrigger asChild>
 						<Button
-							variant='outline'
-							className='absolute right-1/2 h-32 w-[70vw] max-w-screen-lg translate-x-1/2 rounded-full border-foreground font-semibold md:h-40 md:font-bold'
+							variant='default'
+							className='absolute right-1/2 h-32 w-[80vw] max-w-screen-lg translate-x-1/2 overflow-hidden rounded-full border-4 border-border font-semibold md:h-40 md:font-bold'
 							size='lg'
 						>
-							<Rounded>
-								<div className='flex flex-col items-center justify-center gap-2'>
-									<h3 className='text-center text-2xl font-bold'>
-										{pathname.includes('/vn') ? 'Đặt Hẹn' : 'Get in touch'}
-									</h3>
-									<p className='text-center text-sm font-light italic'>
-										{pathname.includes('/vn')
-											? 'Chúng tôi có thể làm được việc cho bạn!'
-											: "Let's see if we are good fit for you!"}
-									</p>
-								</div>
-							</Rounded>
+							{/* <Rounded> */}
+							<div className='flex flex-col items-center justify-center gap-2'>
+								<h3 className='text-center text-2xl font-bold'>
+									{pathname.includes('/vn') ? 'Đặt Hẹn' : 'Get in touch'}
+								</h3>
+								<p className='text-center text-sm font-light italic'>
+									{pathname.includes('/vn')
+										? 'Chúng tôi sẽ cung cấp theo yêu cầu!'
+										: "Let's see if we are good fit for you!"}
+								</p>
+							</div>
+							{/* </Rounded> */}
 						</Button>
+
 						{/* </Magnetic> */}
 					</DrawerTrigger>
 					{/* h-[80svh] is adjusting height of the drawer */}
