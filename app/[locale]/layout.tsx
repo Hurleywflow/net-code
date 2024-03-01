@@ -5,14 +5,16 @@ import { cn } from '@/lib/utils';
 // import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 // import { getTranslations } from 'next-intl/server';
-import { Inter as FontSans } from 'next/font/google';
 import Script from 'next/script';
 import { Toaster as Toast } from 'react-hot-toast';
 import './globals.css';
 // import GoogleAnalytics from '@bradgarropy/next-google-analytics';
-export const fontSans = FontSans({
+import { Inter, Roboto_Mono } from 'next/font/google';
+
+const inter = Inter({
 	subsets: ['latin'],
-	variable: '--font-sans',
+	display: 'swap',
+	variable: '--font-inter',
 });
 
 // const t = useTranslations('Index');
@@ -74,7 +76,7 @@ export default function RootLayout({
 			<body
 				className={cn(
 					'min-h-screen bg-background font-sans antialiased overflow-hidden',
-					fontSans.variable,
+					inter.variable,
 				)}
 			>
 				<Toast />
