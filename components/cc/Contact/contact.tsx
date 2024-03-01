@@ -46,7 +46,7 @@ const Contact = () => {
 						: "Let's work together"}
 				</div>
 				<div className='relative flex h-[30vw] w-full items-center  p-5 md:h-[20vw] 2xl:h-[15vw]'>
-					<hr className='w-full border-2 border-orange-500 ' />
+					<hr className=' w-full overflow-hidden border-2 border-border ' />
 					<Dialog open={open} onOpenChange={setOpen}>
 						<DialogTrigger asChild>
 							<Button
@@ -56,12 +56,12 @@ const Contact = () => {
 							>
 								{/* <Rounded> */}
 								<div className='flex flex-col items-center justify-center gap-2'>
-									<h3 className='text-center text-2xl font-bold'>
+									<h3 className='text-center text-2xl font-bold md:text-4xl'>
 										{pathname.includes('/vn') ? 'Đặt Hẹn' : 'Get in touch'}
 									</h3>
 									<p className='text-center text-sm font-light italic'>
 										{pathname.includes('/vn')
-											? 'Chúng tôi sẽ cung cấp theo yêu cầu!'
+											? 'Chúng tôi sẽ đáp ứng theo yêu cầu!'
 											: "Let's see if we are good fit for you!"}
 									</p>
 								</div>
@@ -124,7 +124,7 @@ const Contact = () => {
 					: "Let's work together"}
 			</div>
 			<div className='relative flex h-[30vw] w-full items-center  p-5 md:h-[20vw] 2xl:h-[15vw]'>
-				<hr className='w-full border-2 border-orange-500 ' />
+				<hr className=' w-full overflow-hidden border-2 border-border ' />
 
 				<Drawer
 					open={open}
@@ -137,17 +137,17 @@ const Contact = () => {
 					<DrawerTrigger asChild>
 						<Button
 							variant='default'
-							className='absolute right-1/2 h-32 w-[80vw] max-w-screen-lg translate-x-1/2 overflow-hidden rounded-full border-4 border-border font-semibold md:h-40 md:font-bold'
+							className='absolute right-1/2 h-32 w-[80vw] max-w-screen-lg translate-x-1/2  rounded-full border-4 border-border font-semibold md:h-40 md:font-bold'
 							size='lg'
 						>
 							{/* <Rounded> */}
 							<div className='flex flex-col items-center justify-center gap-2'>
-								<h3 className='text-center text-2xl font-bold'>
+								<h3 className='text-center text-2xl font-bold md:text-4xl'>
 									{pathname.includes('/vn') ? 'Đặt Hẹn' : 'Get in touch'}
 								</h3>
 								<p className='text-center text-sm font-light italic'>
 									{pathname.includes('/vn')
-										? 'Chúng tôi sẽ cung cấp theo yêu cầu!'
+										? 'Chúng tôi sẽ đáp ứng theo yêu cầu!'
 										: "Let's see if we are good fit for you!"}
 								</p>
 							</div>

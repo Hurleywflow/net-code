@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Description from '../Description';
-import { TitleSparkles } from '../title-sparkles/title-sparkles';
+import AnimatedText from '../animated-text/AnimatedText';
 import { TitleSpotlight } from '../title-spotlight/title-spotlight';
 
 function HeroBeam() {
@@ -17,7 +17,15 @@ function HeroBeam() {
 				</div>
 				<div className='mt-[-100vh] h-[220vh] [view-timeline-name:--reveal-wrapper] lg:h-[500vh]'>
 					<div className='sticky top-0 flex min-h-screen flex-col items-center justify-center'>
-						<TitleSparkles />
+						{/* <InfiniteTextScrolling /> */}
+						{/* <TextRevealCardPreview /> */}
+						{/* <TitleSparkles /> */}
+						<AnimatedText
+							el='span'
+							text={['NetCode']}
+							className='text-6xl font-bold md:text-7xl lg:text-8xl'
+							repeatDelay={5000}
+						/>
 						<div className='my-10 hidden lg:block'>
 							<p className='supports-[animation-timeline]:reveal-text text-balance text-xl text-foreground shadow-foreground-400 text-shadow-lg md:text-2xl lg:text-3xl lg:leading-[1]'>
 								{t('hero4')}
