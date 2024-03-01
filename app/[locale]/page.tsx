@@ -1,4 +1,5 @@
 import { Container } from '@/components/cc/container/container';
+import { GridBackgroundDemo } from '@/components/cc/grid-background-demo/GridBackgroundDemo';
 import dynamic from 'next/dynamic';
 const Contact = dynamic(async () => import('@/components/cc/Contact/contact'));
 const Footer = dynamic(async () => import('@/components/cc/footer/footer'));
@@ -19,6 +20,7 @@ export default function Home() {
 					<HeroBeam />
 				</Container>
 				{/* <BackgroundBoxes /> */}
+				<GridBackgroundDemo />
 				<LampDemo />
 				{/* <CircleContainer /> */}
 				<Container>

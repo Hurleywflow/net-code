@@ -10,8 +10,6 @@ import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import { Toaster as Toast } from 'react-hot-toast';
 import './globals.css';
-import Head from 'next/head';
-import { useTranslations } from 'next-intl';
 
 const inter = Inter({
 	subsets: ['latin'],
@@ -109,14 +107,8 @@ export default function RootLayout({
 	children,
 	params: { locale },
 }: RootLayoutProps) {
-		const t = useTranslations('Index');
 	return (
 		<html lang={locale}>
-			<Head>
-				<link rel='alternate' hrefLang='en' href='https://netcodedev.com' />
-				<link rel='alternate' hrefLang='en' href='https://netcodedev.com/en' />
-				<link rel='alternate' hrefLang='vn' href='https://netcodedev.com/vn' />
-			</Head>
 			<body
 				className={cn(
 					'min-h-screen bg-background font-sans antialiased',

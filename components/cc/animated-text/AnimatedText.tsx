@@ -31,7 +31,7 @@ const defaultAnimations = {
 	},
 };
 
-export const AnimatedText = ({
+const AnimatedText = ({
 	text,
 	el: Wrapper = 'p',
 	className,
