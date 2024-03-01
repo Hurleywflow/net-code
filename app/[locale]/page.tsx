@@ -1,9 +1,14 @@
-import Contact from '@/components/cc/Contact/contact';
-// import CircleContainer from '@/components/cc/circle-container/circle-container';
 import { Container } from '@/components/cc/container/container';
-import Footer from '@/components/cc/footer/footer';
-import HeroBeam from '@/components/cc/heroBeam/heroBeam';
-import { LampDemo } from '@/components/cc/lamp/lamp';
+import dynamic from 'next/dynamic';
+const Contact = dynamic(async () => import('@/components/cc/Contact/contact'));
+const Footer = dynamic(async () => import('@/components/cc/footer/footer'));
+const HeroBeam = dynamic(
+	async () => import('@/components/cc/heroBeam/heroBeam'),
+);
+const LampDemo = dynamic(async () => import('@/components/cc/lamp/lamp'));
+
+// import CircleContainer from '@/components/cc/circle-container/circle-container';
+
 // import { BackgroundBoxes } from '@/components/cc/project-parallax/BackgroundBoxes';
 
 export default function Home() {

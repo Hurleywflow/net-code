@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import React from 'react';
 import { QuestionAnswers } from '../question-answer/question-answer';
 
-export function LampDemo() {
+export default function LampDemo() {
 	const t = useTranslations('Index');
 	return (
 		<section id='faqs' className='m-0 flex items-center justify-center  p-0'>

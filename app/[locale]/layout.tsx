@@ -4,12 +4,12 @@ import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 // import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
+// import GoogleAnalytics from '@bradgarropy/next-google-analytics';
+import { Inter } from 'next/font/google';
 // import { getTranslations } from 'next-intl/server';
 import Script from 'next/script';
 import { Toaster as Toast } from 'react-hot-toast';
 import './globals.css';
-// import GoogleAnalytics from '@bradgarropy/next-google-analytics';
-import { Inter, Roboto_Mono } from 'next/font/google';
 
 const inter = Inter({
 	subsets: ['latin'],
@@ -72,10 +72,10 @@ export default function RootLayout({
 	params: { locale },
 }: RootLayoutProps) {
 	return (
-		<html lang={locale} suppressHydrationWarning>
+		<html lang={locale}>
 			<body
 				className={cn(
-					'min-h-screen bg-background font-sans antialiased overflow-hidden',
+					'min-h-screen bg-background font-sans antialiased',
 					inter.variable,
 				)}
 			>
