@@ -4,7 +4,7 @@ import { Container } from '@/components/cc/container/container';
 import Footer from '@/components/cc/footer/footer';
 import HeroBeam from '@/components/cc/heroBeam/heroBeam';
 import { LampDemo } from '@/components/cc/lamp/lamp';
-import { BackgroundBoxes } from '@/components/cc/project-parallax/BackgroundBoxes';
+// import { BackgroundBoxes } from '@/components/cc/project-parallax/BackgroundBoxes';
 
 export default function Home() {
 	return (
@@ -13,7 +13,7 @@ export default function Home() {
 				<Container>
 					<HeroBeam />
 				</Container>
-				<BackgroundBoxes />
+				{/* <BackgroundBoxes /> */}
 				<LampDemo />
 				{/* <CircleContainer /> */}
 				<Container>

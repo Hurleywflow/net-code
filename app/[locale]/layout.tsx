@@ -1,17 +1,19 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import Navbar from '@/components/cc/navbar/navbar';
 import { Toaster } from '@/components/ui/toaster';
+import { cn } from '@/lib/utils';
 // import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 // import { getTranslations } from 'next-intl/server';
-import { Inter } from 'next/font/google';
+import { Inter as FontSans } from 'next/font/google';
 import Script from 'next/script';
 import { Toaster as Toast } from 'react-hot-toast';
 import './globals.css';
-
 // import GoogleAnalytics from '@bradgarropy/next-google-analytics';
-
-const inter = Inter({ subsets: ['latin'] });
+export const fontSans = FontSans({
+	subsets: ['latin'],
+	variable: '--font-sans',
+});
 
 // const t = useTranslations('Index');
 export const metadata: Metadata = {
@@ -66,10 +68,15 @@ interface RootLayoutProps {
 export default function RootLayout({
 	children,
 	params: { locale },
-}: Readonly<RootLayoutProps>) {
+}: RootLayoutProps) {
 	return (
-		<html lang={locale}>
-			<body className={`m-0 box-border p-0 ${inter.className}`}>
+		<html lang={locale} suppressHydrationWarning>
+			<body
+				className={cn(
+					'min-h-screen bg-background font-sans antialiased overflow-hidden',
+					fontSans.variable,
+				)}
+			>
 				<Toast />
 				<Navbar />
 				{children}

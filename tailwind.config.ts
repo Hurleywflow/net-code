@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 const defaultTheme = require('tailwindcss/defaultTheme');
-
+import { fontFamily } from 'tailwindcss/defaultTheme';
 const colors = require('tailwindcss/colors');
 const {
 	default: flattenColorPalette,
@@ -25,6 +25,9 @@ const config = {
 	prefix: '',
 	safelist: ['animate-ripple'],
 	theme: {
+		fontFamily: {
+			sans: ['var(--font-sans)', ...fontFamily.sans],
+		},
 		screens: {
 			xs: '380px',
 			sm: '640px',
