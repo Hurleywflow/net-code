@@ -1,16 +1,17 @@
 import { Container } from '@/components/cc/container/container';
-import { GridBackgroundDemo } from '@/components/cc/grid-background-demo/GridBackgroundDemo';
 import dynamic from 'next/dynamic';
-const Contact = dynamic(async () => import('@/components/cc/Contact/contact'));
+const GridBackgroundDemo = dynamic(
+	async () => import('@/components/cc/grid-background-demo/GridBackgroundDemo'),
+);
+const GridBackgroundDemoLight = dynamic(
+	async () =>
+		import('@/components/cc/grid-background-demo/GridBackgroundDemoLight'),
+);
 const Footer = dynamic(async () => import('@/components/cc/footer/footer'));
 const HeroBeam = dynamic(
 	async () => import('@/components/cc/heroBeam/heroBeam'),
 );
 const LampDemo = dynamic(async () => import('@/components/cc/lamp/lamp'));
-
-// import CircleContainer from '@/components/cc/circle-container/circle-container';
-
-// import { BackgroundBoxes } from '@/components/cc/project-parallax/BackgroundBoxes';
 
 export default function Home() {
 	return (
@@ -19,13 +20,13 @@ export default function Home() {
 				<Container>
 					<HeroBeam />
 				</Container>
-				{/* <BackgroundBoxes /> */}
+				{/* Projects Component */}
 				<GridBackgroundDemo />
+				{/* FAQs component */}
 				<LampDemo />
 				{/* <CircleContainer /> */}
-				<Container>
-					<Contact />
-				</Container>
+				{/* contact component */}
+				<GridBackgroundDemoLight />
 			</main>
 			<Footer />
 		</>

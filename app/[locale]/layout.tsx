@@ -1,15 +1,16 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import Navbar from '@/components/cc/navbar/navbar';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 // import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 // import GoogleAnalytics from '@bradgarropy/next-google-analytics';
 import { Inter } from 'next/font/google';
 // import { getTranslations } from 'next-intl/server';
 import Script from 'next/script';
 import { Toaster as Toast } from 'react-hot-toast';
 import './globals.css';
+const Navbar = dynamic(async () => import('@/components/cc/navbar/navbar'));
 
 const inter = Inter({
 	subsets: ['latin'],

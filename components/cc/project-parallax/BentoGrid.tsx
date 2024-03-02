@@ -35,6 +35,7 @@ const Skeleton = ({ img }: { img: string }) => (
 			src={img}
 			alt={img}
 			fill
+			sizes={'(max-width: 768px) 45vw, 30vw'}
 			className='object-cover object-center hover:scale-105 hover:transition-all hover:duration-300 hover:ease-linear '
 		/>
 	</div>

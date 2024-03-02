@@ -35,23 +35,23 @@ const Contact = () => {
 	if (isDesktop) {
 		return (
 			<section
-				className=' mb-5 mt-60 flex h-[100vh] w-full flex-col flex-wrap items-center justify-center gap-4'
+				className='mb-20 flex h-screen w-full flex-col flex-wrap items-center justify-end gap-4'
 				id='contact'
 			>
 				{/* <section className='mb-[17svh] mt-[50svh]  flex size-full flex-col flex-wrap items-center justify-center gap-4 md:mt-[-35svh] md:pt-[80svh] lg:pt-[50svh]'> */}
-				<div className='animate-slowpan text-wrap  bg-[url("/images/c.webp")] bg-clip-text p-5  text-[5rem] text-transparent md:text-8xl lg:text-[12rem] xl:text-[14rem]'>
+				<div className='animate-slowpan text-wrap bg-[url("/images/c.webp")] bg-clip-text  p-5 text-[5rem] text-transparent  shadow-neutral-600 text-shadow-lg md:text-8xl lg:text-[12rem] xl:text-[14rem]'>
 					{/* Let's work together */}
 					{pathname.includes('/vn')
-						? 'Chung tay cộng tác.'
+						? 'Hãy cùng cộng tác.'
 						: "Let's work together"}
 				</div>
-				<div className='relative flex h-[30vw] w-full items-center  p-5 md:h-[20vw] 2xl:h-[15vw]'>
+				<div className='relative my-5 flex h-32 w-full  items-center p-5 md:h-40'>
 					<hr className=' w-full overflow-hidden border-2 border-border ' />
 					<Dialog open={open} onOpenChange={setOpen}>
 						<DialogTrigger asChild>
 							<Button
 								variant='default'
-								className='absolute right-1/2 h-32 w-[80vw] max-w-screen-lg translate-x-1/2 overflow-hidden rounded-full border-4 border-border font-semibold md:h-40 md:font-bold'
+								className='absolute right-1/2 h-32 w-[80vw] max-w-screen-lg translate-x-1/2 overflow-hidden rounded-full border-4 border-border font-semibold drop-shadow-2xl md:h-40 md:font-bold'
 								size='lg'
 							>
 								{/* <Rounded> */}
@@ -61,8 +61,8 @@ const Contact = () => {
 									</h3>
 									<p className='text-center text-sm font-light italic'>
 										{pathname.includes('/vn')
-											? 'Chúng tôi sẽ đáp ứng theo yêu cầu!'
-											: "Let's see if we are good fit for you!"}
+											? 'Chúng tôi luôn sẵn lòng kết nối.  '
+											: "Let's see if we are good fit for you."}
 									</p>
 								</div>
 								{/* </Rounded> */}
@@ -75,7 +75,7 @@ const Contact = () => {
 								</DialogTitle>
 								<DialogDescription>
 									{pathname.includes('/vn')
-										? 'Chúng tôi luôn sẵn lòng kết nối với bạn.'
+										? 'Chúng tôi luôn sẵn lòng kết nối.'
 										: 'We are always happy to stay connected with you.'}
 								</DialogDescription>
 							</DialogHeader>
@@ -85,7 +85,7 @@ const Contact = () => {
 						</DialogContent>
 					</Dialog>
 				</div>
-				<div className='flex flex-row gap-10'>
+				<div className='flex flex-row gap-5'>
 					<Link href='mailto:hurleywflow@gmail.com' target='_blank'>
 						<Magnetic>
 							<Button
@@ -114,16 +114,16 @@ const Contact = () => {
 	}
 	return (
 		<section
-			className=' mb-5 mt-28 flex h-[100svh] w-full flex-col flex-wrap items-center justify-center gap-4'
+			className='mb-20 flex h-screen w-full flex-col flex-wrap items-center justify-end gap-4'
 			id='contact'
 		>
 			{/* <section className='mb-[17svh] mt-[50svh]  flex size-full flex-col flex-wrap items-center justify-center gap-4 md:mt-[-35svh] md:pt-[80svh] lg:pt-[50svh]'> */}
-			<div className='animate-slowpan text-wrap  bg-[url("/images/c.webp")] bg-clip-text p-5  text-[5rem] text-transparent md:text-8xl lg:text-[12rem] xl:text-[14rem]'>
+			<div className='animate-slowpan text-wrap bg-[url("/images/c.webp")] bg-clip-text  p-5 text-[5rem] text-transparent  shadow-neutral-600 text-shadow-lg md:text-8xl lg:text-[12rem] xl:text-[14rem]'>
 				{pathname.includes('/vn')
-					? 'Chung tay cộng tác.'
+					? 'Hãy cùng cộng tác.'
 					: "Let's work together"}
 			</div>
-			<div className='relative flex h-[30vw] w-full items-center  p-5 md:h-[20vw] 2xl:h-[15vw]'>
+			<div className='relative my-5 flex h-32 w-full  items-center p-5 md:h-40'>
 				<hr className=' w-full overflow-hidden border-2 border-border ' />
 
 				<Drawer
@@ -137,7 +137,7 @@ const Contact = () => {
 					<DrawerTrigger asChild>
 						<Button
 							variant='default'
-							className='absolute right-1/2 h-32 w-[80vw] max-w-screen-lg translate-x-1/2  rounded-full border-4 border-border font-semibold md:h-40 md:font-bold'
+							className='absolute right-1/2 h-32 w-[80vw] max-w-screen-lg translate-x-1/2  rounded-full border-4 border-border font-semibold drop-shadow-2xl md:h-40 md:font-bold '
 							size='lg'
 						>
 							{/* <Rounded> */}
@@ -147,8 +147,8 @@ const Contact = () => {
 								</h3>
 								<p className='text-center text-sm font-light italic'>
 									{pathname.includes('/vn')
-										? 'Chúng tôi sẽ đáp ứng theo yêu cầu!'
-										: "Let's see if we are good fit for you!"}
+										? 'Chúng tôi luôn sẵn lòng kết nối.'
+										: "Let's see if we are good fit for you."}
 								</p>
 							</div>
 							{/* </Rounded> */}
@@ -171,7 +171,7 @@ const Contact = () => {
 							</DrawerTitle>
 							<DrawerDescription>
 								{pathname.includes('/vn')
-									? 'Chúng tôi luôn sẵn lòng kết nối với bạn.'
+									? 'Chúng tôi luôn sẵn lòng kết nối.'
 									: 'We are always happy to stay connected with you.'}
 							</DrawerDescription>
 						</DrawerHeader>
@@ -185,7 +185,7 @@ const Contact = () => {
 					</DrawerContent>
 				</Drawer>
 			</div>
-			<div className='flex flex-row gap-10'>
+			<div className='flex flex-row gap-5'>
 				<Link href='mailto:hurleywflow@gmail.com' target='_blank'>
 					<Magnetic>
 						<Button

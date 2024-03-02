@@ -1,11 +1,9 @@
-import { Button } from '@/components/ui/button';
-
 import { useTranslations } from 'next-intl';
 import { Meteors } from '../meteors/meteors';
-import { Spotlight } from './spotlight';
 import SelectLanguage from '../selectLanguage/selectLanguage';
+import { Spotlight } from './spotlight';
 
-export function TitleSpotlight() {
+function TitleSpotlight() {
 	const t = useTranslations('Index');
 
 	// const isDesktop = useMediaQuery('(min-width: 768px)');
@@ -29,11 +27,11 @@ export function TitleSpotlight() {
 						{t('hero2')}
 					</h1>
 					{/* <!-- Element 3 --> */}
-					<p className='relative  mx-auto my-2 max-w-xl animate-slidein text-center text-sm font-normal text-neutral-200 opacity-0 [--slidein-delay:500ms] lg:text-medium'>
+					<p className='relative  mx-auto my-2 max-w-xl animate-slidein text-center text-sm font-normal text-neutral-200 opacity-0 [--slidein-delay:600ms] lg:text-medium'>
 						{t('hero3')}
 					</p>
 					{/* <!-- Element 4 --> */}
-					<div className='relative  mx-auto my-2 max-w-lg animate-slidein text-center text-medium text-neutral-500 opacity-0 [--slidein-delay:700ms]'>
+					<div className='relative  mx-auto my-2 max-w-lg animate-slidein text-center text-medium text-neutral-500 opacity-0 [--slidein-delay:900ms]'>
 						<SelectLanguage />
 					</div>
 				</div>
@@ -43,3 +41,4 @@ export function TitleSpotlight() {
 		</header>
 	);
 }
+export default TitleSpotlight;

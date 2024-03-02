@@ -30,11 +30,11 @@ import {
 	NavbarMenuToggle,
 } from '@nextui-org/react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import ProfileForm from '../booking-form/booking-form';
 import { Tabs } from '../tab/tabs';
 import { AcmeLogo } from './Logo.jsx';
-import { usePathname } from 'next/navigation';
 
 export default function NavBar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -187,10 +187,10 @@ export default function NavBar() {
 			isBordered={false}
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
-			className='mx-auto box-border'
+			className='z-[9999] mx-auto box-border'
 		>
 			{/* toggle button */}
-			<NavbarContent className='sm:hidden' justify='start'>
+			<NavbarContent className='sm:hidden ' justify='start'>
 				<NavbarMenuToggle
 					aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
 				/>

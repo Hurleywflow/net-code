@@ -90,12 +90,19 @@ export const reducer = (state: State, action: Action): State => {
 
 			// ! Side effects ! - This could be extracted into a dismissToast() action,
 			// but I'll keep it here for simplicity
+			// if (toastId) {
+			// 	addToRemoveQueue(toastId);
+			// } else {
+			// 	state.toasts.forEach((toast) => {
+			// 		addToRemoveQueue(toast.id);
+			// 	});
+			// }
 			if (toastId) {
 				addToRemoveQueue(toastId);
 			} else {
-				state.toasts.forEach((toast) => {
+				for (const toast of state.toasts) {
 					addToRemoveQueue(toast.id);
-				});
+				}
 			}
 
 			return {
@@ -130,9 +137,12 @@ let memoryState: State = { toasts: [] };
 
 function dispatch(action: Action) {
 	memoryState = reducer(memoryState, action);
-	listeners.forEach((listener) => {
+	// listeners.forEach((listener) => {
+	// 	listener(memoryState);
+	// });
+	for (const listener of listeners) {
 		listener(memoryState);
-	});
+	}
 }
 
 type Toast = Omit<ToasterToast, 'id'>;
@@ -154,7 +164,9 @@ function toast({ ...props }: Toast) {
 			id,
 			open: true,
 			onOpenChange: (open) => {
-				if (!open) dismiss();
+				if (!open) {
+					dismiss();
+				}
 			},
 		},
 	});
@@ -186,4 +198,4 @@ function useToast() {
 	};
 }
 
-export { useToast, toast };
+export { toast, useToast };

@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-export  const Container = ({
+export const Container = ({
 	children,
 	className,
 }: {

@@ -1,4 +1,4 @@
-"use client"
+'use client';
 /* eslint-disable @typescript-eslint/no-floating-promises */
 /* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable no-undef */
