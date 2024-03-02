@@ -8,7 +8,6 @@ import dynamic from 'next/dynamic';
 import { Inter } from 'next/font/google';
 // import { getTranslations } from 'next-intl/server';
 import Script from 'next/script';
-import { Toaster as Toast } from 'react-hot-toast';
 import './globals.css';
 const Navbar = dynamic(async () => import('@/components/cc/navbar/navbar'));
 
@@ -116,7 +115,6 @@ export default function RootLayout({
 					inter.variable,
 				)}
 			>
-				<Toast />
 				<Navbar />
 				{children}
 				<Toaster />
