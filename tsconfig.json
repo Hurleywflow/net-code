@@ -33,6 +33,7 @@
 		"postcss.config.js",
 		"next.config.js",
 		"**/*.json",
+		"app/robots.ts",
 		"package.json"
 	],
 	"exclude": ["node_modules"]
