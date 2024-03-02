@@ -23,15 +23,15 @@ function TitleSpotlight() {
 						</h2>
 					</div>
 					{/* <!-- Element 2 --> */}
-					<h1 className='relative  animate-slidein bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text  p-4 text-center text-5xl font-bold  text-transparent opacity-0 [--slidein-delay:300ms] md:text-7xl lg:text-8xl'>
+					<h1 className='relative   bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text  p-4 text-center text-5xl font-bold  text-transparent  md:text-7xl lg:text-8xl'>
 						{t('hero2')}
 					</h1>
 					{/* <!-- Element 3 --> */}
-					<p className='relative  mx-auto my-2 max-w-xl animate-slidein text-center text-sm font-normal text-neutral-200 opacity-0 [--slidein-delay:600ms] lg:text-medium'>
+					<p className='relative  mx-auto my-2 max-w-xl animate-slidein text-center text-sm font-normal text-neutral-200 [--slidein-delay:300ms] lg:text-medium'>
 						{t('hero3')}
 					</p>
 					{/* <!-- Element 4 --> */}
-					<div className='relative  mx-auto my-2 max-w-lg animate-slidein text-center text-medium text-neutral-500 opacity-0 [--slidein-delay:900ms]'>
+					<div className='relative  mx-auto my-2 max-w-lg animate-slidein text-center text-medium text-neutral-500 [--slidein-delay:600ms]'>
 						<SelectLanguage />
 					</div>
 				</div>
