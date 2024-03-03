@@ -195,8 +195,8 @@ export default function NavBar() {
 					aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
 				/>
 			</NavbarContent>
-			{/* starting of the navbar items */}
-			<NavbarContent className='pr-3 sm:hidden' justify='center'>
+			{/* starting of the navbar items on mobile devices */}
+			<NavbarContent className=' pr-3 sm:hidden' justify='center'>
 				<NavbarBrand>
 					{/* adding logo */}
 					<ul className='flex flex-row items-center justify-center gap-1 divide-x divide-none'>

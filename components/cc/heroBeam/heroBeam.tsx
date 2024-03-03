@@ -17,7 +17,7 @@ function HeroBeam() {
 			className='m-0 flex w-screen flex-col items-center justify-center bg-gradient-to-br from-neutral-400 to-secondary '
 		>
 			<div className='wrapper'>
-				<div className='full-bleed relative z-30 flex h-screen items-center bg-cover bg-center pb-20'>
+				<div className='full-bleed relative z-20 flex h-screen items-center bg-cover bg-center pb-20'>
 					{/* add a background beams and spotlight */}
 					<TitleSpotlight />
 				</div>
