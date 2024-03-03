@@ -51,7 +51,7 @@ const Contact = () => {
 						<DialogTrigger asChild>
 							<Button
 								variant='default'
-								className='absolute right-1/2 h-32 w-[80vw] max-w-screen-lg translate-x-1/2 overflow-hidden rounded-full border-4 border-border font-semibold drop-shadow-2xl md:h-40 md:font-bold'
+								className='absolute right-1/2 h-32 w-[80vw] max-w-screen-lg translate-x-1/2 overflow-hidden rounded-full border-4 border-border font-semibold md:h-40 md:font-bold'
 								size='lg'
 							>
 								{/* <Rounded> */}
@@ -137,7 +137,7 @@ const Contact = () => {
 					<DrawerTrigger asChild>
 						<Button
 							variant='default'
-							className='absolute right-1/2 h-32 w-[80vw] max-w-screen-lg translate-x-1/2  rounded-full border-4 border-border font-semibold drop-shadow-2xl md:h-40 md:font-bold '
+							className='absolute right-1/2 h-32 w-[80vw] max-w-screen-lg translate-x-1/2  rounded-full border-4 border-border font-semibold md:h-40 md:font-bold '
 							size='lg'
 						>
 							{/* <Rounded> */}
