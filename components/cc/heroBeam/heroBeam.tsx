@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 
-// const Description = dynamic(async () => import('../Description'));
+const Description = dynamic(async () => import('../Description'));
 const TitleSpotlight = dynamic(
 	async () => import('../title-spotlight/title-spotlight'),
 );
@@ -32,15 +32,15 @@ function HeroBeam() {
 							className='bg-gradient-to-b from-neutral-400 to-neutral-800 bg-clip-text text-6xl font-bold text-transparent shadow-neutral-500 text-shadow-lg md:text-7xl lg:text-8xl'
 							repeatDelay={5000}
 						/>
-						{/* <div className='my-10 hidden lg:block'> */}
-						<div className='my-10'>
+						<div className='my-10 hidden lg:block'>
+						{/* <div className='my-10'> */}
 							<p className='supports-[animation-timeline]:reveal-text text-balance text-xl text-foreground shadow-foreground-400 text-shadow-lg md:text-2xl lg:text-3xl lg:leading-[1]'>
 								{t('hero4')}
 							</p>
 						</div>
-						{/* <div className='my-10 lg:hidden'>
+						<div className='my-10 lg:hidden'>
 							<Description />
-						</div> */}
+						</div>
 					</div>
 				</div>
 			</div>

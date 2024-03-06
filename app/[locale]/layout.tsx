@@ -47,9 +47,10 @@ export const metadata: Metadata = {
 	referrer: 'origin-when-cross-origin',
 	keywords: [
 		'Web Development',
-		'Web Development',
+		'Web Design Melbourne',
 		'Web Development Melbourne',
 		'Web Designer',
+		'Melbourne Website Developers',
 		'Web Developer',
 		'Phát Triển Website',
 		'Thiết kế Website',
