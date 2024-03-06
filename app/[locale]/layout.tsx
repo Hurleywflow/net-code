@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 			'max-snippet': -1,
 		},
 	},
-	title: 'Web Development | Thiết kế website - NetCode',
+	title: 'Web Development Melbourne | Thiết kế website - NetCode',
 	description:
 		'Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.',
 	generator: 'Next.js',
@@ -47,6 +47,8 @@ export const metadata: Metadata = {
 	referrer: 'origin-when-cross-origin',
 	keywords: [
 		'Web Development',
+		'Web Development',
+		'Web Development Melbourne',
 		'Web Designer',
 		'Web Developer',
 		'Phát Triển Website',
