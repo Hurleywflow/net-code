@@ -1,5 +1,7 @@
 import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
+import TextRevealOnScroll from '../text-reveal-on-scroll/TextRevealOnScroll';
+import TextRevealOnScrollMobile from '../text-reveal-on-scroll/TextRevealOnScrollMobile';
 
 const Description = dynamic(async () => import('../Description'));
 const TitleSpotlight = dynamic(
@@ -21,7 +23,7 @@ function HeroBeam() {
 					{/* add a background beams and spotlight */}
 					<TitleSpotlight />
 				</div>
-				<div className='mt-[-100vh] h-[220vh] [view-timeline-name:--reveal-wrapper] lg:h-[500vh] '>
+				<div className='mt-[-100vh] h-[180vh]'>
 					<div className='sticky top-0 flex min-h-screen flex-col items-center justify-center'>
 						{/* <InfiniteTextScrolling /> */}
 						{/* <TextRevealCardPreview /> */}
@@ -35,11 +37,16 @@ function HeroBeam() {
 						{/* <div className='my-10 lg:hidden'>
 							<Description />
 						</div> */}
-						<div className='my-10'>
-							{/* <div className='my-10'> */}
+						{/* <div className='my-10'>
 							<p className='supports-[animation-timeline]:reveal-text text-balance text-xl text-foreground shadow-foreground-400 text-shadow-lg md:text-2xl lg:text-3xl lg:leading-[1]'>
 								{t('hero4')}
 							</p>
+						</div> */}
+						<div className='lg:hidden'>
+							<TextRevealOnScrollMobile />
+						</div>
+						<div className='hidden lg:flex'>
+							<TextRevealOnScroll />
 						</div>
 					</div>
 				</div>
