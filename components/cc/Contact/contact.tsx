@@ -36,7 +36,7 @@ const Contact = () => {
 	if (isDesktop) {
 		return (
 			<section
-				className='mb-20 flex min-h-screen w-full flex-col flex-wrap items-center justify-end gap-4'
+				className='mb-10 flex min-h-screen w-full flex-col flex-wrap items-center justify-end gap-4'
 				id='contact'
 			>
 				{/* <section className='mb-[17svh] mt-[50svh]  flex size-full flex-col flex-wrap items-center justify-center gap-4 md:mt-[-35svh] md:pt-[80svh] lg:pt-[50svh]'> */}

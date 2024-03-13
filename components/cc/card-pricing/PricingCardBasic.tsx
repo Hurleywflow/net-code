@@ -117,7 +117,7 @@ function CardRegular({ className, ...props }: CardProps) {
 					>
 						<CardTitle>Web thông dụng</CardTitle>
 						<CardDescription className='text-muted-background text-sm'>
-							Trang web thiết kế đặc biệt phù hợp cho các cỏ sở kinh doanh vừa
+							Trang web thiết kế đặc biệt phù hợp cho các cơ sở kinh doanh vừa
 							và nhỏ, phục vụ nhiều mục đích và yêu cầu đơn giản nhưng hiện đại.
 							Các tùy chọn thiết kế có sẵn làm tiêu chuẩn và phát triển theo yêu
 							cầu. Không phục vụ cho thiết kế tùy chỉnh hoặc chức năng thương
