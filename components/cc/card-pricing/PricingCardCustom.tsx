@@ -152,7 +152,7 @@ function CardCustom({ className, ...props }: CardProps) {
 							<BellRing />
 							<div className='flex-1 space-y-1'>
 								<p className='text-center text-2xl font-medium md:text-3xl '>
-									từ 270 triệu VND
+									từ 290 triệu VND
 								</p>
 								<p className='text-center text-sm text-muted-foreground'>
 									+ GST
@@ -209,7 +209,7 @@ function CardCustom({ className, ...props }: CardProps) {
 										</DialogDescription>
 									</DialogHeader>
 									{/* form booking data, h-50 is adjusting height of the dialog */}
-									<ProfileForm className='h-70 px-2' />
+									<ProfileForm className='min-h-64 px-2' />
 									{/* <ProfileForm className='h-50 px-2' /> */}
 								</DialogContent>
 							</Dialog>
@@ -329,7 +329,7 @@ function CardCustom({ className, ...props }: CardProps) {
 										className='w-full'
 										variant={'secondary'}
 									>
-										Đặt Hẹn
+										Book Now
 									</Button>
 								</DialogTrigger>
 								<DialogContent className=' sm:max-w-[425px]'>
@@ -344,7 +344,7 @@ function CardCustom({ className, ...props }: CardProps) {
 										</DialogDescription>
 									</DialogHeader>
 									{/* form booking data, h-50 is adjusting height of the dialog */}
-									<ProfileForm className='h-70 px-2' />
+									<ProfileForm className='min-h-64 px-2' />
 									{/* <ProfileForm className='h-50 px-2' /> */}
 								</DialogContent>
 							</Dialog>
@@ -362,7 +362,7 @@ function CardCustom({ className, ...props }: CardProps) {
 										className='w-full'
 										variant={'secondary'}
 									>
-										Đặt Hẹn
+										Book Now
 									</Button>
 								</DrawerTrigger>
 								<DrawerContent>

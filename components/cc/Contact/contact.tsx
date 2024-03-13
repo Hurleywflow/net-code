@@ -40,7 +40,7 @@ const Contact = () => {
 				id='contact'
 			>
 				{/* <section className='mb-[17svh] mt-[50svh]  flex size-full flex-col flex-wrap items-center justify-center gap-4 md:mt-[-35svh] md:pt-[80svh] lg:pt-[50svh]'> */}
-				<article className='mb-60 mt-10 flex w-[90%] max-w-screen-lg  flex-col items-center justify-center gap-2 text-base font-normal text-muted-foreground'>
+				<article className='mb-20 mt-10 flex w-[90%] max-w-screen-lg  flex-col items-center justify-center gap-2 text-base font-normal text-muted-foreground'>
 					<i className='text-xl text-background shadow-foreground-900 text-shadow-lg md:text-2xl'>
 						{pathname.includes('/vn')
 							? 'Giống những gì bạn đã thấy?'
@@ -101,7 +101,7 @@ const Contact = () => {
 								</DialogDescription>
 							</DialogHeader>
 							{/* form booking data, h-50 is adjusting height of the dialog */}
-							<ProfileForm className='h-70 px-2' />
+							<ProfileForm className='min-h-64 px-2' />
 							{/* <ProfileForm className='h-50 px-2' /> */}
 						</DialogContent>
 					</Dialog>

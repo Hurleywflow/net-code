@@ -334,7 +334,7 @@ export default function NavBar() {
 								</DialogDescription>
 							</DialogHeader>
 							{/* form booking data, h-50 is adjusting height of the dialog */}
-							<ProfileForm className='h-70 px-2' />
+							<ProfileForm className='min-h-64 px-2' />
 							{/* <ProfileForm className='h-50 px-2' /> */}
 						</DialogContent>
 					</Dialog>

@@ -48,8 +48,8 @@ const FormSchema = z.object({
 	phone: z.string().refine((value) => phoneRegex.test(value), {
 		message: 'Phone number is not valid.'
 	}),
-	services: z.string({
-		required_error: 'Please select an services you are looking for!'
+	price: z.string({
+		required_error: 'Please select an web development services you are looking for!'
 	}),
 	// date: z.date({
 	//   required_error: 'A date of your refer.',
@@ -69,7 +69,7 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 			username: '',
 			email: '',
 			phone: '',
-			services: '',
+			price: '',
 			note: ''
 		}
 	});
@@ -201,25 +201,26 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 				/>
 				<FormField
 					control={form.control}
-					name='services'
+					name='price'
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Services</FormLabel>
+							<FormLabel>Web services</FormLabel>
 							<Select
 								onValueChange={field.onChange}
 								defaultValue={field.value}
 							>
 								<FormControl>
 									<SelectTrigger>
-										<SelectValue placeholder='Select a service you are looking for.' />
+										<SelectValue placeholder='Select a web development services.' />
 									</SelectTrigger>
 								</FormControl>
 								<SelectContent>
-									<SelectItem value='Building A New Website'>
-										Building A New Website
+									<SelectItem value='Economic Web'>
+										Economic Web
+
 									</SelectItem>
-									<SelectItem value='Maintain Existing Website'>
-										Maintain Existing Website
+									<SelectItem value='Custom Designed Website & Developed Website'>
+										Custom Designed Website & Developed Website
 									</SelectItem>
 								</SelectContent>
 							</Select>

@@ -15,14 +15,14 @@ interface ContactFormProps {
 	username?: string;
 	email?: string;
 	phone?: string;
-	services?: string;
+	price?: string;
 	note?: string;
 }
 const ContactForm = ({
 	username,
 	email,
 	phone,
-	services,
+	price,
 	note
 }: ContactFormProps) => {
 	return (
@@ -43,7 +43,7 @@ const ContactForm = ({
 								<Text>UserName: {username}</Text>
 								<Text>Email: {email}</Text>
 								<Text>PhoneNumber: {phone}</Text>
-								<Text>Services: {services}</Text>
+								<Text>Services: {price}</Text>
 								<Text>MoreEnquires: {note}</Text>
 							</Row>
 							<Hr />

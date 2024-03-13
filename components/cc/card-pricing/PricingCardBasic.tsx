@@ -129,7 +129,7 @@ function CardRegular({ className, ...props }: CardProps) {
 							<BellRing />
 							<div className='flex-1 space-y-1'>
 								<p className='text-center text-2xl font-medium md:text-3xl '>
-									từ 30 triệu VND
+									từ 32 triệu VND
 								</p>
 								<p className='text-muted-accent text-center text-sm'>+ GST</p>
 							</div>
@@ -184,7 +184,7 @@ function CardRegular({ className, ...props }: CardProps) {
 										</DialogDescription>
 									</DialogHeader>
 									{/* form booking data, h-50 is adjusting height of the dialog */}
-									<ProfileForm className='h-70 px-2' />
+									<ProfileForm className='min-h-64 px-2' />
 									{/* <ProfileForm className='h-50 px-2' /> */}
 								</DialogContent>
 							</Dialog>
@@ -238,7 +238,7 @@ function CardRegular({ className, ...props }: CardProps) {
 			) : (
 				<Card
 					className={cn(
-						'w-[380px] h-full bg-foreground text-background border-background hover:ring-2 hover:ring-ring hover:ring-offset-2 relative ',
+						'w-[380px]  bg-foreground text-background border-background hover:ring-2 hover:ring-ring hover:ring-offset-2 relative h-full',
 						className
 					)}
 					{...props}
@@ -306,7 +306,7 @@ function CardRegular({ className, ...props }: CardProps) {
 										className='w-full'
 										variant={'secondary'}
 									>
-										Đặt Hẹn
+										Book Now
 									</Button>
 								</DialogTrigger>
 								<DialogContent className=' sm:max-w-[425px]'>
@@ -321,7 +321,7 @@ function CardRegular({ className, ...props }: CardProps) {
 										</DialogDescription>
 									</DialogHeader>
 									{/* form booking data, h-50 is adjusting height of the dialog */}
-									<ProfileForm className='h-70 px-2' />
+									<ProfileForm className='min-h-64 px-2' />
 									{/* <ProfileForm className='h-50 px-2' /> */}
 								</DialogContent>
 							</Dialog>
@@ -339,7 +339,7 @@ function CardRegular({ className, ...props }: CardProps) {
 										className='w-full'
 										variant={'secondary'}
 									>
-										Đặt Hẹn
+										Book Now
 									</Button>
 								</DrawerTrigger>
 								<DrawerContent>
