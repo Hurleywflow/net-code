@@ -5,7 +5,7 @@ function GridBackgroundDemo() {
 	const t = useTranslations('Index');
 	return (
 		<section
-			className='relative flex h-fit w-full flex-col  items-center justify-center bg-foreground bg-grid-white/[0.2] dark:bg-black dark:bg-grid-foreground/[0.2]'
+			className='relative m-0 flex h-fit w-full  flex-col items-center justify-center bg-foreground bg-grid-white/[0.2] dark:bg-black dark:bg-grid-foreground/[0.2]'
 			id='projects'
 		>
 			{/* Radial gradient for the container to give a faded look */}

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const BentoGrid = ({
 	className,
-	children,
+	children
 }: {
 	className?: string;
 	children?: React.ReactNode;
@@ -12,7 +12,7 @@ export const BentoGrid = ({
 		<div
 			className={cn(
 				'grid md:auto-rows-[18rem] grid-cols-2 md:grid-cols-3 gap-4 max-w-7xl mx-auto ',
-				className,
+				className
 			)}
 		>
 			{children}
@@ -26,7 +26,7 @@ export const BentoGridItem = ({
 	description,
 	header,
 	icon,
-	link,
+	link
 }: {
 	className?: string;
 	title?: string | React.ReactNode;
@@ -39,10 +39,14 @@ export const BentoGridItem = ({
 		<div
 			className={cn(
 				'row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-foreground border border-transparent justify-between flex flex-col space-y-4',
-				className,
+				className
 			)}
 		>
-			<Link href={link ? link : '/'} target='_blank' rel='noopener noreferrer'>
+			<Link
+				href={link ? link : '/'}
+				target='_blank'
+				rel='noopener noreferrer'
+			>
 				{header}
 				<div className='transition duration-200 group-hover/bento:translate-x-2'>
 					{icon}

@@ -24,11 +24,11 @@ const config = {
 		{
 			files: ['**/*.json'],
 			options: {
-				useTabs: false,
-			},
-		},
+				useTabs: false
+			}
+		}
 	],
-	plugins: ['prettier-plugin-tailwindcss'],
+	plugins: ['prettier-plugin-tailwindcss']
 };
 
 module.exports = config;

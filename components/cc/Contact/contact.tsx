@@ -9,7 +9,7 @@ import {
 	DialogDescription,
 	DialogHeader,
 	DialogTitle,
-	DialogTrigger,
+	DialogTrigger
 } from '@/components/ui/dialog';
 import {
 	Drawer,
@@ -19,13 +19,14 @@ import {
 	DrawerFooter,
 	DrawerHeader,
 	DrawerTitle,
-	DrawerTrigger,
+	DrawerTrigger
 } from '@/components/ui/drawer';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import ProfileForm from '../booking-form/booking-form';
+import TextRevealGenerate from '../text-generate-effect/TextRevealGenerate';
 
 const Contact = () => {
 	// const [snap, setSnap] = useState<number | string | null>(0.7);
@@ -35,10 +36,27 @@ const Contact = () => {
 	if (isDesktop) {
 		return (
 			<section
-				className='mb-20 flex h-screen w-full flex-col flex-wrap items-center justify-end gap-4'
+				className='mb-20 flex min-h-screen w-full flex-col flex-wrap items-center justify-end gap-4'
 				id='contact'
 			>
 				{/* <section className='mb-[17svh] mt-[50svh]  flex size-full flex-col flex-wrap items-center justify-center gap-4 md:mt-[-35svh] md:pt-[80svh] lg:pt-[50svh]'> */}
+				<article className='mb-60 mt-10 flex w-[90%] max-w-screen-lg  flex-col items-center justify-center gap-2 text-base font-normal text-muted-foreground'>
+					<i className='text-xl text-background shadow-foreground-900 text-shadow-lg md:text-2xl'>
+						{pathname.includes('/vn')
+							? 'Giống những gì bạn đã thấy?'
+							: 'Like what you see?'}
+					</i>
+					<h3 className='bg-gradient-to-b from-neutral-700 to-neutral-900 bg-clip-text py-4 text-center text-5xl font-bold text-transparent shadow-neutral-500 text-shadow-lg md:text-6xl lg:text-7xl'>
+						{pathname.includes('/vn')
+							? 'Báo giá cho trang web mới của bạn'
+							: 'Get a quote for your new website'}
+					</h3>
+
+					<div className=''>
+						{/* <TextGenerateEffectDemo /> */}
+						<TextRevealGenerate />
+					</div>
+				</article>
 				<div className='animate-slowpan text-wrap bg-[url("/images/c.webp")] bg-clip-text  p-5 text-[5rem] text-transparent  shadow-neutral-600 text-shadow-lg md:text-8xl lg:text-[12rem] xl:text-[14rem]'>
 					{/* Let's work together */}
 					{pathname.includes('/vn')
@@ -47,7 +65,10 @@ const Contact = () => {
 				</div>
 				<div className='relative my-5 flex h-32 w-full  items-center p-5 md:h-40'>
 					<hr className=' w-full overflow-hidden border-2 border-border ' />
-					<Dialog open={open} onOpenChange={setOpen}>
+					<Dialog
+						open={open}
+						onOpenChange={setOpen}
+					>
 						<DialogTrigger asChild>
 							<Button
 								variant='default'
@@ -86,7 +107,10 @@ const Contact = () => {
 					</Dialog>
 				</div>
 				<div className='flex flex-row gap-5'>
-					<Link href='mailto:hurleywflow@gmail.com' target='_blank'>
+					<Link
+						href='mailto:hurleywflow@gmail.com'
+						target='_blank'
+					>
 						<Magnetic>
 							<Button
 								variant='default'
@@ -114,10 +138,27 @@ const Contact = () => {
 	}
 	return (
 		<section
-			className='mb-20 flex h-screen w-full flex-col flex-wrap items-center justify-end gap-4'
+			className='mb-20 flex min-h-screen w-full flex-col flex-wrap items-center justify-end gap-4'
 			id='contact'
 		>
 			{/* <section className='mb-[17svh] mt-[50svh]  flex size-full flex-col flex-wrap items-center justify-center gap-4 md:mt-[-35svh] md:pt-[80svh] lg:pt-[50svh]'> */}
+			<article className='mb-60 mt-10 flex w-[90%] max-w-screen-lg  flex-col items-center justify-center gap-2 text-base font-normal text-muted-foreground'>
+				<i className='text-xl text-background shadow-foreground-900 text-shadow-lg md:text-2xl'>
+					{pathname.includes('/vn')
+						? 'Giống những gì bạn đã thấy?'
+						: 'Like what you see?'}
+				</i>
+				<h3 className='bg-gradient-to-b from-neutral-700 to-neutral-900 bg-clip-text py-4 text-center text-5xl font-bold text-transparent shadow-neutral-500 text-shadow-lg md:text-6xl lg:text-7xl'>
+					{pathname.includes('/vn')
+						? 'Báo giá cho trang web mới của bạn'
+						: 'Get a quote for your new website'}
+				</h3>
+
+				<div className=''>
+					{/* <TextGenerateEffectDemo /> */}
+					<TextRevealGenerate />
+				</div>
+			</article>
 			<div className='animate-slowpan text-wrap bg-[url("/images/c.webp")] bg-clip-text  p-5 text-[5rem] text-transparent  shadow-neutral-600 text-shadow-lg md:text-8xl lg:text-[12rem] xl:text-[14rem]'>
 				{pathname.includes('/vn')
 					? 'Hãy cùng cộng tác.'
@@ -186,7 +227,10 @@ const Contact = () => {
 				</Drawer>
 			</div>
 			<div className='flex flex-row gap-5'>
-				<Link href='mailto:hurleywflow@gmail.com' target='_blank'>
+				<Link
+					href='mailto:hurleywflow@gmail.com'
+					target='_blank'
+				>
 					<Magnetic>
 						<Button
 							variant='default'

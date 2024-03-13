@@ -2,13 +2,16 @@
 import { MotionDiv } from '@/lib/framer';
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
-import React from 'react';
+import type React from 'react';
 import { QuestionAnswers } from '../question-answer/question-answer';
 
 export default function LampDemo() {
 	const t = useTranslations('Index');
 	return (
-		<section id='faqs' className='m-0 flex items-center justify-center  p-0'>
+		<section
+			id='faqs'
+			className='m-0 flex items-center justify-center  bg-foreground p-0'
+		>
 			<LampContainer>
 				<MotionDiv
 					initial={{ opacity: 0.5, y: 100 }}
@@ -16,7 +19,7 @@ export default function LampDemo() {
 					transition={{
 						delay: 0.3,
 						duration: 0.8,
-						ease: 'easeInOut',
+						ease: 'easeInOut'
 					}}
 					className='mt-64 flex w-screen flex-col items-center justify-center'
 				>
@@ -33,7 +36,7 @@ export default function LampDemo() {
 
 const LampContainer = ({
 	children,
-	className,
+	className
 }: {
 	children: React.ReactNode;
 	className?: string;
@@ -41,8 +44,8 @@ const LampContainer = ({
 	return (
 		<div
 			className={cn(
-				'relative flex min-h-[150svh] md:min-h-[120svh] lg:min-h-screen flex-col items-center justify-center overflow-hidden bg-foreground w-screen z-0 pt-96',
-				className,
+				'relative flex min-h-[150vh] md:min-h-[120vh] lg:min-h-screen flex-col items-center justify-center overflow-hidden bg-foreground w-screen z-0 pt-96',
+				className
 			)}
 		>
 			<div className='relative isolate z-0 flex w-screen flex-1 scale-y-125 items-center justify-center '>
@@ -52,11 +55,11 @@ const LampContainer = ({
 					transition={{
 						delay: 0.3,
 						duration: 0.8,
-						ease: 'easeInOut',
+						ease: 'easeInOut'
 					}}
 					style={{
 						// biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
-						backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
+						backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`
 					}}
 					className='bg-gradient-conic absolute inset-auto right-1/2 h-56 w-[30rem] overflow-visible from-cyan-500 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]'
 				>
@@ -69,11 +72,11 @@ const LampContainer = ({
 					transition={{
 						delay: 0.3,
 						duration: 0.8,
-						ease: 'easeInOut',
+						ease: 'easeInOut'
 					}}
 					style={{
 						backgroundImage:
-							'conic-gradient(var(--conic-position), var(--tw-gradient-stops))',
+							'conic-gradient(var(--conic-position), var(--tw-gradient-stops))'
 					}}
 					className='bg-gradient-conic absolute inset-auto left-1/2 h-56 w-[30rem] from-transparent via-transparent to-cyan-500 text-white [--conic-position:from_290deg_at_center_top]'
 				>
@@ -89,7 +92,7 @@ const LampContainer = ({
 					transition={{
 						delay: 0.3,
 						duration: 0.8,
-						ease: 'easeInOut',
+						ease: 'easeInOut'
 					}}
 					className='absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-cyan-400 blur-2xl'
 				/>
@@ -99,7 +102,7 @@ const LampContainer = ({
 					transition={{
 						delay: 0.3,
 						duration: 0.8,
-						ease: 'easeInOut',
+						ease: 'easeInOut'
 					}}
 					className='absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[7rem] bg-cyan-400 '
 				/>

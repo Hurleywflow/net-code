@@ -13,11 +13,11 @@ const nextConfig = {
 			{
 				protocol: 'https',
 				hostname: 'aceternity.com',
-				port: '',
+				port: ''
 				// pathname: '/account123/**',
-			},
-		],
-	},
+			}
+		]
+	}
 };
 
 module.exports = withNextIntl(nextConfig);

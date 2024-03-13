@@ -3,7 +3,7 @@ module.exports = {
 	env: {
 		browser: true,
 		es2021: true,
-		node: true,
+		node: true
 	},
 	extends: [
 		'next',
@@ -12,28 +12,28 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 		'plugin:@typescript-eslint/recommended-type-checked',
 		'plugin:react/recommended',
-		'plugin:tailwindcss/recommended',
+		'plugin:tailwindcss/recommended'
 		// '@nkzw',
 	],
 	settings: {
 		react: {
-			version: 'detect',
-		},
+			version: 'detect'
+		}
 	},
 	overrides: [
 		{
 			env: {
-				node: true,
+				node: true
 			},
 			files: ['.eslintrc.{js,cjs}'],
 			parserOptions: {
-				sourceType: 'script',
-			},
+				sourceType: 'script'
+			}
 		},
 		{
 			files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
-			parser: '@typescript-eslint/parser',
-		},
+			parser: '@typescript-eslint/parser'
+		}
 	],
 	ignorePatterns: ['postcss.config.js'],
 	parser: '@typescript-eslint/parser',
@@ -43,7 +43,7 @@ module.exports = {
 		// project: ['./tsconfig.json'],
 		// extraFileExtensions: ['.json'],
 		project: true,
-		tsconfigRootDir: __dirname,
+		tsconfigRootDir: __dirname
 	},
 	plugins: ['@typescript-eslint', 'react'],
 	rules: {
@@ -65,6 +65,6 @@ module.exports = {
 		'@typescript-eslint/no-unused-vars': 'off',
 		'@typescript-eslint/no-use-before-define': 'off',
 		'no-mixed-spaces-and-tabs': 'off',
-		'react/prop-types': 'off',
-	},
+		'react/prop-types': 'off'
+	}
 };

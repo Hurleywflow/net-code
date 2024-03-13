@@ -12,9 +12,17 @@ export default function LoadingButton({
 	...props
 }: LoadingButtonProps) {
 	return (
-		<Button {...props} disabled={props.disabled ?? pending}>
+		<Button
+			{...props}
+			disabled={props.disabled ?? pending}
+		>
 			<span className='flex items-center justify-center gap-1'>
-				{pending && <Loader2 size={16} className='animate-spin' />}
+				{pending && (
+					<Loader2
+						size={16}
+						className='animate-spin'
+					/>
+				)}
 				{children}
 			</span>
 		</Button>

@@ -6,7 +6,7 @@ import {
 	IconClipboardCopy,
 	IconFileBroken,
 	IconSignature,
-	IconTableColumn,
+	IconTableColumn
 } from '@tabler/icons-react';
 import Image from 'next/image';
 
@@ -46,48 +46,48 @@ const items = [
 		description: '',
 		link: 'https://portfoliohurley.vercel.app/',
 		header: <Skeleton img='/images/projects/hlp1.jpeg' />,
-		icon: <IconClipboardCopy className='size-4 text-neutral-300' />,
+		icon: <IconClipboardCopy className='size-4 text-neutral-300' />
 	},
 	{
 		title: 'Hurley Portfolio 2',
 		description: '',
 		link: 'https://hurleyportfolio1.vercel.app/',
 		header: <Skeleton img='/images/projects/hlp2.jpeg' />,
-		icon: <IconFileBroken className='size-4 text-neutral-300' />,
+		icon: <IconFileBroken className='size-4 text-neutral-300' />
 	},
 	{
 		title: 'Bank Design',
 		description: '',
 		link: 'https://hurley-bank.vercel.app',
 		header: <Skeleton img='/images/projects/b.jpeg' />,
-		icon: <IconTableColumn className='size-4 text-neutral-300' />,
+		icon: <IconTableColumn className='size-4 text-neutral-300' />
 	},
 	{
 		title: 'Villa Trung Nghia',
 		description: '',
 		link: 'https://www.villadalat.online',
 		header: <Skeleton img='/images/projects/vltn.jpeg' />,
-		icon: <IconArrowWaveRightUp className='size-4 text-neutral-300' />,
+		icon: <IconArrowWaveRightUp className='size-4 text-neutral-300' />
 	},
 	{
 		title: 'NailStudioPro',
 		description: '',
 		link: 'https://www.nailstudiopro.com',
 		header: <Skeleton img='/images/projects/nsp.jpeg' />,
-		icon: <IconSignature className='size-4 text-neutral-300' />,
+		icon: <IconSignature className='size-4 text-neutral-300' />
 	},
 	{
 		title: 'RealEstate',
 		description: '',
 		link: 'https://real-estate-api-alpha.vercel.app',
 		header: <Skeleton img='/images/projects/rs.jpeg' />,
-		icon: <IconBoxAlignTopLeft className='size-4 text-neutral-300' />,
+		icon: <IconBoxAlignTopLeft className='size-4 text-neutral-300' />
 	},
 	{
 		title: 'Hurley Portfolio 2',
 		description: '',
 		link: 'https://hurleyportfolio1.vercel.app/',
 		header: <Skeleton img='/images/projects/hlp2.jpeg' />,
-		icon: <IconBoxAlignRightFilled className='size-4 text-neutral-300' />,
-	},
+		icon: <IconBoxAlignRightFilled className='size-4 text-neutral-300' />
+	}
 ];

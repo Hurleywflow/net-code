@@ -2,7 +2,7 @@
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 // import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 // import GoogleAnalytics from '@bradgarropy/next-google-analytics';
 import { Inter } from 'next/font/google';
@@ -14,17 +14,17 @@ const Navbar = dynamic(async () => import('@/components/cc/navbar/navbar'));
 const inter = Inter({
 	subsets: ['latin'],
 	display: 'swap',
-	variable: '--font-inter',
+	variable: '--font-inter'
 });
 
 // const t = useTranslations('Index');
 export const metadata: Metadata = {
 	metadataBase: new URL('https://netcodedev.com'),
 	alternates: {
-		canonical: '/',
+		canonical: '/'
 	},
 	openGraph: {
-		images: '/opengraph-image.png',
+		images: '/opengraph-image.png'
 	},
 	robots: {
 		index: true,
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
 			noimageindex: true,
 			'max-video-preview': -1,
 			'max-image-preview': 'large',
-			'max-snippet': -1,
-		},
+			'max-snippet': -1
+		}
 	},
 	title: 'Web Development Melbourne | Thiết kế website - NetCode',
 	description:
@@ -53,24 +53,24 @@ export const metadata: Metadata = {
 		'Melbourne Website Developers',
 		'Web Developer',
 		'Phát Triển Website',
-		'Thiết kế Website',
+		'Thiết kế Website'
 	],
 	authors: [
 		{ name: 'Nguyen' },
-		{ name: 'Hurley', url: 'https://netcodedev.com' },
+		{ name: 'Hurley', url: 'https://netcodedev.com' }
 	],
 	creator: 'Hurley Nguyen',
 	publisher: 'Hurley Nguyen',
 	formatDetection: {
 		email: false,
 		address: false,
-		telephone: false,
-	},
+		telephone: false
+	}
 };
 export const viewport = {
 	width: 'device-width',
 	initialScale: 1,
-	// maximumScale: 1,
+	maximumScale: 1
 	// userScalable: 'no',
 	// Also supported by less commonly used
 	// interactiveWidget: 'resizes-visual',
@@ -106,14 +106,14 @@ interface RootLayoutProps {
 }
 export default function RootLayout({
 	children,
-	params: { locale },
+	params: { locale }
 }: RootLayoutProps) {
 	return (
 		<html lang={locale}>
 			<body
 				className={cn(
-					'min-h-screen bg-background font-sans antialiased',
-					inter.variable,
+					'min-h-screen bg-background font-sans antialiased m-0 p-0',
+					inter.variable
 				)}
 			>
 				<Navbar />
@@ -129,7 +129,10 @@ export default function RootLayout({
 				src='https://www.googletagmanager.com/gtag/js?id=G-9LZ03P2LHT'
 				// src='https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX'
 			/>
-			<Script id='google-analytics' strategy='afterInteractive'>
+			<Script
+				id='google-analytics'
+				strategy='afterInteractive'
+			>
 				{` window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());

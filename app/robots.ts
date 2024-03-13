@@ -6,8 +6,8 @@ export default function robots(): MetadataRoute.Robots {
 			userAgent: '*',
 			allow: ['/', '/en', '/vn'],
 			// not allow to show in google
-			disallow: '/studio',
+			disallow: '/studio'
 		},
-		sitemap: 'https://netcodedev.com/sitemap.xml',
+		sitemap: 'https://netcodedev.com/sitemap.xml'
 	};
 }

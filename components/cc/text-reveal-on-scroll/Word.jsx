@@ -11,21 +11,25 @@ export default function Paragraph({ paragraph }) {
 	const container = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: container,
-		offset: ['start 0.4', 'start 0.2'],
+		offset: ['start 0.3', 'start 0.2']
 	});
 
 	const words = paragraph.split(' ');
 	return (
 		<p
 			ref={container}
-			className='flex w-full max-w-screen-xl flex-wrap p-10 text-justify text-xl leading-none shadow-foreground-500 text-shadow-xl md:text-2xl lg:text-3xl'
+			className='flex w-full max-w-screen-xl flex-wrap p-10 text-justify text-xl leading-none shadow-foreground-700 text-shadow-lg md:text-2xl lg:text-3xl'
 		>
 			{words.map((word, i) => {
 				const start = i / words.length;
 				const end = start + 1 / words.length;
 				return (
-					// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-					<Word key={i} progress={scrollYProgress} range={[start, end]}>
+					<Word
+						// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+						key={i}
+						progress={scrollYProgress}
+						range={[start, end]}
+					>
 						{word}
 					</Word>
 				);

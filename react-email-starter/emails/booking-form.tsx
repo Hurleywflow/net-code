@@ -8,7 +8,7 @@ import {
 	Preview,
 	Row,
 	Section,
-	Text,
+	Text
 } from '@react-email/components';
 import { Tailwind } from '@react-email/tailwind';
 interface ContactFormProps {
@@ -23,7 +23,7 @@ const ContactForm = ({
 	email,
 	phone,
 	services,
-	note,
+	note
 }: ContactFormProps) => {
 	return (
 		<Html>

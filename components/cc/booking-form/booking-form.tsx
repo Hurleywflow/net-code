@@ -19,7 +19,7 @@ import {
 	FormField,
 	FormItem,
 	FormLabel,
-	FormMessage,
+	FormMessage
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import {
@@ -27,7 +27,7 @@ import {
 	SelectContent,
 	SelectItem,
 	SelectTrigger,
-	SelectValue,
+	SelectValue
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
@@ -40,23 +40,23 @@ const phoneRegex = /^\d{10,13}$/;
 
 const FormSchema = z.object({
 	username: z.string().min(2, {
-		message: 'Username must be at least 2 characters.',
+		message: 'Username must be at least 2 characters.'
 	}),
 	email: z.string().email({
-		message: 'Invalid email address.',
+		message: 'Invalid email address.'
 	}),
 	phone: z.string().refine((value) => phoneRegex.test(value), {
-		message: 'Phone number is not valid.',
+		message: 'Phone number is not valid.'
 	}),
 	services: z.string({
-		required_error: 'Please select an services you are looking for!',
+		required_error: 'Please select an services you are looking for!'
 	}),
 	// date: z.date({
 	//   required_error: 'A date of your refer.',
 	// }),
 	note: z.string().max(500, {
-		message: 'Message must not be longer than 500 characters.',
-	}),
+		message: 'Message must not be longer than 500 characters.'
+	})
 });
 
 function ProfileForm({ className }: React.ComponentProps<'form'>) {
@@ -70,8 +70,8 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 			email: '',
 			phone: '',
 			services: '',
-			note: '',
-		},
+			note: ''
+		}
 	});
 	// 2. Define a submit handler.
 	async function onSubmit(data: z.infer<typeof FormSchema>) {
@@ -98,13 +98,13 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 		try {
 			const response = await fetch('/api/email', {
 				method: 'POST',
-				body: JSON.stringify(data),
+				body: JSON.stringify(data)
 			});
 			if (!response.ok) {
 				toast({
 					variant: 'destructive',
 					title: 'Woops!',
-					description: 'Your message has not been sent.',
+					description: 'Your message has not been sent.'
 				});
 			}
 		} catch (error) {
@@ -112,7 +112,7 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 				toast({
 					variant: 'destructive',
 					title: 'Woops!',
-					description: 'Your message has not been sent.',
+					description: 'Your message has not been sent.'
 				});
 			}
 			throw new Error('Error sending email');
@@ -125,7 +125,7 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 					<span className='mx-auto text-center'>{data && <Confetti />}</span>
 					<code className='text-white'>{JSON.stringify(data, null, 2)}</code>
 				</pre>
-			),
+			)
 		});
 
 		// reset to default value of the from, closed dialog or drawer and redirect to home page
@@ -148,7 +148,7 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 				onSubmit={form.handleSubmit(onSubmit)}
 				className={cn(
 					'grid h-[70svh] items-start gap-4 overflow-y-auto',
-					className,
+					className
 				)}
 			>
 				<FormField
@@ -158,7 +158,10 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 						<FormItem>
 							<FormLabel>User Name</FormLabel>
 							<FormControl>
-								<Input placeholder='Hurley Nguyen' {...field} />
+								<Input
+									placeholder='Hurley Nguyen'
+									{...field}
+								/>
 							</FormControl>
 							<FormMessage />
 						</FormItem>
@@ -171,7 +174,10 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 						<FormItem>
 							<FormLabel>Email</FormLabel>
 							<FormControl>
-								<Input placeholder='hurley@example.com' {...field} />
+								<Input
+									placeholder='hurley@example.com'
+									{...field}
+								/>
 							</FormControl>
 							<FormMessage />
 						</FormItem>
@@ -184,7 +190,10 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 						<FormItem>
 							<FormLabel>Phone Number</FormLabel>
 							<FormControl>
-								<Input placeholder='0423099677' {...field} />
+								<Input
+									placeholder='0423099677'
+									{...field}
+								/>
 							</FormControl>
 							<FormMessage />
 						</FormItem>
@@ -196,7 +205,10 @@ function ProfileForm({ className }: React.ComponentProps<'form'>) {
 					render={({ field }) => (
 						<FormItem>
 							<FormLabel>Services</FormLabel>
-							<Select onValueChange={field.onChange} defaultValue={field.value}>
+							<Select
+								onValueChange={field.onChange}
+								defaultValue={field.value}
+							>
 								<FormControl>
 									<SelectTrigger>
 										<SelectValue placeholder='Select a service you are looking for.' />

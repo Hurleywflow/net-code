@@ -20,15 +20,15 @@ type AnimatedTextProps = {
 const defaultAnimations = {
 	hidden: {
 		opacity: 0,
-		y: 20,
+		y: 20
 	},
 	visible: {
 		opacity: 1,
 		y: 0,
 		transition: {
-			duration: 0.1,
-		},
-	},
+			duration: 0.1
+		}
+	}
 };
 
 const AnimatedText = ({
@@ -37,7 +37,7 @@ const AnimatedText = ({
 	className,
 	once,
 	repeatDelay,
-	animation = defaultAnimations,
+	animation = defaultAnimations
 }: AnimatedTextProps) => {
 	const controls = useAnimation();
 	const textArray = Array.isArray(text) ? text : [text];
@@ -75,7 +75,7 @@ const AnimatedText = ({
 				animate={controls}
 				variants={{
 					visible: { transition: { staggerChildren: 0.1 } },
-					hidden: {},
+					hidden: {}
 				}}
 				aria-hidden
 			>

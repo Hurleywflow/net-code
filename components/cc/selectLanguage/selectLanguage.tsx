@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import {
 	Popover,
 	PopoverContent,
-	PopoverTrigger,
+	PopoverTrigger
 } from '@/components/ui/popover';
 import { Separator } from '@/components/ui/separator';
 import { Link } from '@/navigation';
@@ -26,13 +26,19 @@ function SelectLanguage() {
 			<PopoverContent className='w-fit'>
 				<div className='flex h-5 items-center space-x-4 text-sm'>
 					{/* You can override the `locale` to switch to another language */}
-					<Link href='/' locale='vn'>
+					<Link
+						href='/'
+						locale='vn'
+					>
 						<div className='cursor-pointer hover:scale-105 hover:font-bold'>
 							VietNamese
 						</div>
 					</Link>
 					<Separator orientation='vertical' />
-					<Link href='/' locale='en'>
+					<Link
+						href='/'
+						locale='en'
+					>
 						<div className='cursor-pointer hover:scale-105 hover:font-bold'>
 							English
 						</div>

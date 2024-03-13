@@ -7,7 +7,7 @@ import {
 	DialogDescription,
 	DialogHeader,
 	DialogTitle,
-	DialogTrigger,
+	DialogTrigger
 } from '@/components/ui/dialog';
 import {
 	Drawer,
@@ -17,7 +17,7 @@ import {
 	DrawerFooter,
 	DrawerHeader,
 	DrawerTitle,
-	DrawerTrigger,
+	DrawerTrigger
 } from '@/components/ui/drawer';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import {
@@ -27,7 +27,7 @@ import {
 	NavbarItem,
 	NavbarMenu,
 	NavbarMenuItem,
-	NavbarMenuToggle,
+	NavbarMenuToggle
 } from '@nextui-org/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -46,52 +46,60 @@ export default function NavBar() {
 	const menuItems = [
 		{
 			title: 'Home',
-			content: '/',
+			content: '/'
 		},
 		{
 			title: 'Intro',
-			content: '#intro',
+			content: '#intro'
 		},
 		{
 			title: 'Projects',
-			content: '#projects',
+			content: '#projects'
+		},
+		{
+			title: 'Price',
+			content: '#pricing'
 		},
 		{
 			title: 'FAQs',
-			content: '#faqs',
+			content: '#faqs'
 		},
 		{
 			title: 'Contact',
-			content: '#contact',
-		},
+			content: '#contact'
+		}
 	];
 	const menuItemsVn = [
 		{
 			title: 'Trang chủ',
-			content: '/',
+			content: '/'
 		},
 		{
 			title: 'Giới thiệu',
-			content: '#intro',
+			content: '#intro'
 		},
 		{
 			title: 'Dự án',
-			content: '#projects',
+			content: '#projects'
+		},
+		{
+			title: 'Bảng giá',
+			content: '#pricing'
 		},
 		{
 			title: 'Câu hỏi',
-			content: '#faqs',
+			content: '#faqs'
 		},
 		{
 			title: 'Liên hệ',
-			content: '#contact',
-		},
+			content: '#contact'
+		}
 	];
 	const tabs = [
 		{
 			title: 'Home',
 			value: 'home',
-			content: '/',
+			content: '/'
 		},
 		{
 			title: 'Intro',
@@ -101,7 +109,7 @@ export default function NavBar() {
 			// 		<p>Services tab</p>
 			// 	</div>
 			// ),
-			content: '#intro',
+			content: '#intro'
 		},
 		{
 			title: 'Projects',
@@ -111,7 +119,17 @@ export default function NavBar() {
 			// 		<p>Playground tab</p>
 			// 	</div>
 			// ),
-			content: '#projects',
+			content: '#projects'
+		},
+		{
+			title: 'Price',
+			value: 'pricing',
+			// content: (
+			// 	<div className='relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold text-white md:text-4xl'>
+			// 		<p>Playground tab</p>
+			// 	</div>
+			// ),
+			content: '#pricing'
 		},
 		{
 			title: 'FAQs',
@@ -121,7 +139,7 @@ export default function NavBar() {
 			// 		<p>Content tab</p>
 			// 	</div>
 			// ),
-			content: '#faqs',
+			content: '#faqs'
 		},
 		{
 			title: 'Contact',
@@ -131,14 +149,14 @@ export default function NavBar() {
 			// 		<p>Random tab</p>
 			// 	</div>
 			// ),
-			content: '#contact',
-		},
+			content: '#contact'
+		}
 	];
 	const tabsVn = [
 		{
 			title: 'Trang chủ',
 			value: 'home',
-			content: '/',
+			content: '/'
 		},
 		{
 			title: 'Giới thiệu',
@@ -148,7 +166,7 @@ export default function NavBar() {
 			// 		<p>Services tab</p>
 			// 	</div>
 			// ),
-			content: '#intro',
+			content: '#intro'
 		},
 		{
 			title: 'Dự án',
@@ -158,7 +176,17 @@ export default function NavBar() {
 			// 		<p>Playground tab</p>
 			// 	</div>
 			// ),
-			content: '#projects',
+			content: '#projects'
+		},
+		{
+			title: 'Bảng giá',
+			value: 'pricing',
+			// content: (
+			// 	<div className='relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold text-white md:text-4xl'>
+			// 		<p>Playground tab</p>
+			// 	</div>
+			// ),
+			content: '#pricing'
 		},
 		{
 			title: 'Câu hỏi',
@@ -168,7 +196,7 @@ export default function NavBar() {
 			// 		<p>Content tab</p>
 			// 	</div>
 			// ),
-			content: '#faqs',
+			content: '#faqs'
 		},
 		{
 			title: 'Liên hệ',
@@ -178,8 +206,8 @@ export default function NavBar() {
 			// 		<p>Random tab</p>
 			// 	</div>
 			// ),
-			content: '#contact',
-		},
+			content: '#contact'
+		}
 	];
 
 	return (
@@ -190,13 +218,19 @@ export default function NavBar() {
 			className='z-[9999] mx-auto box-border'
 		>
 			{/* toggle button */}
-			<NavbarContent className='sm:hidden ' justify='start'>
+			<NavbarContent
+				className='sm:hidden '
+				justify='start'
+			>
 				<NavbarMenuToggle
 					aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
 				/>
 			</NavbarContent>
 			{/* starting of the navbar items on mobile devices */}
-			<NavbarContent className=' pr-3 sm:hidden' justify='center'>
+			<NavbarContent
+				className=' pr-3 sm:hidden'
+				justify='center'
+			>
 				<NavbarBrand>
 					{/* adding logo */}
 					<ul className='flex flex-row items-center justify-center gap-1 divide-x divide-none'>
@@ -216,7 +250,10 @@ export default function NavBar() {
 				</NavbarBrand>
 			</NavbarContent>
 
-			<NavbarContent className='hidden gap-6 sm:flex' justify='center'>
+			<NavbarContent
+				className='hidden gap-6 sm:flex'
+				justify='center'
+			>
 				<NavbarBrand>
 					<ul className='flex flex-row items-center justify-center gap-1 divide-x divide-none'>
 						<li>
@@ -269,11 +306,17 @@ export default function NavBar() {
 			{/* end of the navbar items */}
 			<NavbarContent justify='end'>
 				{isDesktop ? (
-					<Dialog open={open} onOpenChange={setOpen}>
+					<Dialog
+						open={open}
+						onOpenChange={setOpen}
+					>
 						<DialogTrigger asChild>
 							<NavbarItem>
 								<Magnetic>
-									<Button variant='default' className='rounded-full '>
+									<Button
+										variant='default'
+										className='rounded-full '
+									>
 										{pathname.includes('/vn') ? 'Đặt Hẹn' : 'Get in touch'}
 									</Button>
 								</Magnetic>
@@ -307,7 +350,10 @@ export default function NavBar() {
 						<DrawerTrigger asChild>
 							<NavbarItem>
 								<Magnetic>
-									<Button variant='default' className='rounded-full '>
+									<Button
+										variant='default'
+										className='rounded-full '
+									>
 										{pathname.includes('/vn') ? 'Đặt Hẹn' : 'Get in touch'}
 									</Button>
 								</Magnetic>
@@ -346,7 +392,10 @@ export default function NavBar() {
 			{pathname.includes('/vn') ? (
 				<NavbarMenu className=''>
 					{menuItemsVn.map((item, index) => (
-						<NavbarMenuItem key={`${item.title}-${index}`} className=''>
+						<NavbarMenuItem
+							key={`${item.title}-${index}`}
+							className=''
+						>
 							<Link
 								className='w-full'
 								color={

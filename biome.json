@@ -1,10 +1,12 @@
 {
+	"$schema": "https://biomejs.dev/schemas/1.6.1/schema.json",
 	"organizeImports": {
 		"enabled": true
 	},
 	"formatter": {
 		"enabled": true,
 		"formatWithErrors": true,
+		"attributePosition": "multiline",
 		"indentStyle": "tab",
 		"indentWidth": 2,
 		"lineWidth": 80,
@@ -17,10 +19,11 @@
 			"quoteStyle": "single",
 			"jsxQuoteStyle": "single",
 			"semicolons": "always",
-			"trailingComma": "all",
+			"trailingComma": "none",
 			"quoteProperties": "asNeeded",
 			"bracketSpacing": true,
-			"bracketSameLine": false
+			"bracketSameLine": false,
+			"attributePosition": "multiline"
 		},
 		"parser": {
 			"unsafeParameterDecoratorsEnabled": true
@@ -36,12 +39,7 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"style": {
-				"useBlockStatements": "warn",
-				"useShorthandArrayType": "warn",
-				"noShoutyConstants": "warn",
-				"noUnusedTemplateLiteral": "warn"
-			}
+			"recommended": true
 		}
 	},
 	"vcs": {

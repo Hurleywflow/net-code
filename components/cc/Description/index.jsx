@@ -8,16 +8,16 @@ function Description() {
 	const pathname = usePathname();
 	const slideUp = {
 		initial: {
-			y: '100%',
+			y: '100%'
 		},
 		open: (i) => ({
 			y: '0%',
-			transition: { duration: 0.5, delay: 0.02 * i },
+			transition: { duration: 0.5, delay: 0.02 * i }
 		}),
 		closed: {
 			y: '100%',
-			transition: { duration: 0.5 },
-		},
+			transition: { duration: 0.5 }
+		}
 	};
 
 	// const opacity = {
@@ -41,7 +41,10 @@ function Description() {
 	const description = useRef(null);
 	const isInView = useInView(description);
 	return (
-		<div ref={description} className={styles.description}>
+		<div
+			ref={description}
+			className={styles.description}
+		>
 			<div className={styles.body}>
 				{pathname.includes('/vn') ? (
 					<p>
@@ -50,7 +53,7 @@ function Description() {
 								<span
 									// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 									key={index}
-									className={`text-balance text-xl text-foreground shadow-foreground-400 text-shadow-lg md:text-2xl lg:text-3xl lg:leading-[1] ${styles.mask}`}
+									className={`text-balance text-xl text-foreground shadow-foreground-900 text-shadow-lg md:text-2xl lg:text-3xl lg:leading-[1] ${styles.mask}`}
 								>
 									<motion.span
 										variants={slideUp}

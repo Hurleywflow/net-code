@@ -22,17 +22,17 @@ export async function POST(request: Request): Promise<NextResponse> {
 				email,
 				phone,
 				services,
-				note,
-			}),
+				note
+			})
 		});
 
 		return NextResponse.json(
 			{
-				status: 'Ok',
+				status: 'Ok'
 			},
 			{
-				status: 200,
-			},
+				status: 200
+			}
 		);
 	} catch (e: unknown) {
 		if (e instanceof Error) {
@@ -40,11 +40,11 @@ export async function POST(request: Request): Promise<NextResponse> {
 		}
 		return NextResponse.json(
 			{
-				error: getErrorMessage(e),
+				error: getErrorMessage(e)
 			},
 			{
-				status: 500,
-			},
+				status: 500
+			}
 		);
 	}
 }
