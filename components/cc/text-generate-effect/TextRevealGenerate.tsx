@@ -42,7 +42,7 @@ function TextRevealGenerate() {
 							// 	'Quá trình này là cần thiết để sản phẩm bàn giao và chi phí trả trước, đảm bảo rằng tất cả chúng ta đều đồng ý, giúp tránh bất kỳ những điều bất ngờ trong quá trình thực hiện dự án.'
 							// ]
 						}
-						className='text-balance text-xl text-foreground-700 shadow-foreground-400 text-shadow-lg md:text-2xl'
+						className='text-balance text-center text-xl text-foreground-700 shadow-foreground-400 text-shadow-lg md:text-2xl'
 						repeatDelay={10000}
 					/>
 				</div>
@@ -119,8 +119,9 @@ export const AnimatedText = ({
 				ref={ref}
 				initial='hidden'
 				animate={controls}
+				// adjusting the staggerChildren value to make the text appear more smoothly
 				variants={{
-					visible: { transition: { staggerChildren: 0.03 } },
+					visible: { transition: { staggerChildren: 0.02 } },
 					hidden: {}
 				}}
 				aria-hidden

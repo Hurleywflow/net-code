@@ -152,7 +152,7 @@ function CardCustom({ className, ...props }: CardProps) {
 							<BellRing />
 							<div className='flex-1 space-y-1'>
 								<p className='text-center text-2xl font-medium md:text-3xl '>
-									từ 290 triệu VND
+									từ $18,000 <i className='text-xs font-extralight'>AUD</i>
 								</p>
 								<p className='text-center text-sm text-muted-foreground'>
 									+ GST
@@ -288,7 +288,7 @@ function CardCustom({ className, ...props }: CardProps) {
 							<BellRing />
 							<div className='flex-1 space-y-1'>
 								<p className='text-center text-2xl font-medium md:text-3xl '>
-									from $18,000
+									from $18,000 <i className='text-xs font-extralight'>AUD</i>
 								</p>
 								<p className='text-center text-sm text-muted-foreground'>
 									+ GST

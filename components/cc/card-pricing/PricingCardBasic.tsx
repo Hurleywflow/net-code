@@ -129,7 +129,7 @@ function CardRegular({ className, ...props }: CardProps) {
 							<BellRing />
 							<div className='flex-1 space-y-1'>
 								<p className='text-center text-2xl font-medium md:text-3xl '>
-									từ 32 triệu VND
+									từ $2,000 <i className='text-xs font-extralight'>AUD</i>
 								</p>
 								<p className='text-muted-accent text-center text-sm'>+ GST</p>
 							</div>
@@ -267,7 +267,7 @@ function CardRegular({ className, ...props }: CardProps) {
 							<BellRing />
 							<div className='flex-1 space-y-1'>
 								<p className='text-center text-2xl font-medium md:text-3xl '>
-									from $2,000
+									from $2,000 <i className='text-xs font-extralight'>AUD</i>
 								</p>
 								<p className='text-muted-accent text-center text-sm'>+ GST</p>
 							</div>

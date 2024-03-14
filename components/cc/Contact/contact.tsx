@@ -36,12 +36,12 @@ const Contact = () => {
 	if (isDesktop) {
 		return (
 			<section
-				className='mb-10 flex min-h-screen w-full flex-col flex-wrap items-center justify-end gap-4'
+				className='mb-10 flex min-h-screen w-full flex-col flex-wrap items-center justify-end gap-4 md:mb-20'
 				id='contact'
 			>
 				{/* <section className='mb-[17svh] mt-[50svh]  flex size-full flex-col flex-wrap items-center justify-center gap-4 md:mt-[-35svh] md:pt-[80svh] lg:pt-[50svh]'> */}
 				<article className='mb-20 mt-10 flex w-[90%] max-w-screen-lg  flex-col items-center justify-center gap-2 text-base font-normal text-muted-foreground'>
-					<i className='text-xl text-background shadow-foreground-900 text-shadow-lg md:text-2xl'>
+					<i className='text-xl text-foreground shadow-foreground-700 text-shadow-lg md:text-2xl'>
 						{pathname.includes('/vn')
 							? 'Giống những gì bạn đã thấy?'
 							: 'Like what you see?'}
@@ -138,12 +138,12 @@ const Contact = () => {
 	}
 	return (
 		<section
-			className='mb-20 flex min-h-screen w-full flex-col flex-wrap items-center justify-end gap-4'
+			className='mb-10 flex min-h-screen w-full flex-col flex-wrap items-center justify-end gap-4'
 			id='contact'
 		>
 			{/* <section className='mb-[17svh] mt-[50svh]  flex size-full flex-col flex-wrap items-center justify-center gap-4 md:mt-[-35svh] md:pt-[80svh] lg:pt-[50svh]'> */}
-			<article className='mb-60 mt-10 flex w-[90%] max-w-screen-lg  flex-col items-center justify-center gap-2 text-base font-normal text-muted-foreground'>
-				<i className='text-xl text-background shadow-foreground-900 text-shadow-lg md:text-2xl'>
+			<article className='mb-20 mt-10 flex w-[90%] max-w-screen-lg  flex-col items-center justify-center gap-2 text-base font-normal text-muted-foreground'>
+				<i className='text-xl text-foreground shadow-foreground-700 text-shadow-lg md:text-2xl'>
 					{pathname.includes('/vn')
 						? 'Giống những gì bạn đã thấy?'
 						: 'Like what you see?'}
