@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/popover';
 import { Separator } from '@/components/ui/separator';
 import { Link } from '@/navigation';
+import { Globe } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
 function SelectLanguage() {
@@ -20,6 +21,7 @@ function SelectLanguage() {
 					size={'lg'}
 					variant={'secondary'}
 				>
+					<Globe className='mr-2 text-medium font-semibold' />
 					{pathname.includes('/vn') ? 'Language' : 'Ngôn ngữ'}
 				</Button>
 			</PopoverTrigger>

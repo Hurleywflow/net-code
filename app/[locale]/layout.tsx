@@ -1,15 +1,15 @@
+import NavBar from '@/components/cc/navbar/navbar';
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 // import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 // import GoogleAnalytics from '@bradgarropy/next-google-analytics';
 import { Inter } from 'next/font/google';
 // import { getTranslations } from 'next-intl/server';
 import Script from 'next/script';
 import './globals.css';
-const Navbar = dynamic(async () => import('@/components/cc/navbar/navbar'));
+// const Navbar = dynamic(async () => import('@/components/cc/navbar/navbar'));
 
 const inter = Inter({
 	subsets: ['latin'],
@@ -21,7 +21,7 @@ const inter = Inter({
 export const metadata: Metadata = {
 	metadataBase: new URL('https://netcodedev.com'),
 	alternates: {
-		canonical: '/'
+		canonical: 'https://netcodedev.com'
 	},
 	openGraph: {
 		images: '/opengraph-image.png'
@@ -107,7 +107,7 @@ interface RootLayoutProps {
 export default function RootLayout({
 	children,
 	params: { locale }
-}: RootLayoutProps) {
+}: Readonly<RootLayoutProps>) {
 	return (
 		<html lang={locale}>
 			<body
@@ -116,7 +116,7 @@ export default function RootLayout({
 					inter.variable
 				)}
 			>
-				<Navbar />
+				<NavBar />
 				{children}
 				<Toaster />
 				{/* <SpeedInsights /> */}
