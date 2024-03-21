@@ -148,7 +148,7 @@ function CardCustom({ className, ...props }: CardProps) {
 						</CardDescription>
 					</CardHeader>
 					<CardContent className='grid gap-4'>
-						<div className=' flex items-center space-x-4 rounded-md border bg-accent  p-4'>
+						<div className=' flex items-center space-x-4 rounded-md border bg-secondary  p-4'>
 							<BellRing />
 							<div className='flex-1 space-y-1'>
 								<p className='text-center text-2xl font-medium md:text-3xl '>
