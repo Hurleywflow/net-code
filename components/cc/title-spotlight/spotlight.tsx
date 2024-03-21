@@ -5,7 +5,7 @@ type SpotlightProps = {
 	fill?: string;
 };
 
-export const Spotlight = ({ className, fill }: SpotlightProps) => {
+const Spotlight = ({ className, fill }: SpotlightProps) => {
 	return (
 		// biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
 		<svg
@@ -57,3 +57,4 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
 		</svg>
 	);
 };
+export default Spotlight;

@@ -1,12 +1,6 @@
-import dynamic from 'next/dynamic';
 import { GridSmallBackgroundDemo } from '../background/GridSmallBackground';
 import TitleSpotlight from '../title-spotlight/title-spotlight';
 
-const Description = dynamic(async () => import('../Description'));
-
-const AnimatedText = dynamic(
-	async () => import('../animated-text/AnimatedText')
-);
 
 function HeroBeam() {
 	return (

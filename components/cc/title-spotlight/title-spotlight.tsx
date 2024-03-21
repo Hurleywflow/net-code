@@ -1,7 +1,10 @@
 import { useTranslations } from 'next-intl';
-import { Meteors } from '../meteors/meteors';
-import SelectLanguage from '../selectLanguage/selectLanguage';
-import { Spotlight } from './spotlight';
+import dynamic from 'next/dynamic';
+const SelectLanguage = dynamic(
+	async () => import('../selectLanguage/selectLanguage')
+);
+const Spotlight = dynamic(async () => import('./spotlight'));
+const Meteors = dynamic(async () => import('../meteors/meteors'));
 
 function TitleSpotlight() {
 	const t = useTranslations('Index');

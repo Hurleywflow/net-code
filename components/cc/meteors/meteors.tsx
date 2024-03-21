@@ -1,8 +1,6 @@
 import { cn } from '@/lib/utils';
-import clsx from 'clsx';
-import React from 'react';
 
-export const Meteors = ({
+const Meteors = ({
 	number,
 	className
 }: {
@@ -34,3 +32,4 @@ export const Meteors = ({
 		</>
 	);
 };
+export default Meteors;
