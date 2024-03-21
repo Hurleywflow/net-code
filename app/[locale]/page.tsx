@@ -18,7 +18,7 @@ const LampDemo = dynamic(async () => import('@/components/cc/lamp/lamp'));
 export default function Home() {
 	return (
 		<>
-			<main className='m-0 flex min-w-full flex-col items-center justify-center overflow-x-clip p-0'>
+			<main className='m-0 flex h-fit w-full flex-col items-center justify-center overflow-x-clip p-0'>
 				<Container>
 					<HeroBeam />
 				</Container>

@@ -23,7 +23,7 @@ function TitleSpotlight() {
 						</h2>
 					</div>
 					{/* <!-- Element 2 --> */}
-					<h1 className='relative   bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text  p-4 text-center text-5xl font-bold  text-transparent  md:text-7xl lg:text-8xl'>
+					<h1 className='relative   bg-gradient-to-b from-neutral-100 to-neutral-300 bg-clip-text  p-4 text-center text-5xl font-bold  text-transparent  md:text-7xl lg:text-8xl'>
 						{t('hero2')}
 					</h1>
 					{/* <!-- Element 3 --> */}
