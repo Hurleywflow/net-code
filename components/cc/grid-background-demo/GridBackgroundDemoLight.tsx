@@ -1,5 +1,6 @@
-import Contact from '../Contact/contact';
+import dynamic from 'next/dynamic';
 import { Container } from '../container/container';
+const Contact = dynamic(async () => import('../Contact/contact'));
 
 function GridBackgroundDemoLight() {
 	return (

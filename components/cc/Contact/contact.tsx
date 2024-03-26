@@ -24,13 +24,20 @@ import {
 import useMediaQuery from '@/hooks/useMediaQuery';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import ProfileForm from '../booking-form/booking-form';
 import TextRevealGenerate from '../text-generate-effect/TextRevealGenerate';
 
 const Contact = () => {
 	// const [snap, setSnap] = useState<number | string | null>(0.7);
 	const [open, setOpen] = useState(false);
+	const handleOpenChange = useCallback((open: boolean) => {
+		setOpen(open);
+	}, []);
+	const TextRevealGenerateMemo = useMemo(() => {
+		return TextRevealGenerate;
+	}, []);
+
 	const pathname = usePathname();
 	const isDesktop = useMediaQuery('(min-width: 768px)');
 	if (isDesktop) {
@@ -54,7 +61,7 @@ const Contact = () => {
 
 					<div className=''>
 						{/* <TextGenerateEffectDemo /> */}
-						<TextRevealGenerate />
+						<TextRevealGenerateMemo />
 					</div>
 				</article>
 				<div className='animate-slowpan text-wrap bg-[url("/images/c.webp")] bg-clip-text  p-5 text-[5rem] text-transparent  shadow-neutral-600 text-shadow-lg md:text-8xl lg:text-[12rem] xl:text-[14rem]'>
@@ -67,7 +74,7 @@ const Contact = () => {
 					<hr className=' w-full overflow-hidden border-2 border-border ' />
 					<Dialog
 						open={open}
-						onOpenChange={setOpen}
+						onOpenChange={handleOpenChange}
 					>
 						<DialogTrigger asChild>
 							<Button
@@ -156,7 +163,7 @@ const Contact = () => {
 
 				<div className=''>
 					{/* <TextGenerateEffectDemo /> */}
-					<TextRevealGenerate />
+					<TextRevealGenerateMemo />
 				</div>
 			</article>
 			<div className='animate-slowpan text-wrap bg-[url("/images/c.webp")] bg-clip-text  p-5 text-[5rem] text-transparent  shadow-neutral-600 text-shadow-lg md:text-8xl lg:text-[12rem] xl:text-[14rem]'>
@@ -169,7 +176,7 @@ const Contact = () => {
 
 				<Drawer
 					open={open}
-					onOpenChange={setOpen}
+					onOpenChange={handleOpenChange}
 					// snapPoints={[0.7, 1]}
 					// // snapPoints={[0.5, 0.8, 1]}
 					// activeSnapPoint={snap}

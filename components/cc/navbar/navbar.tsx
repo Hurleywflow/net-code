@@ -31,15 +31,30 @@ import {
 } from '@nextui-org/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import ProfileForm from '../booking-form/booking-form';
 import { Tabs } from '../tab/tabs';
 import { AcmeLogo } from './Logo.jsx';
+
+// Define a function to determine the color based on the index
+const getColor = (index: number, menuItemsLength: number): string => {
+	let color = 'foreground'; // Default color
+	if (index === 2) {
+		color = 'warning';
+	} else if (index === menuItemsLength - 1) {
+		color = 'danger';
+	}
+	return color;
+};
 
 export default function NavBar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	// const [snap, setSnap] = useState<number | string | null>(0.7);
 	const [open, setOpen] = useState(false);
+	const handleOpenChange = useCallback((open: boolean) => {
+		setOpen(open);
+	}, []);
+
 	const pathname = usePathname();
 	const isDesktop = useMediaQuery('(min-width: 768px)');
 
@@ -308,7 +323,7 @@ export default function NavBar() {
 				{isDesktop ? (
 					<Dialog
 						open={open}
-						onOpenChange={setOpen}
+						onOpenChange={handleOpenChange}
 					>
 						<DialogTrigger asChild>
 							<NavbarItem>
@@ -341,7 +356,7 @@ export default function NavBar() {
 				) : (
 					<Drawer
 						open={open}
-						onOpenChange={setOpen}
+						onOpenChange={handleOpenChange}
 						// snapPoints={[0.7, 1]}
 						// // snapPoints={[0.5, 0.8, 1]}
 						// activeSnapPoint={snap}
@@ -398,13 +413,7 @@ export default function NavBar() {
 						>
 							<Link
 								className='w-full'
-								color={
-									index === 2
-										? 'warning'
-										: index === menuItems.length - 1
-										  ? 'danger'
-										  : 'foreground'
-								}
+								color={getColor(index, menuItemsVn.length)}
 								href={item.content}
 								// size='lg'
 							>
@@ -419,13 +428,7 @@ export default function NavBar() {
 						<NavbarMenuItem key={`${item.title}-${index}`}>
 							<Link
 								className='w-full'
-								color={
-									index === 2
-										? 'warning'
-										: index === menuItems.length - 1
-										  ? 'danger'
-										  : 'foreground'
-								}
+								color={getColor(index, menuItems.length)}
 								href={item.content}
 								// size='lg'
 							>

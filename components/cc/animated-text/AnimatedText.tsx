@@ -2,8 +2,8 @@
 /* eslint-disable @typescript-eslint/no-floating-promises */
 /* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable no-undef */
-import { Variant, motion, useAnimation, useInView } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import { motion, useAnimation, useInView, type Variant } from 'framer-motion';
+import { useLayoutEffect, useRef } from 'react';
 
 type AnimatedTextProps = {
 	text: string | string[];
@@ -40,19 +40,19 @@ const AnimatedText = ({
 	animation = defaultAnimations
 }: AnimatedTextProps) => {
 	const controls = useAnimation();
+
 	const textArray = Array.isArray(text) ? text : [text];
 	const ref = useRef(null);
 	const isInView = useInView(ref, { amount: 0.5, once });
 
-	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-	useEffect(() => {
+	useLayoutEffect(() => {
 		let timeout: NodeJS.Timeout;
 		const show = () => {
 			controls.start('visible');
 			if (repeatDelay) {
 				timeout = setTimeout(async () => {
 					await controls.start('hidden');
-					controls.start('visible');
+					await controls.start('visible');
 				}, repeatDelay);
 			}
 		};

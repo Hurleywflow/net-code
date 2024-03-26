@@ -24,6 +24,7 @@ export function GridSmallBackgroundDemo() {
 					text={['NetCode']}
 					className='bg-gradient-to-b from-neutral-400 to-neutral-800 bg-clip-text text-6xl font-bold text-transparent shadow-neutral-500 text-shadow-lg md:text-7xl lg:text-8xl'
 					repeatDelay={5000}
+					
 				/>
 
 				<div className='lg:hidden'>
