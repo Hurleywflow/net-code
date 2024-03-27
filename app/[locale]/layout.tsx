@@ -19,33 +19,12 @@ const inter = Inter({
 });
 
 // const t = useTranslations('Index');
-export const metadata: Metadata = {
-	metadataBase: new URL('https://netcodedev.com'),
-	alternates: {
-		canonical: 'https://netcodedev.com'
-	},
-	openGraph: {
-		images: '/opengraph-image.png'
-	},
-	robots: {
-		index: true,
-		follow: true,
-		nocache: true,
-		googleBot: {
-			index: true,
-			follow: false,
-			noimageindex: true,
-			'max-video-preview': -1,
-			'max-image-preview': 'large',
-			'max-snippet': -1
-		}
-	},
+
+const metadata: Metadata = {
 	title: 'Web Development Melbourne | Thiết kế website - NetCode',
 	description:
 		'Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.',
-	generator: 'Next.js',
-	applicationName: 'NetCode',
-	referrer: 'origin-when-cross-origin',
+	metadataBase: new URL('https://netcodedev.com'),
 	keywords: [
 		'Web Development',
 		'Web Design Melbourne',
@@ -56,23 +35,87 @@ export const metadata: Metadata = {
 		'Phát Triển Website',
 		'Thiết kế Website'
 	],
-	authors: [
-		{ name: 'Nguyen' },
-		{ name: 'Hurley', url: 'https://netcodedev.com' }
-	],
-	creator: 'Hurley Nguyen',
-	publisher: 'Hurley Nguyen',
-	formatDetection: {
-		email: false,
-		address: false,
-		telephone: false
+	openGraph: {
+		title: 'Web Development Melbourne | Thiết kế website - NetCode',
+		description:
+			'Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.',
+		type: 'website',
+		url: 'https://netcodedev.com',
+		siteName: 'NetCode',
+		images: [
+			{
+				url: '',
+				width: 1200,
+				height: 630
+			}
+		]
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Web Development Melbourne | Thiết kế website - NetCode',
+		description:
+			'Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.',
+		images: {
+			url: '',
+			width: 1200,
+			height: 630
+		}
 	}
 };
+// export const metadata: Metadata = {
+// 	metadataBase: new URL('https://netcodedev.com'),
+// 	alternates: {
+// 		canonical: 'https://netcodedev.com'
+// 	},
+// 	openGraph: {
+// 		images: '/opengraph-image.png'
+// 	},
+// 	robots: {
+// 		index: true,
+// 		follow: true,
+// 		nocache: true,
+// 		googleBot: {
+// 			index: true,
+// 			follow: false,
+// 			noimageindex: true,
+// 			'max-video-preview': -1,
+// 			'max-image-preview': 'large',
+// 			'max-snippet': -1
+// 		}
+// 	},
+// 	title: 'Web Development Melbourne | Thiết kế website - NetCode',
+// 	description:
+// 		'Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.',
+// 	generator: 'Next.js',
+// 	applicationName: 'NetCode',
+// 	referrer: 'origin-when-cross-origin',
+// 	keywords: [
+// 		'Web Development',
+// 		'Web Design Melbourne',
+// 		'Web Development Melbourne',
+// 		'Web Designer',
+// 		'Melbourne Website Developers',
+// 		'Web Developer',
+// 		'Phát Triển Website',
+// 		'Thiết kế Website'
+// 	],
+// 	authors: [
+// 		{ name: 'Nguyen' },
+// 		{ name: 'Hurley', url: 'https://netcodedev.com' }
+// 	],
+// 	creator: 'Hurley Nguyen',
+// 	publisher: 'Hurley Nguyen',
+// 	formatDetection: {
+// 		email: false,
+// 		address: false,
+// 		telephone: false
+// 	}
+// };
 export const viewport = {
 	width: 'device-width',
 	initialScale: 1,
 	maximumScale: 1,
-	userScalable: 'no',
+	userScalable: 'no'
 	// Also supported by less commonly used
 	// interactiveWidget: 'resizes-visual',
 };
