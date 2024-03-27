@@ -20,7 +20,7 @@ const inter = Inter({
 
 // const t = useTranslations('Index');
 
-const metadata: Metadata = {
+export const metadata: Metadata = {
 	title: 'Web Development Melbourne | Thiết kế website - NetCode',
 	description:
 		'Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.',
